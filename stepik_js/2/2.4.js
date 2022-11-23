@@ -15,7 +15,7 @@
 // console.log(testArray([0, 1, 5, 3], [3]));
 
 
-// 2.4.10
+// 2.4.10 Objects
 function testArray(a, b) {
     return (a.concat(b)).split("").reverse().join("").concat("Иванов");
 }

@@ -7,7 +7,7 @@ let updatedPrices = prices.map((price) => {
 let clientEstimations = [];
 
 const askClientToGiveEstimation = () => {
-    let n = Number.parseInt(prompt("Как вы оцениваете нашу кофейню от 1 до 10"));
+    let n = Number.parseInt(prompt("Как вы оцениваете нашу кофейню от 1 до 10 Objects"));
 
     if (n >= 1 && n <= 10) {
         clientEstimations.push(n);

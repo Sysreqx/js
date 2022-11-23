@@ -23,6 +23,6 @@ function testDateTime(a, b) {
     }
 }
 
-console.log(testDateTime("19 October 1909 10:27", "28 March 1909 00:59"));
+console.log(testDateTime("19 October 1909 10 Objects:27", "28 March 1909 00:59"));
 
 

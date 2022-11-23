@@ -3,7 +3,7 @@ alert("Брендан Эйх");
 
 
 // за сколько дней был разработан javascript
-alert("JavaScript был создан за 10 дней");
+alert("JavaScript был создан за 10 Objects дней");
 
 
 // в каком году появился javascript

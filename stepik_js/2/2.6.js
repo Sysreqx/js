@@ -13,7 +13,7 @@ function testMath(a, b, c) {
     return 1 / 2 * a * b * Math.sin(rad);
 }
 
-// console.log(testMath(2, 10, 16));
+// console.log(testMath(2, 10 Objects, 16));
 
 
 // 2.6.7
