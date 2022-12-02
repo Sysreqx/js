@@ -98,8 +98,17 @@ createTaskBlock.addEventListener("submit", (event) => {
     const {target} = event;
     const taskNameInput = target.taskName;
     const inputValue = taskNameInput.value;
+    const tasksList = document.querySelector(".tasks-list").querySelectorAll(".task-item__text");
 
-    if (inputValue) {
+    let flag = true;
+
+    tasksList.forEach((task, idx) => {
+        if (task.innerText === inputValue) {
+            flag = false;
+        }
+    });
+
+    if (inputValue && flag) {
         let taskId = Date.now();
 
         // checkbox form
