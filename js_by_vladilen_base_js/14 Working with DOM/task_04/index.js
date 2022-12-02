@@ -74,14 +74,8 @@ taskNameInput.addEventListener("input", (event) => {
     const messageBlockFromDOM = document.querySelector('.error-message-block');
     const tasksList = document.querySelector(".tasks-list").querySelectorAll(".task-item__text");
 
-    if (!value) {
-        let errorMessageBlock = document.createElement("span");
-        errorMessageBlock.className = "error-message-block";
-        errorMessageBlock.innerText = "Название задачи не должно быть пустым";
-        createTaskBlock.append(errorMessageBlock);
-    } else if (value && messageBlockFromDOM) {
-        messageBlockFromDOM.remove();
-    } else if (value && !messageBlockFromDOM) {
+
+    if (value && !messageBlockFromDOM) {
         tasksList.forEach((task, idx) => {
             if (task.innerText === value) {
                 let errorMessageBlock = document.createElement("span");
@@ -91,6 +85,16 @@ taskNameInput.addEventListener("input", (event) => {
             }
         });
     }
+
+    if (!value) {
+        let errorMessageBlock = document.createElement("span");
+        errorMessageBlock.className = "error-message-block";
+        errorMessageBlock.innerText = "Название задачи не должно быть пустым";
+        createTaskBlock.append(errorMessageBlock);
+    } else if (value && messageBlockFromDOM) {
+        messageBlockFromDOM.remove();
+    }
+
 });
 
 createTaskBlock.addEventListener("submit", (event) => {
