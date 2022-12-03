@@ -196,30 +196,29 @@ const createModalWindow = () => {
     return modalOverlay;
 }
 
-
 const deleteTask = () => {
+    // const tasksList = document.querySelector(".tasks-list");
+    let itemToDel;
+    document.addEventListener("click", (event) => {
+        let {target} = event;
 
+        if (target.classList.contains("task-item__delete-button")) {
+            // const itemToDelId = target.closest(".task-item").dataset.taskId;
+            itemToDel = target.closest(".task-item");
+            document.body.append(createModalWindow());
+        }
+
+        if (target.classList.contains("delete-modal__button")) {
+            let modalOverlay = document.querySelector(".modal-overlay");
+
+            if (target.classList.contains("delete-modal__confirm-button")) {
+                itemToDel.remove();
+            }
+            modalOverlay.remove();
+        }
+
+    });
 };
 
-// const tasksList = document.querySelector(".tasks-list");
-let itemToDel;
-document.addEventListener("click", (event) => {
-    let {target} = event;
-
-    if (target.classList.contains("task-item__delete-button")) {
-        // const itemToDelId = target.closest(".task-item").dataset.taskId;
-        itemToDel = target.closest(".task-item");
-        document.body.append(createModalWindow());
-    }
-
-    if (target.classList.contains("delete-modal__button")) {
-        let modalOverlay = document.querySelector(".modal-overlay");
-
-        if (target.classList.contains("delete-modal__confirm-button")) {
-            itemToDel.remove();
-        }
-        modalOverlay.remove();
-    }
-
-});
+deleteTask();
 
