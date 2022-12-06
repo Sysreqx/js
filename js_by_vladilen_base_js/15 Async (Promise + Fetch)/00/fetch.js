@@ -10,11 +10,11 @@ const createTodoElement = (text) => {
     return todoElement;
 }
 
-const toggleElement = () => {
+const toggleLoader = () => {
     const loaderHTML = document.querySelector("#loader");
     const isHidden = loaderHTML.hasAttribute("hidden");
     if (isHidden) {
-        loaderHTML.removeAttribute("hiddenn");
+        loaderHTML.removeAttribute("hidden");
     } else {
         loaderHTML.setAttribute("hidden", "");
     }
@@ -23,6 +23,7 @@ const toggleElement = () => {
 const dataContainer = document.querySelector("#data-container");
 
 const getAllTodos = () => {
+    toggleLoader();
     const result = fetch(TODOS_URL, {
         method: "GET",
     });
@@ -43,6 +44,9 @@ const getAllTodos = () => {
         })
         .catch(error => {
             console.log("error", error);
+        })
+        .finally(() => {
+            toggleLoader();
         });
 }
 
