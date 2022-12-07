@@ -223,6 +223,22 @@ const deleteTask = () => {
 
 deleteTask();
 
+//
+// document.addEventListener("DOMContentLoaded", (event) => {
+//     const elementorToggleItem = document.querySelector(".elementor-toggle-item");
+//     const elementorTabTitle = elementorToggleItem.querySelector(".elementor-tab-title");
+//     console.log(elementorTabTitle);
+//     elementorTabTitle.classList.add("elementor-active");
+//     elementorTabTitle.ariaExpanded = "false";
+//     elementorTabTitle.tabIndex = "-1";
+//     elementorTabTitle.ariaSelected = "false";
+//
+//     const elementorTabContent = elementorToggleItem.querySelector(".elementor-tab-content");
+//     console.log(elementorTabContent);
+//     elementorTabContent.classList.add("elementor-active");
+//     elementorTabContent.style.display = "block";
+// });
+
 
 document.addEventListener("keydown", (event) => {
     const {key} = event;
