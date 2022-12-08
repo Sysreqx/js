@@ -5,7 +5,7 @@ document.addEventListener("scroll", (event) => {
     let divHeight = document.querySelector(".box-1").clientHeight;
 
     // lh = h - 33%; lh / 5 = 13.2 %
-    let breakPointStep = divHeight * 0.9;
+    let breakPointStep = divHeight * 0.09;
     let breakPoint1 = breakPointStep;
     let breakPoint2 = breakPoint1 + breakPointStep;
     let breakPoint3 = breakPoint2 + breakPointStep;
