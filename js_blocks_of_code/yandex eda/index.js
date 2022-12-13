@@ -251,3 +251,46 @@ for (let i = 0; i < quizes.length; i++) {
     });
 }
 
+// function checks which one didn't select
+// TODO
+const checkIfQuestionSelected = (selected) => {
+    let quantity = 9;
+
+    if (selected.length < quantity) {
+        console.log("Выберите все вопросы");
+
+        let anyBoxesChecked = new Array(quantity).fill(true);
+        let anyBoxesList = [];
+        for (let i = 0; i < quantity; i++) {
+            anyBoxesList.push(`q-${i + 1}`);
+        }
+
+        for (let i = 0; i < selected.length; i++) {
+            for (let j = 0; j < anyBoxesList.length; j++) {
+                if (selected[i].classList.contains(anyBoxesList[j])) {
+                    anyBoxesChecked[j] = false;
+                }
+            }
+        }
+
+        for (let i = 0; i < anyBoxesChecked.length; i++) {
+            if (anyBoxesChecked[i]) {
+                console.log(`Не выбран вопрос ${i + 1}`);
+            }
+        }
+    }
+}
+
+// button if click
+let btn = document.querySelector(".done");
+
+btn.addEventListener("click", (event) => {
+    let selected = document.querySelectorAll(".selected");
+
+    checkIfQuestionSelected(selected);
+
+    for (let i = 0; i < selected.length; i++) {
+        // console.log(selected[i]);
+    }
+});
+
