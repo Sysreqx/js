@@ -253,9 +253,7 @@ for (let i = 0; i < quizes.length; i++) {
 
 // function checks which one didn't select
 // TODO
-const checkIfQuestionSelected = (selected) => {
-    let quantity = 9;
-
+const checkIfQuestionSelected = (selected, quantity) => {
     if (selected.length < quantity) {
         console.log("Выберите все вопросы");
 
@@ -285,12 +283,15 @@ const checkIfQuestionSelected = (selected) => {
 let btn = document.querySelector(".done");
 
 btn.addEventListener("click", (event) => {
+    let questions = document.querySelectorAll(".questions");
     let selected = document.querySelectorAll(".selected");
 
-    checkIfQuestionSelected(selected);
+    let quantity = questions.length;
+
+    checkIfQuestionSelected(selected, quantity);
 
     for (let i = 0; i < selected.length; i++) {
-        // console.log(selected[i]);
+        console.log(selected[i]);
     }
 });
 

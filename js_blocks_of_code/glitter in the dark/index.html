@@ -18,6 +18,54 @@
     <div class="box box-6"></div>
 
 
-    <script src="index2.js"></script>
+    <script src="index.js"></script>
+
+    <!--    Images loaded before displaying     -->
+    <div class="hidden">
+        <script type="text/javascript">
+
+            let images = [];
+            function preload() {
+                for (let i = 0; i < preload.arguments.length; i++) {
+                    images[i] = new Image()
+                    images[i].src = preload.arguments[i]
+                }
+            }
+            preload(
+                "cover-01.jpg",
+                "cover-02.jpg",
+                "cover-03.jpg",
+                "cover-08.jpg",
+                "cover-11.jpg"
+            )
+
+        </script>
+    </div>
+
+    <!--#region preload images for "glitter in the dark"  -->
+
+    <div class="hidden">
+        <script type="text/javascript">
+
+            let images = [];
+            function preload() {
+                for (let i = 0; i < preload.arguments.length; i++) {
+                    images[i] = new Image()
+                    images[i].src = preload.arguments[i]
+                }
+            }
+            preload(
+                "https://esquire.kz/wp-content/uploads/2016/12/cover-01.jpg",
+                "https://esquire.kz/wp-content/uploads/2016/12/cover-02.jpg",
+                "https://esquire.kz/wp-content/uploads/2016/12/cover-03.jpg",
+                "https://esquire.kz/wp-content/uploads/2016/12/cover-06.jpg",
+                "https://esquire.kz/wp-content/uploads/2016/12/cover-08.jpg",
+                "https://esquire.kz/wp-content/uploads/2016/12/cover-11.jpg"
+            )
+
+        </script>
+    </div>
+
+    <!--#endregion -->
 </body>
 </html>
