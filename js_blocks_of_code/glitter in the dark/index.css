@@ -349,9 +349,10 @@ template {
 }
 /*NORMALIZE END*/
 
-
-
-
+/*remove scroll bar*/
+/*html { overflow-x: hidden; }*/
+/*body { overflow-x: hidden; }*/
+/*remove scroll bar*/
 
 .box {
     min-height: 100vh;
@@ -361,26 +362,73 @@ template {
     position: absolute;
 }
 
+.box-1 {
+    background: no-repeat center center/ cover url("first-01.png");
+}
+
 .box-2 {
-    background: no-repeat center center/ cover url("cover-02.jpg");
+    display: flex;
+    background: #5c5456;
+
+    /*background:no-repeat center bottom/ contain url("a-01.jpg") ;*/
+}
+
+.box-2 .width-50vw {
+    width: 50vw;
+    margin: 0 auto;
+    z-index: 10;
+}
+
+.box-2 .width-50vw .second_img {
+    position: sticky;
+    top: 0;
+    margin: 0 auto;
+    height: 100vh;
+}
+
+.box-2 .width-50perc {
+    position: sticky;
+    width: 50%;
+    margin: 50px auto;
 }
 
 .box-3 {
-    background: no-repeat center center/ cover url("cover-03.jpg");
+    display: flex;
+    position: relative;
+    /*background: #5c5456;*/
+    background:no-repeat center top/ cover url("a-01.jpg") fixed;
 }
 
-.box-4 {
-    background: no-repeat center center/ cover url("cover-08.jpg");
+.box-3 .width-50vw {
+    width: 50vw;
+    margin: 0 auto;
 }
 
-.box-5 {
-    background: no-repeat center center/ cover url("cover-11.jpg");
+.box-3 .height-400vh {
+    height: 400vh;
 }
 
-.box-1 {
-    background: no-repeat center center/ cover url("cover-01.jpg");
+.box-3 .width-50perc {
+    position: sticky;
+    top: 50%;
+    /*-ms-transform: translateY(-50%);*/
+    /*transform: translateY(-50%);*/
+    width: 50%;
+    margin: 50px auto;
 }
 
-.box-6 {
-    background: no-repeat center center/ cover url("cover-10.jpg");
-}
+/*.box-3 {*/
+/*    background: no-repeat center center/ cover url("cover-03.jpg");*/
+/*}*/
+
+/*.box-4 {*/
+/*    background: no-repeat center center/ cover url("cover-08.jpg");*/
+/*}*/
+
+/*.box-5 {*/
+/*    background: no-repeat center center/ cover url("cover-11.jpg");*/
+/*}*/
+
+/*.box-6 {*/
+/*    background: no-repeat center center/ cover url("cover-10.jpg");*/
+/*}*/
