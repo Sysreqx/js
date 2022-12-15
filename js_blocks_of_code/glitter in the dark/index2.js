@@ -52,8 +52,24 @@ document.addEventListener("scroll", (event) => {
         if (secondImg.src !== 'https://esquire.kz/wp-content/uploads/2016/12/second-05.jpg')
             secondImg.src = 'https://esquire.kz/wp-content/uploads/2016/12/second-05.jpg';
     }
-    //
-    // console.log(secondImg);
-    // console.log(axisY);
+
+    breakPointStep = document.querySelector(".box-3").clientHeight * 0.20;
+    let div2height = document.querySelector(".box-2").clientHeight;
+    let breakPoint8 = divHeight + div2height + breakPointStep;
+    let breakPoint9 = breakPoint8 + breakPointStep;
+    // let breakPoint10 = breakPoint9 + breakPointStep;
+
+    let div3 = document.querySelector(".box-3");
+
+    if (axisY < breakPoint8) {
+        if (div3.style.backgroundImage !== 'url("https://esquire.kz/wp-content/uploads/2016/12/first-01.png")')
+            div3.style.backgroundImage = 'url("https://esquire.kz/wp-content/uploads/2016/12/first-01.png")';
+    } else if (axisY >= breakPoint8 && axisY < breakPoint9) {
+        if (div3.style.backgroundImage !== 'url("https://esquire.kz/wp-content/uploads/2016/12/first-02.jpg")')
+            div3.style.backgroundImage = 'url("https://esquire.kz/wp-content/uploads/2016/12/first-02.jpg")';
+    } else if (axisY >= breakPoint9) {
+        if (div3.style.backgroundImage !== 'url("https://esquire.kz/wp-content/uploads/2016/12/first-03.png")')
+            div3.style.backgroundImage = 'url("https://esquire.kz/wp-content/uploads/2016/12/first-03.png")';
+    }
 
 });
