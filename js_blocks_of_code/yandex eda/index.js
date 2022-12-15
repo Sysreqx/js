@@ -1,251 +1,61 @@
 let quizes = document.querySelectorAll(".quiz");
 
+const selectAnAnswer = (target, questionClassName) => {
+    if (target.classList.contains("a-1")) {
+        let questions = document.querySelectorAll(`.${questionClassName}`);
+        questions.forEach(q => {
+            q.classList.remove("selected");
+        });
+        target.parentElement.classList.add("selected");
+    } else if (target.classList.contains("a-2")) {
+        let questions = document.querySelectorAll(`.${questionClassName}`);
+        questions.forEach(q => {
+            q.classList.remove("selected");
+        });
+        target.parentElement.classList.add("selected");
+    } else if (target.classList.contains("a-3")) {
+        let questions = document.querySelectorAll(`.${questionClassName}`);
+        questions.forEach(q => {
+            q.classList.remove("selected");
+        });
+        target.parentElement.classList.add("selected");
+    } else if (target.classList.contains("a-4")) {
+        let questions = document.querySelectorAll(`.${questionClassName}`);
+        questions.forEach(q => {
+            q.classList.remove("selected");
+        });
+        target.parentElement.classList.add("selected");
+    } else if (target.classList.contains("a-5")) {
+        let questions = document.querySelectorAll(`.${questionClassName}`);
+        questions.forEach(q => {
+            q.classList.remove("selected");
+        });
+        target.parentElement.classList.add("selected");
+    }
+}
+
 for (let i = 0; i < quizes.length; i++) {
     quizes[i].addEventListener("click", (event) => {
         let {target} = event;
 
         if (target.parentElement.classList.contains("q-1")) {
-            if (target.classList.contains("a-1")) {
-                let questions = document.querySelectorAll(".q-1");
-                questions.forEach(q => {
-                    q.classList.remove("selected");
-                });
-                target.parentElement.classList.add("selected");
-            } else if (target.classList.contains("a-2")) {
-                let questions = document.querySelectorAll(".q-1");
-                questions.forEach(q => {
-                    q.classList.remove("selected");
-                });
-                target.parentElement.classList.add("selected");
-            } else if (target.classList.contains("a-3")) {
-                let questions = document.querySelectorAll(".q-1");
-                questions.forEach(q => {
-                    q.classList.remove("selected");
-                });
-                target.parentElement.classList.add("selected");
-            } else if (target.classList.contains("a-4")) {
-                let questions = document.querySelectorAll(".q-1");
-                questions.forEach(q => {
-                    q.classList.remove("selected");
-                });
-                target.parentElement.classList.add("selected");
-            }
+            selectAnAnswer(target, "q-1")
         } else if (target.parentElement.classList.contains("q-2")) {
-
-            if (target.classList.contains("a-1")) {
-                let questions = document.querySelectorAll(".q-2");
-                questions.forEach(q => {
-                    q.classList.remove("selected");
-                });
-                target.parentElement.classList.add("selected");
-            } else if (target.classList.contains("a-2")) {
-                let questions = document.querySelectorAll(".q-2");
-                questions.forEach(q => {
-                    q.classList.remove("selected");
-                });
-                target.parentElement.classList.add("selected");
-            } else if (target.classList.contains("a-3")) {
-                let questions = document.querySelectorAll(".q-2");
-                questions.forEach(q => {
-                    q.classList.remove("selected");
-                });
-                target.parentElement.classList.add("selected");
-            } else if (target.classList.contains("a-4")) {
-                let questions = document.querySelectorAll(".q-2");
-                questions.forEach(q => {
-                    q.classList.remove("selected");
-                });
-                target.parentElement.classList.add("selected");
-            }
+            selectAnAnswer(target, "q-2")
         } else if (target.parentElement.classList.contains("q-3")) {
-
-            if (target.classList.contains("a-1")) {
-                let questions = document.querySelectorAll(".q-3");
-                questions.forEach(q => {
-                    q.classList.remove("selected");
-                });
-                target.parentElement.classList.add("selected");
-            } else if (target.classList.contains("a-2")) {
-                let questions = document.querySelectorAll(".q-3");
-                questions.forEach(q => {
-                    q.classList.remove("selected");
-                });
-                target.parentElement.classList.add("selected");
-            } else if (target.classList.contains("a-3")) {
-                let questions = document.querySelectorAll(".q-3");
-                questions.forEach(q => {
-                    q.classList.remove("selected");
-                });
-                target.parentElement.classList.add("selected");
-            } else if (target.classList.contains("a-4")) {
-                let questions = document.querySelectorAll(".q-3");
-                questions.forEach(q => {
-                    q.classList.remove("selected");
-                });
-                target.parentElement.classList.add("selected");
-            }
+            selectAnAnswer(target, "q-3")
         } else if (target.parentElement.classList.contains("q-4")) {
-
-            if (target.classList.contains("a-1")) {
-                let questions = document.querySelectorAll(".q-4");
-                questions.forEach(q => {
-                    q.classList.remove("selected");
-                });
-                target.parentElement.classList.add("selected");
-            } else if (target.classList.contains("a-2")) {
-                let questions = document.querySelectorAll(".q-4");
-                questions.forEach(q => {
-                    q.classList.remove("selected");
-                });
-                target.parentElement.classList.add("selected");
-            } else if (target.classList.contains("a-3")) {
-                let questions = document.querySelectorAll(".q-4");
-                questions.forEach(q => {
-                    q.classList.remove("selected");
-                });
-                target.parentElement.classList.add("selected");
-            } else if (target.classList.contains("a-4")) {
-                let questions = document.querySelectorAll(".q-4");
-                questions.forEach(q => {
-                    q.classList.remove("selected");
-                });
-                target.parentElement.classList.add("selected");
-            }
+            selectAnAnswer(target, "q-4")
         } else if (target.parentElement.classList.contains("q-5")) {
-
-            if (target.classList.contains("a-1")) {
-                let questions = document.querySelectorAll(".q-5");
-                questions.forEach(q => {
-                    q.classList.remove("selected");
-                });
-                target.parentElement.classList.add("selected");
-            } else if (target.classList.contains("a-2")) {
-                let questions = document.querySelectorAll(".q-5");
-                questions.forEach(q => {
-                    q.classList.remove("selected");
-                });
-                target.parentElement.classList.add("selected");
-            } else if (target.classList.contains("a-3")) {
-                let questions = document.querySelectorAll(".q-5");
-                questions.forEach(q => {
-                    q.classList.remove("selected");
-                });
-                target.parentElement.classList.add("selected");
-            } else if (target.classList.contains("a-4")) {
-                let questions = document.querySelectorAll(".q-5");
-                questions.forEach(q => {
-                    q.classList.remove("selected");
-                });
-                target.parentElement.classList.add("selected");
-            }
+            selectAnAnswer(target, "q-5")
         } else if (target.parentElement.classList.contains("q-6")) {
-
-            if (target.classList.contains("a-1")) {
-                let questions = document.querySelectorAll(".q-6");
-                questions.forEach(q => {
-                    q.classList.remove("selected");
-                });
-                target.parentElement.classList.add("selected");
-            } else if (target.classList.contains("a-2")) {
-                let questions = document.querySelectorAll(".q-6");
-                questions.forEach(q => {
-                    q.classList.remove("selected");
-                });
-                target.parentElement.classList.add("selected");
-            } else if (target.classList.contains("a-3")) {
-                let questions = document.querySelectorAll(".q-6");
-                questions.forEach(q => {
-                    q.classList.remove("selected");
-                });
-                target.parentElement.classList.add("selected");
-            } else if (target.classList.contains("a-4")) {
-                let questions = document.querySelectorAll(".q-6");
-                questions.forEach(q => {
-                    q.classList.remove("selected");
-                });
-                target.parentElement.classList.add("selected");
-            }
+            selectAnAnswer(target, "q-6")
         } else if (target.parentElement.classList.contains("q-7")) {
-
-            if (target.classList.contains("a-1")) {
-                let questions = document.querySelectorAll(".q-7");
-                questions.forEach(q => {
-                    q.classList.remove("selected");
-                });
-                target.parentElement.classList.add("selected");
-            } else if (target.classList.contains("a-2")) {
-                let questions = document.querySelectorAll(".q-7");
-                questions.forEach(q => {
-                    q.classList.remove("selected");
-                });
-                target.parentElement.classList.add("selected");
-            } else if (target.classList.contains("a-3")) {
-                let questions = document.querySelectorAll(".q-7");
-                questions.forEach(q => {
-                    q.classList.remove("selected");
-                });
-                target.parentElement.classList.add("selected");
-            } else if (target.classList.contains("a-4")) {
-                let questions = document.querySelectorAll(".q-7");
-                questions.forEach(q => {
-                    q.classList.remove("selected");
-                });
-                target.parentElement.classList.add("selected");
-            }
+            selectAnAnswer(target, "q-7")
         } else if (target.parentElement.classList.contains("q-8")) {
-
-            if (target.classList.contains("a-1")) {
-                let questions = document.querySelectorAll(".q-8");
-                questions.forEach(q => {
-                    q.classList.remove("selected");
-                });
-                target.parentElement.classList.add("selected");
-            } else if (target.classList.contains("a-2")) {
-                let questions = document.querySelectorAll(".q-8");
-                questions.forEach(q => {
-                    q.classList.remove("selected");
-                });
-                target.parentElement.classList.add("selected");
-            } else if (target.classList.contains("a-3")) {
-                let questions = document.querySelectorAll(".q-8");
-                questions.forEach(q => {
-                    q.classList.remove("selected");
-                });
-                target.parentElement.classList.add("selected");
-            } else if (target.classList.contains("a-4")) {
-                let questions = document.querySelectorAll(".q-8");
-                questions.forEach(q => {
-                    q.classList.remove("selected");
-                });
-                target.parentElement.classList.add("selected");
-            }
+            selectAnAnswer(target, "q-8")
         } else if (target.parentElement.classList.contains("q-9")) {
-
-            if (target.classList.contains("a-1")) {
-                let questions = document.querySelectorAll(".q-9");
-                questions.forEach(q => {
-                    q.classList.remove("selected");
-                });
-                target.parentElement.classList.add("selected");
-            } else if (target.classList.contains("a-2")) {
-                let questions = document.querySelectorAll(".q-9");
-                questions.forEach(q => {
-                    q.classList.remove("selected");
-                });
-                target.parentElement.classList.add("selected");
-            } else if (target.classList.contains("a-3")) {
-                let questions = document.querySelectorAll(".q-9");
-                questions.forEach(q => {
-                    q.classList.remove("selected");
-                });
-                target.parentElement.classList.add("selected");
-            } else if (target.classList.contains("a-4")) {
-                let questions = document.querySelectorAll(".q-9");
-                questions.forEach(q => {
-                    q.classList.remove("selected");
-                });
-                target.parentElement.classList.add("selected");
-            }
+            selectAnAnswer(target, "q-9")
         }
 
     });
@@ -292,6 +102,17 @@ btn.addEventListener("click", (event) => {
 
     for (let i = 0; i < selected.length; i++) {
         console.log(selected[i]);
+        let cntCharacter1 = 0;
+        let cntCharacter2 = 0;
+        let cntCharacter3 = 0;
+        let cntCharacter4 = 0;
+        let cntCharacter5 = 0;
+
+        if (selected[i].classList.contains("q-1")) {
+            if (selected[i].classList.contains("a-1")) {
+                cntCharacter1++;
+            }
+        }
     }
 });
 
