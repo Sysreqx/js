@@ -71,15 +71,26 @@ document.addEventListener("scroll", (event) => {
             div3.style.backgroundImage = 'url("first-03.png")';
     }
 
-    let box3 = document.querySelector(".box-3");
-    let box3Text = box3.querySelector(".width-50perc");
-    let addTranslateYBreakPoint = divHeight + div2height - box3Text.clientHeight + 50;
+    // let box3 = document.querySelector(".box-3");
+    // let box3Text = box3.querySelector(".width-50perc");
+    // let addTranslateYBreakPoint = divHeight + div2height + box3.clientHeight * 0.70 - box3Text * 0.7 ;
+    //
+    // if (axisY > addTranslateYBreakPoint) {
+    //     if (box3Text.style.transform !== 'translate(0, -30%)')
+    //         box3Text.style.transform = 'translate(0, -30%)';
+    // }
+    // else
+    //     box3Text.style.transform = 'translate(0, 0)';
 
-    if (axisY > addTranslateYBreakPoint) {
-        if (box3Text.style.transform !== 'translate(0, -50%)')
-            box3Text.style.transform = 'translate(0, -50%)';
-    }
-    else
-        box3Text.style.transform = 'translate(0, 0)';
+    //
+    // let addTranslateYBreakPoint = divHeight * 0.4 + div2height;
+    // let addTranslateYBreakPoint2 = divHeight + div2height;
+    // if (axisY >= addTranslateYBreakPoint && axisY <= addTranslateYBreakPoint2 + box3.clientHeight) {
+    //     console.log(addTranslateYBreakPoint);
+    //     console.log(axisY);
+    //     box3Text.style.transform = `translate(0, ${addTranslateYBreakPoint - axisY}px)`;
+    // }
+    // else
+    //     box3Text.style.transform = 'translate(0, 0)';
 
 });

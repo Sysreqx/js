@@ -394,7 +394,7 @@ template {
 
 .box-3 {
     display: flex;
-    position: relative;
+    position: sticky;
     /*background: #5c5456;*/
     background:no-repeat center top/ cover url("a-01.jpg") fixed;
 }
@@ -411,10 +411,10 @@ template {
 .box-3 .width-50perc {
     position: sticky;
     top: 50%;
-    /*-ms-transform: translateY(-50%);*/
-    /*transform: translateY(-50%);*/
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
     width: 50%;
-    margin: 50px auto;
+    margin: -25% auto -100%;
 }
 
 /*.box-3 {*/
