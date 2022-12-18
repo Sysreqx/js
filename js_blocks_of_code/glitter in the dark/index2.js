@@ -106,15 +106,15 @@ document.addEventListener("scroll", (event) => {
     }
 
     let box4 = document.querySelector(".box-4");
-    breakPointStep = box4.clientHeight * 0.25;
+    breakPointStep = box4.clientHeight * 0.10;
     let breakPoint13 = box1 + box2 + box3.clientHeight + breakPointStep + topDiv1 + topDiv2;
 
     if (axisY < breakPoint13) {
-        if (box4.style.backgroundImage !== 'url("https://esquire.kz/wp-content/uploads/2016/12/alexand-1.png")')
-            box4.style.backgroundImage = 'url("https://esquire.kz/wp-content/uploads/2016/12/alexand-1.png")';
-    } else if (axisY >= breakPoint13) {
         if (box4.style.backgroundImage !== 'url("https://esquire.kz/wp-content/uploads/2016/12/alexand-3.png")')
             box4.style.backgroundImage = 'url("https://esquire.kz/wp-content/uploads/2016/12/alexand-3.png")';
+    } else if (axisY >= breakPoint13) {
+        if (box4.style.backgroundImage !== 'url("https://esquire.kz/wp-content/uploads/2016/12/alexand-1.png")')
+            box4.style.backgroundImage = 'url("https://esquire.kz/wp-content/uploads/2016/12/alexand-1.png")';
     }
 
 });
