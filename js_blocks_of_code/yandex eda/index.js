@@ -108,6 +108,7 @@ btn.addEventListener("click", (event) => {
         let cntCharacter4 = 0;
         let cntCharacter5 = 0;
 
+
         if (selected[i].classList.contains("q-1")) {
             if (selected[i].classList.contains("a-1")) {
                 cntCharacter1++;
