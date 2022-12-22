@@ -354,15 +354,6 @@ template {
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 
-video {
-    margin: 0;
-    padding: 0;
-}
-source {
-    margin: 0;
-    padding: 0;
-}
-
 .content {
     display: flex;
     justify-content: center;
@@ -372,7 +363,7 @@ source {
     margin: 0 auto;
     height: 100vh;
     background: rgba(0, 0, 0, 0.5);
-    transform: translateY(-101%);
+    transform: translateY(-100%);
 }
 
 .content p {
@@ -390,20 +381,24 @@ source {
     top: 0;
     z-index: -1;
     position: sticky;
-    /*background: url(https://images.unsplash.com/photo-1481349518771-20055b2a7b24?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cmFuZG9tfGVufDB8fDB8fA%3D%3D&w=1000&q=80);*/
     background: #000000;
     background-position: center;
     background-size: contain;
 }
 
-/*.background-video {*/
-/*    height: 100vh;*/
-/*    margin: 0;*/
-/*    width: 100%;*/
-/*    top: 0;*/
-/*    z-index: -1;*/
-/*    position: sticky;*/
-/*    background-position: center;*/
-/*    background-size: contain;*/
-/*}*/
+video {
+    min-width: 300px;
+    max-width: 1200px;
+    min-height: 300px;
+    max-height: 500px;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
 
+.fullVH {
+    height: 100vh;
+}
