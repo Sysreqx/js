@@ -354,48 +354,56 @@ template {
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 
-.body-top {
-    background: black;
+video {
+    margin: 0;
+    padding: 0;
+}
+source {
+    margin: 0;
+    padding: 0;
 }
 
-.box-overlap {
+.content {
     display: flex;
+    justify-content: center;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    margin: -50vh auto 0;
-    background: rgba(0, 0, 0, 0.5);
-    position: relative;
-    min-height: 100vh;
-    width: 100%;
-}
-
-.box-overlap .text {
-    font-size: 30px;
-    padding: 20px 500px;
-}
-
-.box-1 {
-    display: flex;
-    align-items: center;
-    top: 0;
+    padding: 0 1rem;
     margin: 0 auto;
-    background: #66ffd1;
-    max-width: 1920px;
-    min-height: 100vh;
-}
-
-.box-2 {
     height: 100vh;
-    width: 100vw;
-    background: #f5d1ff;
+    background: rgba(0, 0, 0, 0.5);
+    transform: translateY(-101%);
 }
 
-.box-inner {
-    display: flex;
-    margin: 0 auto;
-    background: #FF0000;
-    max-width: 1700px;
-    min-height: 700px;
-    width: 100%;
+.content p {
+    color: white;
 }
+
+.big {
+    font-size: 50px;
+}
+
+.bg {
+    height: 100vh;
+    margin: 0;
+    width: 100%;
+    top: 0;
+    z-index: -1;
+    position: sticky;
+    /*background: url(https://images.unsplash.com/photo-1481349518771-20055b2a7b24?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cmFuZG9tfGVufDB8fDB8fA%3D%3D&w=1000&q=80);*/
+    background: #000000;
+    background-position: center;
+    background-size: contain;
+}
+
+/*.background-video {*/
+/*    height: 100vh;*/
+/*    margin: 0;*/
+/*    width: 100%;*/
+/*    top: 0;*/
+/*    z-index: -1;*/
+/*    position: sticky;*/
+/*    background-position: center;*/
+/*    background-size: contain;*/
+/*}*/
+
