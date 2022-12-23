@@ -402,3 +402,25 @@ video {
 .fullVH {
     height: 100vh;
 }
+
+.boot {
+    position: relative;
+    width: 500px;
+    height: 500px;
+    background: #8dffda;
+}
+
+.boot img {
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    width: 30px;
+    height: 30px;
+}
+
+.boot1 {
+    width: 500px;
+    height: 500px;
+    background: rgba(0, 0, 0, .5);
+    display: none   ;
+}
