@@ -10,7 +10,6 @@ for (let i = 0; i < boots.length; i++) {
         let boot4 = document.querySelector(".boot4");
 
         let boot1Click = document.querySelector(".boot1_click");
-        let boot1Img = document.querySelector("img");
         let boot2Click = document.querySelector(".boot2_click");
         let boot3Click = document.querySelector(".boot3_click");
         let boot4Click = document.querySelector(".boot4_click");
@@ -26,8 +25,38 @@ for (let i = 0; i < boots.length; i++) {
             boot1.style.display = "none";
             boot1Click.style.display = "flex";
         }
+
+
+        if (target.parentElement.parentElement.classList.contains("boot2_click")) {
+            boot2.style.display = "flex";
+            boot2Click.style.display = "none";
+        }
+
+        if (target.classList.contains("boot2")) {
+            boot2.style.display = "none";
+            boot2Click.style.display = "flex";
+        }
+
+
+        if (target.parentElement.parentElement.classList.contains("boot3_click")) {
+            boot3.style.display = "flex";
+            boot3Click.style.display = "none";
+        }
+
+        if (target.classList.contains("boot3")) {
+            boot3.style.display = "none";
+            boot3Click.style.display = "flex";
+        }
+
+
+        if (target.parentElement.parentElement.classList.contains("boot4_click")) {
+            boot4.style.display = "flex";
+            boot4Click.style.display = "none";
+        }
+
+        if (target.classList.contains("boot4")) {
+            boot4.style.display = "none";
+            boot4Click.style.display = "flex";
+        }
     });
 }
-
-
-
