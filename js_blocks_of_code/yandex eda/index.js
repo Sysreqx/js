@@ -61,8 +61,15 @@ for (let i = 0; i < quizes.length; i++) {
     });
 }
 
+const identifyACharacter = (max, c1, c2, c3, c4, c5) => {
+    if (max === c1) return "Ameli";
+    if (max === c2) return "Fibi";
+    if (max === c3) return "Sheldon";
+    if (max === c4) return "Toni";
+    return "Vincent";
+}
+
 // function checks which one didn't select
-// TODO
 const checkIfQuestionSelected = (selected, quantity) => {
     if (selected.length < quantity) {
         console.log("Выберите все вопросы");
@@ -86,34 +93,192 @@ const checkIfQuestionSelected = (selected, quantity) => {
                 console.log(`Не выбран вопрос ${i + 1}`);
             }
         }
+
+        return false;
     }
+    return true;
 }
 
 // button if click
-let btn = document.querySelector(".done");
+let btns = document.querySelectorAll(".done");
 
-btn.addEventListener("click", (event) => {
-    let questions = document.querySelectorAll(".questions");
-    let selected = document.querySelectorAll(".selected");
+for (let i = 0; i < btns.length; i++) {
+    btns[i].addEventListener("click", (event) => {
+        let questions = document.querySelectorAll(".questions");
+        let selected = document.querySelectorAll(".selected");
 
-    let quantity = questions.length;
+        let quantity = questions.length;
 
-    checkIfQuestionSelected(selected, quantity);
+        checkIfQuestionSelected(selected, quantity);
 
-    for (let i = 0; i < selected.length; i++) {
-        console.log(selected[i]);
+        let character1 = "Ameli";
+        let character2 = "Fibi";
+        let character3 = "Sheldon";
+        let character4 = "Toni";
+        let character5 = "Vincent";
+
         let cntCharacter1 = 0;
         let cntCharacter2 = 0;
         let cntCharacter3 = 0;
         let cntCharacter4 = 0;
         let cntCharacter5 = 0;
 
+        for (let i = 0; i < selected.length; i++) {
+            console.log(selected[i]);
 
-        if (selected[i].classList.contains("q-1")) {
-            if (selected[i].classList.contains("a-1")) {
-                cntCharacter1++;
+            if (selected[i].classList.contains("q-1")) {
+
+                if (selected[i].classList.contains("a-1")) {
+                    cntCharacter1++;
+                } else if (selected[i].classList.contains("a-2")) {
+                    cntCharacter2++;
+                } else if (selected[i].classList.contains("a-3")) {
+                    cntCharacter3++;
+                } else if (selected[i].classList.contains("a-4")) {
+                    cntCharacter4++;
+                } else {
+                    cntCharacter5++;
+                }
             }
+
+            if (selected[i].classList.contains("q-2")) {
+
+                if (selected[i].classList.contains("a-1")) {
+                    cntCharacter1++;
+                } else if (selected[i].classList.contains("a-2")) {
+                    cntCharacter2++;
+                } else if (selected[i].classList.contains("a-3")) {
+                    cntCharacter4++;
+                } else if (selected[i].classList.contains("a-4")) {
+                    cntCharacter3++;
+                } else {
+                    cntCharacter5++;
+                }
+            }
+
+            if (selected[i].classList.contains("q-3")) {
+
+                if (selected[i].classList.contains("a-1")) {
+                    cntCharacter3++;
+                } else if (selected[i].classList.contains("a-2")) {
+                    cntCharacter4++;
+                } else if (selected[i].classList.contains("a-3")) {
+                    cntCharacter1++;
+                } else if (selected[i].classList.contains("a-4")) {
+                    cntCharacter2++;
+                } else {
+                    cntCharacter5++;
+                }
+            }
+
+            if (selected[i].classList.contains("q-4")) {
+
+                if (selected[i].classList.contains("a-1")) {
+                    cntCharacter4++;
+                } else if (selected[i].classList.contains("a-2")) {
+                    cntCharacter3++;
+                } else if (selected[i].classList.contains("a-3")) {
+                    cntCharacter2++;
+                } else if (selected[i].classList.contains("a-4")) {
+                    cntCharacter1++;
+                } else {
+                    cntCharacter5++;
+                }
+            }
+
+            if (selected[i].classList.contains("q-5")) {
+
+                if (selected[i].classList.contains("a-1")) {
+                    cntCharacter3++;
+                } else if (selected[i].classList.contains("a-2")) {
+                    cntCharacter4++;
+                } else if (selected[i].classList.contains("a-3")) {
+                    cntCharacter1++;
+                } else if (selected[i].classList.contains("a-4")) {
+                    cntCharacter2++;
+                } else {
+                    cntCharacter5++;
+                }
+            }
+
+            if (selected[i].classList.contains("q-6")) {
+
+                if (selected[i].classList.contains("a-1")) {
+                    cntCharacter1++;
+                } else if (selected[i].classList.contains("a-2")) {
+                    cntCharacter3++;
+                } else if (selected[i].classList.contains("a-3")) {
+                    cntCharacter2++;
+                } else if (selected[i].classList.contains("a-4")) {
+                    cntCharacter4++;
+                } else {
+                    cntCharacter5++;
+                }
+            }
+
+            if (selected[i].classList.contains("q-7")) {
+
+                if (selected[i].classList.contains("a-1")) {
+                    cntCharacter1++;
+                } else if (selected[i].classList.contains("a-2")) {
+                    cntCharacter3++;
+                } else if (selected[i].classList.contains("a-3")) {
+                    cntCharacter4++;
+                } else if (selected[i].classList.contains("a-4")) {
+                    cntCharacter2++;
+                } else {
+                    cntCharacter5++;
+                }
+            }
+
+            if (selected[i].classList.contains("q-8")) {
+
+                if (selected[i].classList.contains("a-1")) {
+                    cntCharacter1++;
+                } else if (selected[i].classList.contains("a-2")) {
+                    cntCharacter4++;
+                } else if (selected[i].classList.contains("a-3")) {
+                    cntCharacter3++;
+                } else if (selected[i].classList.contains("a-4")) {
+                    cntCharacter2++;
+                } else {
+                    cntCharacter5++;
+                }
+            }
+
+            if (selected[i].classList.contains("q-9")) {
+
+                if (selected[i].classList.contains("a-1")) {
+                    cntCharacter1++;
+                } else if (selected[i].classList.contains("a-2")) {
+                    cntCharacter2++;
+                } else if (selected[i].classList.contains("a-3")) {
+                    cntCharacter4++;
+                } else if (selected[i].classList.contains("a-4")) {
+                    cntCharacter3++;
+                } else {
+                    cntCharacter5++;
+                }
+            }
+
         }
-    }
-});
+
+        console.log(`${character1} = ${cntCharacter1}`);
+        console.log(`${character2} = ${cntCharacter2}`);
+        console.log(`${character3} = ${cntCharacter3}`);
+        console.log(`${character4} = ${cntCharacter4}`);
+        console.log(`${character5} = ${cntCharacter5}`);
+
+        let maxPoints = Math.max(cntCharacter1, cntCharacter2, cntCharacter3, cntCharacter4, cntCharacter5);
+
+        let charToShow = identifyACharacter(maxPoints, cntCharacter1, cntCharacter2, cntCharacter3, cntCharacter4, cntCharacter5);
+        console.log(charToShow);
+    });
+}
+
+
+
+
+
+
 
