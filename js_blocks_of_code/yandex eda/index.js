@@ -1,5 +1,9 @@
 let quizes = document.querySelectorAll(".quiz");
 
+// for (let i = 0; i < quizes.length; i++) {
+//     console.log(quizes[i]);
+// }
+
 const selectAnAnswer = (target, questionClassName) => {
     if (target.classList.contains("a-1")) {
         let questions = document.querySelectorAll(`.${questionClassName}`);
@@ -37,6 +41,8 @@ const selectAnAnswer = (target, questionClassName) => {
 for (let i = 0; i < quizes.length; i++) {
     quizes[i].addEventListener("click", (event) => {
         let {target} = event;
+
+        console.log(target);
 
         if (target.parentElement.classList.contains("q-1")) {
             selectAnAnswer(target, "q-1")
@@ -263,11 +269,11 @@ for (let i = 0; i < btns.length; i++) {
 
             }
 
-            // console.log(`${character1} = ${cntCharacter1}`);
-            // console.log(`${character2} = ${cntCharacter2}`);
-            // console.log(`${character3} = ${cntCharacter3}`);
-            // console.log(`${character4} = ${cntCharacter4}`);
-            // console.log(`${character5} = ${cntCharacter5}`);
+            console.log(`${character1} = ${cntCharacter1}`);
+            console.log(`${character2} = ${cntCharacter2}`);
+            console.log(`${character3} = ${cntCharacter3}`);
+            console.log(`${character4} = ${cntCharacter4}`);
+            console.log(`${character5} = ${cntCharacter5}`);
 
             let maxPoints = Math.max(cntCharacter1, cntCharacter2, cntCharacter3, cntCharacter4, cntCharacter5);
 
