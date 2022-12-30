@@ -498,3 +498,17 @@ a {
 .a-1:hover, .a-2:hover, .a-3:hover, .a-4:hover, .a-5:hover {
 
 }
+
+
+
+
+.circle {
+    min-width: 20px;
+    min-height: 20px;
+}
+
+.circle-inner-active {
+    background: #000000;
+    min-width: 12px;
+    min-height: 12px;
+}

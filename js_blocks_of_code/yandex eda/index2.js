@@ -43,6 +43,44 @@ const selectAnAnswer = (target, questionClassName) => {
     }
 }
 
+// helper function for selectAnCircle function
+const selectAnCircleHelperFunction = (target, questionClassName) => {
+    let circle = target.parentElement.querySelector(".circle-inner");
+
+    console.log(target);
+
+    let questions = document.querySelectorAll(`.${questionClassName}`);
+    let circles = [];
+    questions.forEach(q => {
+        circles.push(q.querySelector(".circle-inner"));
+    });
+    circles.forEach(c => {
+        console.log(c);
+        c.classList.remove("circle-inner-active");
+    })
+    circle.classList.add("circle-inner-active");
+}
+
+const selectAnCircle = (target, questionClassName) => {
+    if (target.classList.contains("a-1")) {
+        // console.log("a1");
+        selectAnCircleHelperFunction(target, questionClassName);
+    } else if (target.classList.contains("a-2")) {
+        // console.log("a2");
+        selectAnCircleHelperFunction(target, questionClassName);
+    } else if (target.classList.contains("a-3")) {
+        // console.log("a3");
+        selectAnCircleHelperFunction(target, questionClassName);
+    } else if (target.classList.contains("a-4")) {
+        // console.log("a4");
+        selectAnCircleHelperFunction(target, questionClassName);
+    } else if (target.classList.contains("a-5")) {
+        // console.log("a5");
+        selectAnCircleHelperFunction(target, questionClassName);
+    }
+}
+
+
 for (let i = 0; i < quizes.length; i++) {
     quizes[i].addEventListener("click", (event) => {
         let {target} = event;
@@ -51,23 +89,32 @@ for (let i = 0; i < quizes.length; i++) {
 
         if (target.parentElement.parentElement.parentElement.classList.contains("q-1")) {
             // console.log("esafaseseaf");
-            selectAnAnswer(target.parentElement.parentElement, "q-1")
+            selectAnAnswer(target.parentElement.parentElement, "q-1");
+            selectAnCircle(target.parentElement.parentElement, "q-1");
         } else if (target.parentElement.parentElement.parentElement.classList.contains("q-2")) {
-            selectAnAnswer(target.parentElement.parentElement, "q-2")
+            selectAnAnswer(target.parentElement.parentElement, "q-2");
+            selectAnCircle(target.parentElement.parentElement, "q-2");
         } else if (target.parentElement.parentElement.parentElement.classList.contains("q-3")) {
-            selectAnAnswer(target.parentElement.parentElement, "q-3")
+            selectAnAnswer(target.parentElement.parentElement, "q-3");
+            selectAnCircle(target.parentElement.parentElement, "q-3");
         } else if (target.parentElement.parentElement.parentElement.classList.contains("q-4")) {
-            selectAnAnswer(target.parentElement.parentElement, "q-4")
+            selectAnAnswer(target.parentElement.parentElement, "q-4");
+            selectAnCircle(target.parentElement.parentElement, "q-4");
         } else if (target.parentElement.parentElement.parentElement.classList.contains("q-5")) {
-            selectAnAnswer(target.parentElement.parentElement, "q-5")
+            selectAnAnswer(target.parentElement.parentElement, "q-5");
+            selectAnCircle(target.parentElement.parentElement, "q-5");
         } else if (target.parentElement.parentElement.parentElement.classList.contains("q-6")) {
-            selectAnAnswer(target.parentElement.parentElement, "q-6")
+            selectAnAnswer(target.parentElement.parentElement, "q-6");
+            selectAnCircle(target.parentElement.parentElement, "q-6");
         } else if (target.parentElement.parentElement.parentElement.classList.contains("q-7")) {
-            selectAnAnswer(target.parentElement.parentElement, "q-7")
+            selectAnAnswer(target.parentElement.parentElement, "q-7");
+            selectAnCircle(target.parentElement.parentElement, "q-7");
         } else if (target.parentElement.parentElement.parentElement.classList.contains("q-8")) {
-            selectAnAnswer(target.parentElement.parentElement, "q-8")
+            selectAnAnswer(target.parentElement.parentElement, "q-8");
+            selectAnCircle(target.parentElement.parentElement, "q-8");
         } else if (target.parentElement.parentElement.parentElement.classList.contains("q-9")) {
-            selectAnAnswer(target.parentElement.parentElement, "q-9")
+            selectAnAnswer(target.parentElement.parentElement, "q-9");
+            selectAnCircle(target.parentElement.parentElement, "q-9");
         }
 
     });
@@ -362,9 +409,18 @@ const showACharacterDiv = (char) => {
     }
 }
 
+//
 const clearSelectionsFromQuestions = () => {
+    // remove selected for result
     let questions = document.querySelectorAll(".selected");
     questions.forEach(q => {
         q.classList.remove("selected");
     });
+
+    // remove circles
+    let circles = document.querySelectorAll(".circle-inner-active");
+    circles.forEach(c => {
+        c.classList.remove("circle-inner-active");
+    });
 }
+
