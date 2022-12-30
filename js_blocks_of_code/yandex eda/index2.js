@@ -47,7 +47,7 @@ const selectAnAnswer = (target, questionClassName) => {
 const selectAnCircleHelperFunction = (target, questionClassName) => {
     let circle = target.parentElement.querySelector(".circle-inner");
 
-    console.log(target);
+    // console.log(target);
 
     let questions = document.querySelectorAll(`.${questionClassName}`);
     let circles = [];
@@ -55,7 +55,7 @@ const selectAnCircleHelperFunction = (target, questionClassName) => {
         circles.push(q.querySelector(".circle-inner"));
     });
     circles.forEach(c => {
-        console.log(c);
+        // console.log(c);
         c.classList.remove("circle-inner-active");
     })
     circle.classList.add("circle-inner-active");
@@ -363,18 +363,18 @@ const showACharacterDiv = (char) => {
     let char4 = "Toni";
     let char5 = "Vincent";
 
-    let allCharacters = document.querySelectorAll(".character");
+    let allCharacters = document.querySelectorAll(".character-wrapper");
 
     // console.log("from showACharacterDiv()");
     // allCharacters.forEach(c => {
     //     console.log(c);
     // })
 
-    let charDiv = document.querySelector("#character-1");
-    if (char2 === char) charDiv = document.querySelector("#character-2");
-    if (char3 === char) charDiv = document.querySelector("#character-3");
-    if (char4 === char) charDiv = document.querySelector("#character-4");
-    if (char5 === char) charDiv = document.querySelector("#character-5");
+    let charDiv = document.querySelector(".character-1-wrapper");
+    if (char2 === char) charDiv = document.querySelector(".character-2-wrapper");
+    if (char3 === char) charDiv = document.querySelector(".character-3-wrapper");
+    if (char4 === char) charDiv = document.querySelector(".character-4-wrapper");
+    if (char5 === char) charDiv = document.querySelector(".character-5-wrapper");
 
     for (let i = 0; i < allCharacters.length; i++) {
         allCharacters[i].style.display = "none";
@@ -399,10 +399,18 @@ const showACharacterDiv = (char) => {
             let {target} = event;
             if (target.classList.contains("close-div")) {
 
-                closeBtn.style.display = "none";
+                // closeBtn.style.display = "none";
+                charDiv.style.display = "none";
+                // charDiv.style.position = "relative";
+                // charDiv.style.top = "initial";
+            }
+        });
 
-                charDiv.style.position = "relative";
-                charDiv.style.top = "initial";
+        document.addEventListener("click", (event) => {
+            let {target} = event;
+
+            if (target.classList.contains("character")) {
+                charDiv.style.display = "none";
             }
         });
 
@@ -424,3 +432,6 @@ const clearSelectionsFromQuestions = () => {
     });
 }
 
+// document.addEventListener("click", (event) => {
+//     console.log(event.target);
+// });
