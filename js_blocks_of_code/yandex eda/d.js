@@ -43,62 +43,42 @@ const selectAnAnswer = (target, questionClassName) => {
     }
 }
 
+// helper function for selectAnCircle function
+const selectAnCircleHelperFunction = (target, questionClassName, answerClassName) => {
+    let circle = target.parentElement.parentElement.querySelector(".circle-inner");
+
+    // console.log(target);
+
+    let questions = document.querySelectorAll(`.${questionClassName}`);
+    let circles = [];
+    questions.forEach(q => {
+        circles.push(q.querySelector(".circle-inner"));
+    });
+    circles.forEach(c => {
+        // console.log(c);
+        c.classList.remove("circle-inner-active");
+        if (c.parentElement.classList.contains(answerClassName))
+            circle = c.parentElement;
+    });
+    circle.classList.add("circle-inner-active");
+}
+
 const selectAnCircle = (target, questionClassName) => {
     if (target.classList.contains("a-1")) {
         // console.log("a1");
-        let questions = document.querySelectorAll(`.${questionClassName}`);
-        let circles = [];
-        questions.forEach(q => {
-            circles.push(q.querySelector(".circle-inner"));
-        });
-        circles.forEach(c => {
-            c.classList.remove("circle-inner-active");
-        })
-        target.querySelector(".circle-inner").classList.add("circle-inner-active");
+        selectAnCircleHelperFunction(target, questionClassName, "a-1");
     } else if (target.classList.contains("a-2")) {
         // console.log("a2");
-        let questions = document.querySelectorAll(`.${questionClassName}`);
-        let circles = [];
-        questions.forEach(q => {
-            circles.push(q.querySelector(".circle-inner"));
-        });
-        circles.forEach(c => {
-            c.classList.remove("circle-inner-active");
-        })
-        target.querySelector(".circle-inner").classList.add("circle-inner-active");
+        selectAnCircleHelperFunction(target, questionClassName, "a-2");
     } else if (target.classList.contains("a-3")) {
         // console.log("a3");
-        let questions = document.querySelectorAll(`.${questionClassName}`);
-        let circles = [];
-        questions.forEach(q => {
-            circles.push(q.querySelector(".circle-inner"));
-        });
-        circles.forEach(c => {
-            c.classList.remove("circle-inner-active");
-        })
-        target.querySelector(".circle-inner").classList.add("circle-inner-active");
+        selectAnCircleHelperFunction(target, questionClassName, "a-3");
     } else if (target.classList.contains("a-4")) {
         // console.log("a4");
-        let questions = document.querySelectorAll(`.${questionClassName}`);
-        let circles = [];
-        questions.forEach(q => {
-            circles.push(q.querySelector(".circle-inner"));
-        });
-        circles.forEach(c => {
-            c.classList.remove("circle-inner-active");
-        })
-        target.querySelector(".circle-inner").classList.add("circle-inner-active");
+        selectAnCircleHelperFunction(target, questionClassName, "a-4");
     } else if (target.classList.contains("a-5")) {
         // console.log("a5");
-        let questions = document.querySelectorAll(`.${questionClassName}`);
-        let circles = [];
-        questions.forEach(q => {
-            circles.push(q.querySelector(".circle-inner"));
-        });
-        circles.forEach(c => {
-            c.classList.remove("circle-inner-active");
-        })
-        target.querySelector(".circle-inner").classList.add("circle-inner-active");
+        selectAnCircleHelperFunction(target, questionClassName, "a-5");
     }
 }
 
@@ -385,18 +365,18 @@ const showACharacterDiv = (char) => {
     let char4 = "Toni";
     let char5 = "Vincent";
 
-    let allCharacters = document.querySelectorAll(".character");
+    let allCharacters = document.querySelectorAll(".character-wrapper");
 
     // console.log("from showACharacterDiv()");
     // allCharacters.forEach(c => {
     //     console.log(c);
     // })
 
-    let charDiv = document.querySelector("#character-1");
-    if (char2 === char) charDiv = document.querySelector("#character-2");
-    if (char3 === char) charDiv = document.querySelector("#character-3");
-    if (char4 === char) charDiv = document.querySelector("#character-4");
-    if (char5 === char) charDiv = document.querySelector("#character-5");
+    let charDiv = document.querySelector(".character-1-wrapper");
+    if (char2 === char) charDiv = document.querySelector(".character-2-wrapper");
+    if (char3 === char) charDiv = document.querySelector(".character-3-wrapper");
+    if (char4 === char) charDiv = document.querySelector(".character-4-wrapper");
+    if (char5 === char) charDiv = document.querySelector(".character-5-wrapper");
 
     for (let i = 0; i < allCharacters.length; i++) {
         allCharacters[i].style.display = "none";
@@ -421,24 +401,39 @@ const showACharacterDiv = (char) => {
             let {target} = event;
             if (target.classList.contains("close-div")) {
 
-                closeBtn.style.display = "none";
+                // closeBtn.style.display = "none";
+                charDiv.style.display = "none";
+                // charDiv.style.position = "relative";
+                // charDiv.style.top = "initial";
+            }
+        });
 
-                charDiv.style.position = "relative";
-                charDiv.style.top = "initial";
+        document.addEventListener("click", (event) => {
+            let {target} = event;
+
+            if (target.classList.contains("character")) {
+                charDiv.style.display = "none";
             }
         });
 
     }
 }
 
-// todo rewrite to circles
+//
 const clearSelectionsFromQuestions = () => {
+    // remove selected for result
     let questions = document.querySelectorAll(".selected");
     questions.forEach(q => {
         q.classList.remove("selected");
     });
+
+    // remove circles
+    let circles = document.querySelectorAll(".circle-inner-active");
+    circles.forEach(c => {
+        c.classList.remove("circle-inner-active");
+    });
 }
 
-const questionsMouseOver = () => {
-    let questions
-}
+// document.addEventListener("click", (event) => {
+//     console.log(event.target);
+// });
