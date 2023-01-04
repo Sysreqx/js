@@ -512,3 +512,29 @@ a {
     min-width: 12px;
     min-height: 12px;
 }
+
+/*button "x" sign*/
+/*selector {*/
+/*    !*display: none;*!*/
+/*    width: 20px;*/
+/*    height: 20px;*/
+/*    !*background: #ff0000;*!*/
+/*    position: absolute;*/
+/*    right: 30px;*/
+/*    top: 30px;*/
+/*    !*border-radius: 100%;*!*/
+/*}*/
+
+/*selector::after {*/
+/*    position: absolute;*/
+/*    top: 0;*/
+/*    bottom: 0;*/
+/*    left: 0;*/
+/*    right: 0;*/
+/*    content: '\d7';*/
+/*    font-size: 25px;*/
+/*    font-weight: 900;*/
+/*    color: #000000;*/
+/*    line-height: 20px;*/
+/*    text-align: center;*/
+/*}*/
