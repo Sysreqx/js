@@ -12,11 +12,6 @@ let createTodoElement = (text) => {
     return li;
 }
 
-// let toggleLoader = () => {
-//      let loader = document.querySelector("#loader");
-//      if (loader)
-// }
-
 let promise = fetch(url, {
     method: "GET"
 });
@@ -28,12 +23,16 @@ promise
 
         return response.json();
     })
-    .then(todos => {
-        todos.forEach((todo) => {
-            // console.log(todo);
-            const innerHTML = createTodoElement(todo.name);
-            dataContainer.append(innerHTML);
-        })
+    .then(async (todos) => {
+        setTimeout(() => {
+            todos.forEach((todo) => {
+                // console.log(todo);
+                const innerHTML = createTodoElement(todo.name);
+                dataContainer.append(innerHTML);
+            });
+
+            document.querySelector("#loader").style.display = "none";
+        }, 1000);
     })
     .catch(error => {
         console.log("error", error)
