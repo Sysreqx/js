@@ -427,9 +427,26 @@ template {
     justify-content: center;
     width: 30%;
     position: relative;
-    top: 80vh;
+    top: 150vh;
 }
 
 .text_inner_right .header3 {
     font-weight: 700;
+}
+
+/*!* width *!*/
+/*::-webkit-scrollbar {*/
+/*    display: none;*/
+/*}*/
+
+.block {
+    background: #1b381b;
+    height: 100%;
+}
+
+.block-1 {
+    background: #3f3f3f;
+}
+.block-3 {
+    background: #3f3f3f;
 }
