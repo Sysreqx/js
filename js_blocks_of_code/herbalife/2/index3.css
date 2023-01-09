@@ -1,0 +1,69 @@
+@media screen and (max-width: 1519px) {
+
+    .section1Block1GreenBG {
+        background-position: -280% -50% !important;
+    }
+
+    .section1Block1HumansBG {
+        background-position: 100% 0 !important;
+    }
+
+    .section1Block1Header .elementor-heading-title {
+        font-size: 90px;
+    }
+
+
+    /*/////////*/
+    .section2LeftText .elementor-heading-title {
+        font-size: 90px;
+    }
+
+    .greenCircle {
+        max-height: 130px;
+        max-width: 130px;
+        height: 130px;
+    }
+
+    .greenCircle .showMe1 .elementor-heading-title {
+        font-size: 100px;
+    }
+
+    .section2RightText .showMe1Header > .elementor-heading-title,
+    .section2RightText .showMe2Header > .elementor-heading-title,
+    .section2RightText .showMe3Header > .elementor-heading-title {
+        font-size: 35px;
+    }
+
+    .section2RightText .showMe1Text .elementor-heading-title,
+    .section2RightText .showMe2Text .elementor-heading-title,
+    .section2RightText .showMe3Text .elementor-heading-title {
+        font-size: 21px;
+    }
+
+
+    /*/////////*/
+    .section3Block1PurpleBG {
+        background-position: 1050px 42% !important;
+    }
+
+    .section3Block1WomanBG {
+        background-position: -8% 0 !important;
+    }
+
+    .section3Block1CircleQuart {
+        background-image: initial !important;
+    }
+
+    .section3Block1TextWrapper {
+        width: 70%;
+    }
+
+    .section3Block1TextWrapper .section3Block1Text .elementor-heading-title {
+        font-size: 21px;
+    }
+
+    .section3Block1ImgWrapper .elementor-heading-title {
+        width: 30%;
+    }
+
+}
