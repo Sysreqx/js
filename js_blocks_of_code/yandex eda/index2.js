@@ -1,3 +1,8 @@
+let sliderHeight = document.querySelector(".sections-wrapper").clientHeight;
+sliderHeight *= 0.8;
+let rightSlider = document.querySelector(".right-slider");
+rightSlider.style.height = `${sliderHeight}px`;
+
 let quizes = document.querySelectorAll(".quiz");
 
 // for (let i = 0; i < quizes.length; i++) {
@@ -435,3 +440,4 @@ const clearSelectionsFromQuestions = () => {
 // document.addEventListener("click", (event) => {
 //     console.log(event.target);
 // });
+
