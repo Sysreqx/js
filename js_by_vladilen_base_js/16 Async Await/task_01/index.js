@@ -1,5 +1,7 @@
 const POSTS_URL = 'https://jsonplaceholder.typicode.com/posts';
 let isLoading = false;
+
+
 const createNewPost = () => {
     isLoading = true;
     fetch(POSTS_URL, {
@@ -18,13 +20,20 @@ const createNewPost = () => {
 };
 createNewPost();
 
+
 createNewPostAsync = async () => {
     isLoading = true;
 
-    const response = await fetch(POSTS_URL, {method: "POST"});
-    const posts = await response.json();
-    console.log("await posts");
-    console.log(posts);
+    try {
+        const response = await fetch(POSTS_URL, {
+            method: 'POST'
+        });
+        const posts = await response.json();
+        console.log(posts);
+    } catch (error) {
+        console.log(error);
+    } finally {
+        isLoading = false;
+    }
 }
-
 createNewPostAsync();
