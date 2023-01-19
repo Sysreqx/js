@@ -334,3 +334,4 @@ const clearSelectionsFromQuestions = () => {
         q.classList.remove("selected");
     });
 }
+
