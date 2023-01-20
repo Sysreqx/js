@@ -11,12 +11,67 @@ document.addEventListener("scroll", (event) => {
             header.style.position = 'absolute';
             header.style.background = "none";
             header.style.boxShadow = "none";
+            // header.style.transition = "all, 50s, ease-in";
         }
     } else if (axisY >= breakPoint1) {
         if (header.style.position !== 'fixed")') {
             header.style.position = 'fixed';
             header.style.background = "#ffffff";
             header.style.boxShadow = "0 4px 2px -2px rgba(0, 0, 0, 0.1)";
+            // header.style.transition = "all, 50s, ease-in";
         }
     }
 });
+
+const showMoreInformationDivs = () => {
+    let moreDivs = document.querySelectorAll(".more");
+    let moreTexts = document.querySelectorAll(".more-text");
+    let moreCloseBtns = document.querySelectorAll(".more-close");
+
+    for (let i = 0; i < moreDivs.length; i++) {
+        moreDivs[i].addEventListener("click", (event) => {
+            let {target} = event;
+
+            // console.log(target);
+            if (target.parentElement.parentElement.classList.contains("more-1")) {
+                moreTexts[0].style.display = "flex";
+            }
+            if (target.parentElement.parentElement.classList.contains("more-2")) {
+                moreTexts[1].style.display = "flex";
+            }
+            if (target.parentElement.parentElement.classList.contains("more-3")) {
+                moreTexts[2].style.display = "flex";
+            }
+            if (target.parentElement.parentElement.classList.contains("more-4")) {
+                moreTexts[3].style.display = "flex";
+            }
+            if (target.parentElement.parentElement.classList.contains("more-5")) {
+                moreTexts[4].style.display = "flex";
+            }
+            if (target.parentElement.parentElement.classList.contains("more-6")) {
+                moreTexts[5].style.display = "flex";
+            }
+            if (target.parentElement.parentElement.classList.contains("more-7")) {
+                moreTexts[6].style.display = "flex";
+            }
+            if (target.parentElement.parentElement.classList.contains("more-8")) {
+                moreTexts[7].style.display = "flex";
+            }
+            if (target.parentElement.parentElement.classList.contains("more-9")) {
+                moreTexts[8].style.display = "flex";
+            }
+            if (target.parentElement.parentElement.classList.contains("more-10")) {
+                moreTexts[9].style.display = "flex";
+            }
+        })
+    }
+
+    moreCloseBtns.forEach(el => {
+        el.addEventListener("click", () => {
+            moreTexts.forEach(el => {
+                el.style.display = "none";
+            })
+        })
+    })
+};
+showMoreInformationDivs();
