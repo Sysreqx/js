@@ -24,8 +24,50 @@ document.addEventListener("scroll", (event) => {
     }
 
     // header nav indicate
+    let breakPoint2 = document.querySelector(".screen-1").clientHeight - 60;
+    let breakPoint3 = document.querySelector(".screen-2").clientHeight +
+        document.querySelector(".screen-3").clientHeight +
+        document.querySelector(".screen-4").clientHeight +
+        breakPoint2;
+    let breakPoint4 = document.querySelector(".screen-5").clientHeight +
+        document.querySelector(".screen-6").clientHeight +
+        breakPoint3;
+    let breakPoint5 = document.querySelector(".screen-7").clientHeight +
+        document.querySelector(".screen-8").clientHeight +
+        document.querySelector(".screen-9").clientHeight +
+        breakPoint4;
+
+    let navs = document.querySelectorAll(".nav-item");
+
+    if (axisY < breakPoint2) {
+        navs.forEach(n => {
+            n.classList.remove("nav-border");
+        });
+    }
+    else if (axisY >= breakPoint2 && axisY < breakPoint3) {
+        navs.forEach(n => {
+            n.classList.remove("nav-border");
+        });
+        navs[0].classList.add("nav-border");
+    } else if (axisY >= breakPoint3 && axisY < breakPoint4) {
+        navs.forEach(n => {
+            n.classList.remove("nav-border");
+        });
+        navs[1].classList.add("nav-border");
+    } else if (axisY >= breakPoint4 && axisY < breakPoint5) {
+        navs.forEach(n => {
+            n.classList.remove("nav-border");
+        });
+        navs[2].classList.add("nav-border");
+    } else if (axisY >= breakPoint5) {
+        navs.forEach(n => {
+            n.classList.remove("nav-border");
+        });
+        navs[3].classList.add("nav-border");
+    }
 
 });
+
 
 const showMoreInformationDivs = () => {
     let moreDivs = document.querySelectorAll(".more");
