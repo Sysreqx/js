@@ -2,6 +2,7 @@ document.addEventListener("scroll", (event) => {
     const axisY = window.scrollY;
     // console.log(axisY);
 
+    // header fixed / absolute
     let breakPoint1 = 60;
 
     let header = document.querySelector(".page-header");
@@ -21,6 +22,9 @@ document.addEventListener("scroll", (event) => {
             // header.style.transition = "all, 50s, ease-in";
         }
     }
+
+    // header nav indicate
+
 });
 
 const showMoreInformationDivs = () => {
@@ -75,3 +79,20 @@ const showMoreInformationDivs = () => {
     })
 };
 showMoreInformationDivs();
+
+const addBorderToNavItem = () => {
+    let navs = document.querySelectorAll(".nav-item");
+    navs.forEach(n => {
+        n.addEventListener("click", (event) => {
+            let {target} = event;
+            if (target.tagName.toLowerCase() === "a") {
+                navs.forEach(el => {
+                    el.classList.remove("nav-border");
+                });
+                // console.log(target.parentElement.parentElement.parentElement);
+                target.parentElement.parentElement.parentElement.classList.add("nav-border");
+            }
+        })
+    })
+}
+addBorderToNavItem();
