@@ -9,19 +9,16 @@ document.addEventListener("scroll", (event) => {
 
     if (axisY < breakPoint1) {
         if (header.style.position !== 'absolute")') {
-            header.style.position = 'absolute';
-            header.style.background = "none";
-            header.style.boxShadow = "none";
+            header.classList.remove("header-on-scroll");
             // header.style.transition = "all, 50s, ease-in";
         }
     } else if (axisY >= breakPoint1) {
         if (header.style.position !== 'fixed")') {
-            header.style.position = 'fixed';
-            header.style.background = "#ffffff";
-            header.style.boxShadow = "0 4px 2px -2px rgba(0, 0, 0, 0.1)";
+            header.classList.add("header-on-scroll");
             // header.style.transition = "all, 50s, ease-in";
         }
     }
+    // header-on-scroll
 
     // header nav indicate
     let breakPoint2 = document.querySelector(".screen-1").clientHeight - 60;
@@ -48,21 +45,25 @@ document.addEventListener("scroll", (event) => {
         navs.forEach(n => {
             n.classList.remove("nav-border");
         });
+        setTimeout('', 100);
         navs[0].classList.add("nav-border");
     } else if (axisY >= breakPoint3 && axisY < breakPoint4) {
         navs.forEach(n => {
             n.classList.remove("nav-border");
         });
+        setTimeout('', 100);
         navs[1].classList.add("nav-border");
     } else if (axisY >= breakPoint4 && axisY < breakPoint5) {
         navs.forEach(n => {
             n.classList.remove("nav-border");
         });
+        setTimeout('', 100);
         navs[2].classList.add("nav-border");
     } else if (axisY >= breakPoint5) {
         navs.forEach(n => {
             n.classList.remove("nav-border");
         });
+        setTimeout('', 100);
         navs[3].classList.add("nav-border");
     }
 
@@ -109,6 +110,30 @@ const showMoreInformationDivs = () => {
             if (target.parentElement.parentElement.classList.contains("more-10")) {
                 moreTexts[9].style.display = "flex";
             }
+            if (target.parentElement.parentElement.classList.contains("more-11")) {
+                moreTexts[10].style.display = "flex";
+            }
+            if (target.parentElement.parentElement.classList.contains("more-12")) {
+                moreTexts[11].style.display = "flex";
+            }
+            if (target.parentElement.parentElement.classList.contains("more-13")) {
+                moreTexts[12].style.display = "flex";
+            }
+            if (target.parentElement.parentElement.classList.contains("more-14")) {
+                moreTexts[13].style.display = "flex";
+            }
+            if (target.parentElement.parentElement.classList.contains("more-15")) {
+                moreTexts[14].style.display = "flex";
+            }
+            if (target.parentElement.parentElement.classList.contains("more-16")) {
+                moreTexts[15].style.display = "flex";
+            }
+            if (target.parentElement.parentElement.classList.contains("more-17")) {
+                moreTexts[16].style.display = "flex";
+            }
+            if (target.parentElement.parentElement.classList.contains("more-18")) {
+                moreTexts[17].style.display = "flex";
+            }
         })
     }
 
@@ -122,19 +147,20 @@ const showMoreInformationDivs = () => {
 };
 showMoreInformationDivs();
 
-const addBorderToNavItem = () => {
-    let navs = document.querySelectorAll(".nav-item");
-    navs.forEach(n => {
-        n.addEventListener("click", (event) => {
-            let {target} = event;
-            if (target.tagName.toLowerCase() === "a") {
-                navs.forEach(el => {
-                    el.classList.remove("nav-border");
-                });
-                // console.log(target.parentElement.parentElement.parentElement);
-                target.parentElement.parentElement.parentElement.classList.add("nav-border");
-            }
-        })
-    })
-}
-addBorderToNavItem();
+// const addBorderToNavItem = () => {
+//     let navs = document.querySelectorAll(".nav-item");
+//     navs.forEach(n => {
+//         n.addEventListener("click", (event) => {
+//             let {target} = event;
+//             if (target.tagName.toLowerCase() === "a") {
+//                 navs.forEach(el => {
+//                     el.classList.remove("nav-border");
+//                 });
+//                 setTimeout('', 5000);
+//                 // console.log(target.parentElement.parentElement.parentElement);
+//                 target.parentElement.parentElement.parentElement.classList.add("nav-border");
+//             }
+//         })
+//     })
+// }
+// addBorderToNavItem();
