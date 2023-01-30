@@ -147,6 +147,24 @@ const showMoreInformationDivs = () => {
 };
 showMoreInformationDivs();
 
+const closeMoreInformation = () => {
+    let moreTexts = document.querySelectorAll(".more-text");
+
+    moreTexts.forEach(el => {
+        el.addEventListener("click", (event) => {
+            let {target} = event;
+            if (!target.classList.contains("more_dont_close") &&
+                !target.parentElement.classList.contains("more_dont_close") &&
+                !target.parentElement.parentElement.classList.contains("more_dont_close") &&
+                !target.parentElement.parentElement.parentElement.classList.contains("more_dont_close") &&
+                !target.parentElement.parentElement.parentElement.parentElement.classList.contains("more_dont_close")) {
+                el.style.display = "none";
+            }
+        })
+    })
+}
+closeMoreInformation();
+
 // const addBorderToNavItem = () => {
 //     let navs = document.querySelectorAll(".nav-item");
 //     navs.forEach(n => {
