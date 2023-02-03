@@ -58,9 +58,61 @@ huyak(wws);
 
 
 
+selector {
+
+}
+
+
+@media only screen and (max-width: 1540px) {
+    selector {
+
+    }
+}
+
+@media only screen and (max-width: 1439px) {
+    selector {
+
+    }
+}
+
+@media only screen and (max-width: 1370px) {
+    selector {
+
+    }
+}
+
+
+@media only screen and (max-width: 1024px) {
+    selector {
+
+    }
+}
+
+
 
 @media only screen and (max-width: 767px) {
     selector {
 
     }
 }
+
+
+let hattaTop = document.querySelector(".hatta-top");
+let hattaBottom = document.querySelector(".hatta-bottom");
+
+let windowHeight = window.innerHeight;
+
+let hattaBottomHeight = hattaBottom.clientHeight;
+hattaTop.style.minHeight = windowHeight - hattaBottomHeight + "px";
+
+// hattaTop = document.querySelector(".hatta-top");
+// hattaTopHeight = hattaTop.clientHeight;
+// console.log(hattaTopHeight);
+
+
+
+
+
+
+
+
