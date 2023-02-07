@@ -1,32 +1,61 @@
-for (let i = 1; i <= 26; i++) {
-    console.log(57.6 * i);
-}
+let loader = document.querySelector(".loader");
 
-57.6
-115.2
-172.8
-230.4
-288
-345.6
-403.2
-460.8
-518.4
-576
-633.6
-691.2
-748.8
-806.4
-864
-921.6
-979.2
-1036.8
-1094.4
-1152
-1209.6
-1267.2
-1324.8
-1382.4
-1440
-1497.6
+window.addEventListener("load", function() {
+    loader.style.display = "none";
+    let firstScreen = document.querySelector(".first-screen");
+    firstScreen.classList.remove("display-me");
+});
 
-<svg xmlns="http://www.w3.org/2000/svg" width="400" height="400" viewBox="120.722 131.607 769.499 641.187"><defs><clipPath id="a"><path fill="currentColor" d="M804 630.5Q651 761 494 772T196.5 641.5Q56 500 176 323t332-190.5q212-13.5 330.5 177t-34.5 321Z"/></clipPath></defs><g clip-path="url(#a)"><path fill="#444cf7" d="M804 630.5Q651 761 494 772T196.5 641.5Q56 500 176 323t332-190.5q212-13.5 330.5 177t-34.5 321Z"/></g></svg>
+
+let lottie1 = document.querySelector(".lottie-click-me");
+lottie1.addEventListener("click", () => {
+
+    // setTimeout(function() { scrollToDiv(); }, 3000);
+
+    let header = document.querySelector("#blockNav");
+    let footer = document.querySelector("footer");
+
+    let firstScreen = document.querySelector(".first-screen");
+    let secondScreen = document.querySelector(".second-screen");
+    let thirdScreen = document.querySelector(".third-screen");
+
+    setTimeout(function() {
+        firstScreen.style.display = "none";
+        secondScreen.classList.remove("display-me");
+        thirdScreen.classList.remove("display-me");
+
+        header.style.display = "block";
+        footer.style.display = "block";
+
+        window.scrollTo({
+            top: 0,
+            left: 0,
+            behavior: 'smooth'
+        });
+    }, 3500);
+});
+
+// let firstScreen = document.querySelector(".first-screen");
+// let firstScreenHeight =  firstScreen.clientHeight;
+//
+//
+// document.addEventListener("scroll", (event) => {
+//     const axisY = window.scrollY;
+//     if (axisY > 0 && axisY < 10800) {
+//         window.scrollTo({
+//             top: 10800,
+//             left: 0,
+//             behavior: 'auto'
+//         });
+//     }
+// });
+
+// function scrollToDiv() {
+//     let firstScreen = document.querySelector(".first-screen");
+//     let firstScreenHeight =  firstScreen.clientHeight;
+//     window.scrollTo({
+//         top: firstScreenHeight,
+//         left: 0,
+//         behavior: 'smooth'
+//     });
+// }
