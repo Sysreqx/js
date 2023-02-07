@@ -3,8 +3,10 @@ let loader = document.querySelector(".loader");
 window.addEventListener("load", function() {
     loader.style.display = "none";
     let firstScreen = document.querySelector(".first-screen");
-    firstScreen.classList.remove("display-me");
+    // firstScreen.classList.remove("display-me");
+    firstScreen.style.display = "flex";
 });
+
 
 
 let lottie1 = document.querySelector(".lottie-click-me");
@@ -17,23 +19,26 @@ lottie1.addEventListener("click", () => {
 
     let firstScreen = document.querySelector(".first-screen");
     let secondScreen = document.querySelector(".second-screen");
+
     let thirdScreen = document.querySelector(".third-screen");
 
     setTimeout(function() {
         firstScreen.style.display = "none";
-        secondScreen.classList.remove("display-me");
-        thirdScreen.classList.remove("display-me");
+        // secondScreen.classList.remove("display-me");
+        // thirdScreen.classList.remove("display-me");
+
+        secondScreen.style.display = "flex";
+        thirdScreen.style.opacity = "1";
+        thirdScreen.style.height = "100%";
 
         header.style.display = "block";
         footer.style.display = "block";
 
-        window.scrollTo({
-            top: 0,
-            left: 0,
-            behavior: 'smooth'
-        });
     }, 3500);
 });
+
+
+
 
 // let firstScreen = document.querySelector(".first-screen");
 // let firstScreenHeight =  firstScreen.clientHeight;
