@@ -38,8 +38,6 @@ lottie1.addEventListener("click", () => {
 });
 
 
-
-
 // let firstScreen = document.querySelector(".first-screen");
 // let firstScreenHeight =  firstScreen.clientHeight;
 //
