@@ -1,26 +1,26 @@
 import React, {useState} from "react";
 
-const Counter = () => {
-    const [count, setCount] = useState(0);
+const Counter = (props) => {
+    const [value, setValue] = useState(props.value);
 
     const formatCount = () => {
-        return count === 0 ? "empty" : count;
+        return value === 0 ? "empty" : value;
     };
 
     const getBadgeClasses = () => {
         let classes = "badge m-2 ";
-        classes += count === 0 ? "bg-warning" : "bg-primary";
+        classes += value === 0 ? "bg-warning" : "bg-primary";
         return classes;
     };
 
     const handleIncrement = () => {
-        setCount(count + 1);
-        console.log(count);
+        setValue(value + 1);
+        console.log(value + 1);
     };
 
     const handleDecrement = () => {
-        setCount(count - 1);
-        console.log(count);
+        setValue(value - 1);
+        console.log(value - 1);
     };
 
     return (
