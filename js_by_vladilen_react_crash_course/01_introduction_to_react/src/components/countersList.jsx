@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import Counter from "./counter";
 
 const CountersList = () => {
@@ -10,8 +10,9 @@ const CountersList = () => {
     { id: 4, value: 1, name: "Набор бичугана" },
   ]);
 
-  const handleDelete = () => {
-    console.log("handleDelete");
+  const handleDelete = (id) => {
+    const newCounters = counters.filter((c) => c.id !== id);
+    setCounters(newCounters);
   };
 
   return (
@@ -19,6 +20,7 @@ const CountersList = () => {
       {counters.map((c) => (
         <Counter
           key={c.id}
+          id={c.id}
           value={c.value}
           name={c.name}
           onDelete={handleDelete}
