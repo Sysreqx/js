@@ -62,14 +62,13 @@ selector {
 
 }
 
-
-@media only screen and (max-width: 1540px) {
+@media only screen and (max-width: 1439px) {
     selector {
 
     }
 }
 
-@media only screen and (max-width: 1439px) {
+@media only screen and (max-width: 1536px) {
     selector {
 
     }
