@@ -1,0 +1,769 @@
+
+html {
+    font-size: 2vh;
+    line-height: 1.3em;
+    /*overflow: hidden;*/
+}
+
+body {
+    background: #519960;
+
+
+}
+
+html, body {
+    overflow: hidden;
+}
+
+
+/*< 16/11*/
+/*16/11 >= & < 16/10*/
+/*16/10 >= & < 16/9*/
+/*16/9 >= & < 15/7*/
+/*> 15/7*/
+
+
+@media (max-aspect-ratio: 16/11) {
+    #tictac-box {
+        left: 24em;
+    }
+
+    #melody {
+        display: none;
+    }
+
+    #melodies {
+        display: none;
+    }
+
+    #play-backstage {
+        width: 27em;
+    }
+}
+
+
+@media (min-aspect-ratio: 16/11) and (max-aspect-ratio: 16/10) {
+    #tictac-box {
+        left: 24em;
+    }
+
+    #melody {
+        display: none;
+    }
+
+    #melodies {
+        display: none;
+    }
+
+    #play-backstage {
+        width: 27em;
+    }
+}
+
+
+@media (min-aspect-ratio: 16/10) and (max-aspect-ratio: 16/9) {
+    #rythm-el {
+        left: 48em;
+    }
+
+    #melody {
+        display: none;
+    }
+
+    #melodies {
+        display: none;
+    }
+}
+
+
+@media (min-aspect-ratio: 16/9) and (max-aspect-ratio: 15/7) {
+    #video-class {
+        width: 40em;
+    }
+
+    #video-header1 {
+        width: 40em;
+        left: 35em;
+        top: 35em;
+    }
+
+    #video-header2 {
+        width: 40em;
+        left: 35em;
+        top: 37.5em;
+    }
+}
+
+
+@media (min-aspect-ratio: 15/7) {
+    #video-class {
+        left: 50%;
+        transform: translateX(-40%);
+    }
+
+    #video-header1, #video-header2 {
+        left: 50%;
+        transform: translateX(-40%);
+    }
+
+    #buttons-block {
+        left: 50%;
+        transform: translateX(-40%);
+    }
+
+    #melodies {
+
+        left: 80em;
+    }
+
+    #melody {
+        top: -6em;
+        left: 63em;
+
+    }
+
+    #rythm-el {
+
+        left: 50em;
+    }
+}
+
+/*< 3/4*/
+/*3/4 >= & < 1/1*/
+/*1/1 >= & < 5/4*/
+/*5/4 >= & < 16/10*/
+/*> 16/10*/
+
+@media (max-aspect-ratio: 3/4) {
+    #join-el {
+        width: 25em;
+        bottom: 2.5em;
+        top: unset;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    #interview-el {
+        top: -4.5em;
+        left: 0em;
+    }
+
+    #play-backstage {
+        width: 24em;
+    }
+
+    #rythm-el {
+        width: 7em;
+        top: 2em;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    #white-oval {
+        display: none;
+    }
+
+    #woman {
+        width: 15em;
+        height: 50em;
+        top: 9em;
+        left: -3em;
+    }
+
+    #mint-oval {
+        width: 20em;
+        top: 16em;
+        left: -5em;
+    }
+
+    #video-class {
+        display: none;
+    }
+
+    #video-header1 {
+        width: 20em;
+        right: 1em;
+        top: 16em;
+        left: unset;
+    }
+
+    #video-header2 {
+        width: 20em;
+        right: 1em;
+        top: 19.5em;
+        left: unset;
+    }
+
+    #buttons-block {
+        width: 22em;
+        left: 2em;
+        bottom: 11em;
+    }
+
+    #tictac-box {
+        width: 7em;
+        bottom: 10em;
+        right: 3em;
+        left: unset;
+    }
+}
+
+@media (min-aspect-ratio: 3/4) and (max-aspect-ratio: 1/1) {
+    #join-el {
+        width: 25em;
+        bottom: 2.5em;
+        top: unset;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    #interview-el {
+        top: -4.5em;
+        left: 0em;
+    }
+
+    #play-backstage {
+        width: 24em;
+    }
+
+    #rythm-el {
+        width: 7em;
+        top: 2em;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    #white-oval {
+        display: none;
+    }
+
+    #woman {
+        width: 15em;
+        height: 50em;
+        top: 9em;
+        left: -3em;
+    }
+
+    #mint-oval {
+        width: 20em;
+        top: 16em;
+        left: -5em;
+    }
+
+    #video-class {
+        display: none;
+    }
+
+    #video-header1 {
+        width: 20em;
+        right: 1em;
+        top: 16em;
+        left: unset;
+    }
+
+    #video-header2 {
+        width: 20em;
+        right: 1em;
+        top: 19.5em;
+        left: unset;
+    }
+
+    #buttons-block {
+        width: 22em;
+        left: 2em;
+        bottom: 11em;
+    }
+
+    #tictac-box {
+        width: 7em;
+        bottom: 10em;
+        right: 3em;
+        left: unset;
+    }
+}
+
+@media (min-aspect-ratio: 1/1) and (max-aspect-ratio: 5/4) {
+    #interview-el {
+        top: 0.5em;
+        left: -1em;
+    }
+
+    #white-oval {
+        display: none;
+    }
+
+    #woman {
+        top: 13em;
+        left: -4em;
+    }
+
+    #mint-oval {
+        width: 25em;
+        top: 24em;
+        left: -5em;
+    }
+
+    #join-el {
+        left: 5em;
+        width: 20em;
+    }
+
+    #rythm-el {
+        width: 6em;
+        top: 1em;
+        left: 29em;
+    }
+
+    #video-class {
+        width: 30em;
+        left: unset;
+        right: 1.5em;
+        top: 17em;
+    }
+
+    #video-header1 {
+        width: 30em;
+        right: 1.5em;
+        left: unset;
+        top: 32em;
+    }
+
+    #video-header2 {
+        width: 30em;
+        right: 1.5em;
+        left: unset;
+        top: 35em;
+    }
+
+    #buttons-block {
+        width: 30em;
+        left: unset;
+        bottom: 2em;
+        right: 1em;
+    }
+
+    #tictac-box {
+        width: 8em;
+        bottom: 1em;
+        left: 8em;
+        z-index: 110;
+    }
+}
+
+@media (min-aspect-ratio: 5/4) and (max-aspect-ratio: 16/10) and (hover: none) and (pointer: coarse) {
+    #interview-el {
+        top: 0.5em;
+        left: -1em;
+    }
+
+    #white-oval {
+        display: none;
+    }
+
+    #woman {
+        top: 13em;
+        left: -4em;
+    }
+
+    #mint-oval {
+        width: 25em;
+        top: 24em;
+        left: -5em;
+    }
+
+    #join-el {
+        left: 5em;
+        width: 20em;
+    }
+
+    #rythm-el {
+        width: 6em;
+        top: 1em;
+        left: 29em;
+    }
+
+    #video-class {
+        width: 30em;
+        left: unset;
+        right: 1.5em;
+        top: 17em;
+    }
+
+    #video-header1 {
+        width: 30em;
+        right: 1.5em;
+        left: unset;
+        top: 32em;
+    }
+
+    #video-header2 {
+        width: 30em;
+        right: 1.5em;
+        left: unset;
+        top: 35em;
+    }
+
+    #buttons-block {
+        width: 30em;
+        left: unset;
+        bottom: 2em;
+        right: 1em;
+    }
+
+    #tictac-box {
+        width: 8em;
+        bottom: 1em;
+        left: 8em;
+        z-index: 110;
+    }
+}
+
+
+@media (aspect-ratio: 1/1) {
+    #interview-el {
+        top: 0.5em;
+        left: -1em;
+    }
+
+    #white-oval {
+        display: none;
+    }
+
+    #woman {
+        top: 13em;
+        left: -4em;
+    }
+
+    #mint-oval {
+        width: 20em;
+        top: 20em;
+        left: -5em;
+    }
+
+    #join-el {
+        left: 13em;
+        width: 20em;
+        bottom: unset;
+        top: 2em;
+        right: unset;
+    }
+
+    #rythm-el {
+        width: 6em;
+        top: 1em;
+        left: 29em;
+    }
+
+    #video-class {
+        width: 30em;
+        left: unset;
+        right: 1.5em;
+        top: 17em;
+        display: unset;
+    }
+
+    #video-header1 {
+        width: 30em;
+        right: 1.5em;
+        left: unset;
+        top: 32em;
+    }
+
+    #video-header2 {
+        width: 30em;
+        right: 1.5em;
+        left: unset;
+        top: 35em;
+    }
+
+    #buttons-block {
+        width: 30em;
+        left: unset;
+        bottom: 2em;
+        right: 1em;
+    }
+
+    #tictac-box {
+        width: 8em;
+        bottom: 1em;
+        left: 8em;
+        z-index: 110;
+    }
+}
+
+/*< 9/20*/
+/*9/20 >= & < 195/422*/
+/*195/422 >= & < 9/16*/
+/*> 9/16*/
+
+@media (max-width: 767px) {
+
+    html, body {
+        /*overflow: hidden;*/
+        overflow-y: scroll;
+    }
+
+    ::-webkit-scrollbar {
+        display: none;
+    }
+
+    body {
+        /*display: none;*/
+        /*height: calc(100% - (200px));*/
+        /*height: -moz-calc(100% - (200px));*/
+        /*height: -webkit-calc(100% - (200px));*/
+    }
+
+    #first-screen-bg {
+        /*display: unset;*/
+    }
+
+
+    #interview-el {
+        width: 19em;
+        top: -11.5em;
+        left: -9em;
+    }
+
+    #interview-el img {
+        content: url("https://elle.com.kz/wp-content/uploads/2016/01/tictac-4.png");
+    }
+
+    #rythm-el {
+        width: 5.5em;
+        top: 3em;
+    }
+
+    #play-backstage {
+        width: 20em;
+        top: -10em;
+        right: -10em;
+    }
+
+    #video-header1 {
+        width: 9em;
+        top: 18em;
+    }
+
+    #video-header1 .elementor-heading-title {
+        font-size: 0.7em;
+        line-height: 1.2em;
+        right: 0.5em;
+    }
+
+    #video-header2 {
+        width: 12em;
+        top: 23.3em;
+        right: 0.5em;
+    }
+
+    #video-header2 .elementor-heading-title {
+        font-size: 0.7em;
+        line-height: 1.2em;
+    }
+
+    #woman {
+        width: 13.6em;
+        height: 50em;
+        top: 9em;
+        left: -3em;
+    }
+
+    #mint-oval {
+        width: 20em;
+        top: 12em;
+        left: -7em;
+    }
+
+    #join-el {
+        width: 15em;
+        bottom: 1em;
+    }
+
+    #buttons-block {
+        display: none;
+    }
+
+    #buttons-mobile {
+        left: 0.5em;
+        bottom: 4em;
+        display: flex;
+        width: 5.5em;
+    }
+
+    #button1-mobile {
+        width: 1.1em;
+    }
+
+    #button2-mobile, #button3-mobile, #button4-mobile {
+        width: 4em;
+    }
+
+    #button2-mobile, #button3-mobile {
+        margin-bottom: 0.5em;
+    }
+
+    #tictac-box {
+        width: 5.5em;
+        top: 9.7em;
+        right: 2.1em;
+    }
+
+    #video-class {
+        display: unset;
+        width: 15em;
+        left: unset;
+        right: 0.5em;
+        top: unset;
+        bottom: 6em;
+    }
+
+    #video-class .elementor-wrapper {
+        aspect-ratio: 17 / 9;
+    }
+}
+
+@media (min-aspect-ratio: 9/20) and (max-aspect-ratio: 195/422)  and (max-width: 767px) {
+    #interview-el {
+        width: 19em;
+        top: -11.5em;
+        left: -9em;
+    }
+
+    #interview-el img {
+        content: url("https://elle.com.kz/wp-content/uploads/2016/01/tictac-4.png");
+    }
+
+    #rythm-el {
+        width: 5.5em;
+        top: 3em;
+    }
+
+    #play-backstage {
+        width: 20em;
+        top: -10em;
+        right: -10em;
+    }
+
+    #video-header1 {
+        width: 9em;
+        top: 18em;
+    }
+
+    #video-header1 .elementor-heading-title {
+        font-size: 0.7em;
+        line-height: 1.2em;
+        right: 0.5em;
+    }
+
+    #video-header2 {
+        width: 12em;
+        top: 23.3em;
+        right: 0.5em;
+    }
+
+    #video-header2 .elementor-heading-title {
+        font-size: 0.7em;
+        line-height: 1.2em;
+    }
+
+    #woman {
+        width: 13.6em;
+        height: 50em;
+        top: 9em;
+        left: -3em;
+    }
+
+    #mint-oval {
+        width: 20em;
+        top: 12em;
+        left: -7em;
+    }
+
+    #join-el {
+        width: 15em;
+        bottom: 1.5em;
+    }
+
+    #buttons-block {
+        display: none;
+    }
+
+    #buttons-mobile {
+        left: 0.5em;
+        bottom: 4em;
+        display: flex;
+        width: 5.5em;
+    }
+
+    #button1-mobile {
+        width: 1.1em;
+    }
+
+    #button2-mobile, #button3-mobile, #button4-mobile {
+        width: 4em;
+    }
+
+    #button2-mobile, #button3-mobile {
+        margin-bottom: 0.5em;
+    }
+
+    #tictac-box {
+        width: 5.5em;
+        top: 9.7em;
+        right: 2.1em;
+    }
+
+    #video-class {
+        display: unset;
+        width: 15em;
+        left: unset;
+        right: 0.5em;
+        top: unset;
+        bottom: 6em;
+    }
+
+    #video-class .elementor-wrapper {
+        aspect-ratio: 17 / 9;
+    }
+}
+
+@media (min-aspect-ratio: 195/422) and (max-aspect-ratio: 9/16)  and (max-width: 767px) {
+
+}
+
+@media (min-aspect-ratio: 9/16)  and (hover: none) and (max-width: 767px) {
+
+}
+
+/*@media (max-aspect-ratio: 16/11) {*/
+/*    #video-class*/
+/*    #video-header*/
+/*    #buttons-block*/
+/*    #button1, #button2, #button3, #button4*/
+/*    #interview-el*/
+/*    #join-el*/
+/*    #white-oval*/
+/*    #mint-oval*/
+/*    #woman*/
+/*    #melodies*/
+/*    #play-backstage*/
+/*    #tictac-box*/
+/*    #rythm-el*/
+/*    #melody*/
+/*}*/
+/*@media (min-aspect-ratio: 16/11) and (max-aspect-ratio: 16/10) {*/
+
+/*}*/
+/*@media (min-aspect-ratio: 16/10) and (max-aspect-ratio: 16/9) {*/
+
+/*}*/
+/*@media (min-aspect-ratio: 16/9) and (max-aspect-ratio: 15/7) {*/
+
+/*}*/
+/*@media (min-aspect-ratio: 15/7) {*/
+
+/*}*/
+
+
+    
