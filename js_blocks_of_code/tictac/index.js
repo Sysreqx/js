@@ -4,6 +4,23 @@ playBackstage.addEventListener("click", (event) => {
     showSecondScreen();
 })
 
+function changeVisibilityOnMobile(x) {
+    let woman = document.querySelector("#woman");
+    let mintOval = document.querySelector("#mint-oval");
+
+    if (x.matches) { // If media query matches
+        woman.style.display = "none";
+        mintOval.style.display = "none";
+    } else {
+        woman.style.display = "unset";
+        mintOval.style.display = "unset";
+    }
+}
+
+let x = window.matchMedia("(max-width: 767px)")
+changeVisibilityOnMobile(x) // Call listener function at run time
+// x.addListener(changeVisibilityOnMobile) // Attach listener function on state changes
+
 function showSecondScreen() {
     let video = document.querySelector("#video-class");
     let videoText1 = document.querySelector("#video-header1");
@@ -18,6 +35,8 @@ function showSecondScreen() {
 
     slider.style.transform = "translateX(0)";
     sliderHeader.style.transform = "translateX(0)";
+
+    changeVisibilityOnMobile();
 }
 
 slideElements1();
