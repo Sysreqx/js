@@ -17,7 +17,7 @@ function showSecondScreen() {
     videoText2.style.transform = "translateX(-100vw)";
 
     slider.style.transform = "translateX(0)";
-    slider.style.transform = "translateX(0)";
+    sliderHeader.style.transform = "translateX(0)";
 }
 
 slideElements1();
@@ -83,7 +83,7 @@ function slideElements1() {
                 slider1Items[0].classList.remove("slide-inactive"); //remove
                 // console.log(`next 0`);
 
-                setTimeout(removeInactiveDown1, 1100);
+                setTimeout(removeInactiveDown1, 2000);
 
                 break;
             }
@@ -94,7 +94,7 @@ function slideElements1() {
             // console.log(`next ${i + 1}`);
 
 
-            setTimeout(removeInactiveDown1, 1100);
+            setTimeout(removeInactiveDown1, 2000);
 
             break;
         }
@@ -123,7 +123,7 @@ function slideElements2() {
                 slider2Items[0].classList.remove("slide-inactive"); //remove
                 // console.log(`next 0`);
 
-                setTimeout(removeInactiveDown2, 1100);
+                setTimeout(removeInactiveDown2, 2000);
 
                 break;
             }
@@ -134,7 +134,7 @@ function slideElements2() {
             // console.log(`next ${i + 1}`);
 
 
-            setTimeout(removeInactiveDown2, 1100);
+            setTimeout(removeInactiveDown2, 2000);
 
             break;
         }
@@ -163,7 +163,7 @@ function slideElements3() {
                 slider3Items[0].classList.remove("slide-inactive"); //remove
                 // console.log(`next 0`);
 
-                setTimeout(removeInactiveDown3, 1100);
+                setTimeout(removeInactiveDown3, 2000);
 
                 break;
             }
@@ -174,7 +174,7 @@ function slideElements3() {
             // console.log(`next ${i + 1}`);
 
 
-            setTimeout(removeInactiveDown3, 1100);
+            setTimeout(removeInactiveDown3, 2000);
 
             break;
         }

@@ -1,3 +1,10 @@
+html, body {
+    /*overflow: hidden;*/
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
 
 html {
     font-size: 2vh;
@@ -7,14 +14,29 @@ html {
 
 body {
     background: #519960;
-
-
 }
 
-html, body {
-    overflow: hidden;
+.slide-active {
+    top: 0;
+    opacity: 1;
+    transition: all 2s ease;
 }
 
+.slide-inactive {
+    top: -100vh;
+    opacity: 0;
+    transition: all 2s ease;
+}
+
+.slide-inactive-down {
+    top: 150vh;
+    opacity: 0;
+    transition: all 2s ease;
+}
+
+/*#first-screen-bg {*/
+/*    position: fixed;*/
+/*}*/
 
 /*< 16/11*/
 /*16/11 >= & < 16/10*/
@@ -72,6 +94,26 @@ html, body {
 
     #melodies {
         display: none;
+    }
+}
+
+@media (aspect-ratio: 16/9) {
+    #melody {
+        display: unset;
+        width: 15em;
+        top: -4em;
+        left: 50em;
+    }
+
+    #melodies {
+        display: unset;
+        width: 7em;
+        top: 4em;
+        left: 64em;
+    }
+
+    #rythm-el {
+        left: 44em;
     }
 }
 
@@ -206,11 +248,23 @@ html, body {
         right: 3em;
         left: unset;
     }
+
+    /*slider*/
+    .snd-bg--slider {
+        width: 36em;
+        height: 23em;
+        left: 13em;
+        top: 14.5em;
+    }
+
+    .slider1 {
+        display: none;
+    }
 }
 
 @media (min-aspect-ratio: 3/4) and (max-aspect-ratio: 1/1) {
     #join-el {
-        width: 25em;
+        width: 20em;
         bottom: 2.5em;
         top: unset;
         left: 50%;
@@ -280,6 +334,15 @@ html, body {
         right: 3em;
         left: unset;
     }
+
+    /*slider */
+    .snd-bg--video-header {
+        font-size: 0.8em;
+        position: absolute;
+        width: 40em;
+        left: 3em;
+        top: 49.9em;
+    }
 }
 
 @media (min-aspect-ratio: 1/1) and (max-aspect-ratio: 5/4) {
@@ -347,6 +410,22 @@ html, body {
         bottom: 1em;
         left: 8em;
         z-index: 110;
+    }
+
+    /*.slider1*/
+    .slider1 {
+        display: unset;
+    }
+
+    .snd-bg--slider {
+        left: unset;
+        right: 5em;
+    }
+
+    .snd-bg--video-header {
+
+        left: unset;
+        right: 1em;
     }
 }
 
@@ -489,6 +568,11 @@ html, body {
         left: 8em;
         z-index: 110;
     }
+
+    /*slider*/
+    .snd-bg--slider {
+        right: 0.5em;
+    }
 }
 
 /*< 9/20*/
@@ -500,23 +584,12 @@ html, body {
 
     html, body {
         /*overflow: hidden;*/
-        overflow-y: scroll;
+        /*overflow-y: scroll;*/
     }
 
-    ::-webkit-scrollbar {
-        display: none;
-    }
-
-    body {
-        /*display: none;*/
-        /*height: calc(100% - (200px));*/
-        /*height: -moz-calc(100% - (200px));*/
-        /*height: -webkit-calc(100% - (200px));*/
-    }
-
-    #first-screen-bg {
-        /*display: unset;*/
-    }
+    /*::-webkit-scrollbar {*/
+    /*    display: none;*/
+    /*}*/
 
 
     #interview-el {
@@ -621,7 +694,17 @@ html, body {
     #video-class .elementor-wrapper {
         aspect-ratio: 17 / 9;
     }
+
+    /*slider*/
+    .snd-bg--video-header {
+        display: none;
+    }
+
+    #snd-bg--slider {
+        display: none;
+    }
 }
+
 
 @media (min-aspect-ratio: 9/20) and (max-aspect-ratio: 195/422)  and (max-width: 767px) {
     #interview-el {
@@ -736,34 +819,7 @@ html, body {
 
 }
 
-/*@media (max-aspect-ratio: 16/11) {*/
-/*    #video-class*/
-/*    #video-header*/
-/*    #buttons-block*/
-/*    #button1, #button2, #button3, #button4*/
-/*    #interview-el*/
-/*    #join-el*/
-/*    #white-oval*/
-/*    #mint-oval*/
-/*    #woman*/
-/*    #melodies*/
-/*    #play-backstage*/
-/*    #tictac-box*/
-/*    #rythm-el*/
-/*    #melody*/
-/*}*/
-/*@media (min-aspect-ratio: 16/11) and (max-aspect-ratio: 16/10) {*/
 
-/*}*/
-/*@media (min-aspect-ratio: 16/10) and (max-aspect-ratio: 16/9) {*/
-
-/*}*/
-/*@media (min-aspect-ratio: 16/9) and (max-aspect-ratio: 15/7) {*/
-
-/*}*/
-/*@media (min-aspect-ratio: 15/7) {*/
-
-/*}*/
 
 
     
