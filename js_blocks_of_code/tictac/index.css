@@ -16,6 +16,16 @@ body {
     background: #519960;
 }
 
+.display-none {
+    display: none;
+    transition: all 1s ease;
+}
+
+.right-zero {
+    right: 0;
+    transition: all 1s ease;
+}
+
 .slide-active {
     top: 0;
     opacity: 1;
@@ -34,9 +44,66 @@ body {
     transition: all 2s ease;
 }
 
-/*#first-screen-bg {*/
-/*    position: fixed;*/
-/*}*/
+/*slider interviews*/
+.interviews {
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+}
+
+.interview-slide {
+    scroll-snap-align: start;
+}
+
+/* Hide the scrollbar */
+.interviews::-webkit-scrollbar {
+    display: none; /* Safari, Google Chrome, Opera,  */
+}
+.interviews {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+}
+
+.interview-inactive {
+    /*transform: translateX(200%);*/
+    top: 200vh;
+    transition: all 0.3s ease;
+
+}
+
+.interview-active {
+    /*transform: translateX(0);*/
+    top: 0;
+    transition: all 0.3s ease;
+}
+
+
+/*slider mobile*/
+.slider-mobile--inner {
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+}
+
+.mobile-slide {
+    scroll-snap-align: start;
+}
+
+.right-arrow,
+.left-arrow {
+    cursor: pointer;
+}
+
+/* Hide the scrollbar */
+.slider-mobile--inner::-webkit-scrollbar {
+    display: none; /* Safari, Google Chrome, Opera,  */
+}
+.slider-mobile--inner {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+}
+
+
 
 /*< 16/11*/
 /*16/11 >= & < 16/10*/
@@ -60,6 +127,14 @@ body {
 
     #play-backstage {
         width: 27em;
+    }
+
+    #interviews {
+        position: absolute;
+        width: 31em;
+        left: 33em;
+        top: 17em;
+        font-size: 0.9em;
     }
 }
 
@@ -178,11 +253,17 @@ body {
 
 @media (max-aspect-ratio: 3/4) {
     #join-el {
-        width: 25em;
+        /*width: 25em;*/
+        /*bottom: 2.5em;*/
+        /*top: unset;*/
+        /*left: 50%;*/
+        /*transform: translateX(-50%);*/
+
+        width: 20em;
         bottom: 2.5em;
         top: unset;
-        left: 50%;
-        transform: translateX(-50%);
+        left: 40%;
+        transform: translateX(-60%);
     }
 
     #interview-el {
@@ -243,22 +324,46 @@ body {
     }
 
     #tictac-box {
-        width: 7em;
-        bottom: 10em;
+        /*width: 7em;*/
+        /*bottom: 10em;*/
+        width: 6em;
+        bottom: 1em;
         right: 3em;
         left: unset;
     }
 
+    .snd-bg--video-header {
+        width: 25em;
+        left: unset;
+        right: 2em;
+        top: 38.5em;
+    }
+
     /*slider*/
     .snd-bg--slider {
-        width: 36em;
-        height: 23em;
-        left: 13em;
-        top: 14.5em;
+        width: 28em;
+        height: 18em;
+        left: unset;
+        right: -6em;
+        top: 13.5em;
+    }
+
+    .sliders {
+        justify-content: start;
     }
 
     .slider1 {
         display: none;
+    }
+
+    /*interviews*/
+    .interviews {
+        position: absolute;
+        font-size: 0.8em;
+        width: 24em;
+        right: 2em;
+        left: unset;
+        top: 17em;
     }
 }
 
@@ -329,19 +434,35 @@ body {
     }
 
     #tictac-box {
-        width: 7em;
-        bottom: 10em;
+        /*width: 7em;*/
+        /*bottom: 10em;*/
+        width: 6em;
+        bottom: 1em;
         right: 3em;
         left: unset;
+        /*right: 3em;*/
+        /*left: unset;*/
     }
 
     /*slider */
     .snd-bg--video-header {
+        display: none;
         font-size: 0.8em;
         position: absolute;
         width: 40em;
         left: 3em;
         top: 49.9em;
+    }
+
+    #snd-bg--slider {
+        width: 36em;
+        height: 23em;
+        left: 14em;
+        top: 14.5em;
+    }
+
+    .sliders {
+        justify-content: start;
     }
 }
 
@@ -651,6 +772,8 @@ body {
     #join-el {
         width: 15em;
         bottom: 1em;
+        left: 50%;
+        transform: translateX(-50%);
     }
 
     #buttons-block {
@@ -702,6 +825,15 @@ body {
 
     #snd-bg--slider {
         display: none;
+    }
+
+    #interviews {
+        font-size: 0.75em;
+        width: 24em;
+        right: unset;
+        /* transform: translateX(-50%); */
+        left: 50%;
+        top: 16em;
     }
 }
 
