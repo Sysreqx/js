@@ -227,7 +227,7 @@ body {
 
 @media (min-aspect-ratio: 16/9) and (max-aspect-ratio: 15/7) {
     #video-class {
-        width: 40em;
+        width: 48em;
     }
 
     #video-header1 {
@@ -236,10 +236,14 @@ body {
         top: 35em;
     }
 
+    .join-yenliktictac {
+        top: 35em;
+    }
+
     #video-header2 {
         width: 40em;
-        left: 35em;
-        top: 37.5em;
+        left: 39.2em;
+        top: 39.5em;
     }
 }
 

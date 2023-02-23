@@ -482,149 +482,149 @@ rightArrow.addEventListener("click", function (ev) {
 
 
 // колесико мышки
-document.onwheel = wheelMeFunc;
-
-function wheelMeFunc(event) {
-    event.preventDefault();
-
-    // Up wheel
-    if (event.deltaY < 0) {
-        slideInterview();
-    }
-
-    // Down wheel
-    else {
-        slideInterview();
-    }
-}
+// document.onwheel = wheelMeFunc;
+//
+// function wheelMeFunc(event) {
+//     event.preventDefault();
+//
+//     // Up wheel
+//     if (event.deltaY < 0) {
+//         slideInterview();
+//     }
+//
+//     // Down wheel
+//     else {
+//         slideInterview();
+//     }
+// }
 
 // A simple swipe detection on vanilla js
-let touchstartX = 0;
-let touchstartY = 0;
-let touchendX = 0;
-let touchendY = 0;
-
-const gestureZone = document.querySelector('.first-screen-bg-mobile');
-
-gestureZone.addEventListener('touchstart', function(event) {
-    touchstartX = event.changedTouches[0].screenX;
-    touchstartY = event.changedTouches[0].screenY;
-}, false);
-
-gestureZone.addEventListener('touchend', function(event) {
-    touchendX = event.changedTouches[0].screenX;
-    touchendY = event.changedTouches[0].screenY;
-    handleGesture();
-}, false);
-
-function handleGesture() {
-    if (touchendX < touchstartX) {
-        // console.log('Swiped left');
-    }
-
-    if (touchendX > touchstartX) {
-        // console.log('Swiped right');
-    }
-
-    if (touchendY < touchstartY) {
-        console.log('Swiped up');
-
-        slideInterviewMobile();
-    }
-
-    if (touchendY > touchstartY) {
-        console.log('Swiped down');
-
-        slideInterviewMobile();
-    }
-
-    if (touchendY === touchstartY) {
-        // console.log('Tap');
-    }
-}
-// A simple swipe detection on vanilla js
-
-function slideInterview() {
-    let sliderInterview = document.querySelector("#interviews");
-    // console.log(sliderInterview);
-    let interview = sliderInterview.querySelectorAll(".interview");
-    // console.log(interview.length);
-
-    for (let i = 0; i < interview.length; i++) {
-
-        if (interview[i].classList.contains("interview-active")) {
-            // console.log(`current ${i}`);
-            interview[i].classList.remove("interview-active"); // remove
-            interview[i].classList.add("interview-inactive"); // add
-            interview[i].style.zIndex = "91";
-            // interview[i].classList.add("slide-inactive-down"); // add
-
-            if (i >= interview.length - 1) {
-                interview[0].style.zIndex = "97";
-                interview[0].classList.add("interview-active"); // add
-                interview[0].classList.remove("interview-inactive"); //remove
-                // console.log(`next 0`);
-
-                // setTimeout(removeInactiveDown1, 2000);
-
-                break;
-            }
-
-            interview[i + 1].style.zIndex = "97";
-            interview[i + 1].classList.add("interview-active"); // add
-            interview[i + 1].classList.remove("interview-inactive"); //remove
-            // console.log(`next ${i + 1}`);
-
-
-            // setTimeout(removeInactiveDown1, 2000);
-
-            break;
-        }
-    }
-    // let timeout = random(4000, 7000);
-    // setTimeout(slideElements1, timeout);
-}
-
-function slideInterviewMobile() {
-    let sliderInterview = document.querySelector(".interviews-mobile");
-    // console.log(sliderInterview);
-    let interview = sliderInterview.querySelectorAll(".interview-mobile");
-    // console.log(interview.length);
-
-    for (let i = 0; i < interview.length; i++) {
-
-        if (interview[i].classList.contains("interview-active-mobile")) {
-            console.log(`current ${i}`);
-            interview[i].classList.remove("interview-active-mobile"); // remove
-            interview[i].classList.add("interview-inactive-mobile"); // add
-            interview[i].style.zIndex = "91";
-            // interview[i].classList.add("slide-inactive-down"); // add
-
-            if (i >= interview.length - 1) {
-                interview[0].style.zIndex = "97";
-                interview[0].classList.add("interview-active-mobile"); // add
-                interview[0].classList.remove("interview-inactive-mobile"); //remove
-                console.log(`next 0`);
-
-                // setTimeout(removeInactiveDown1, 2000);
-
-                break;
-            }
-
-            interview[i + 1].style.zIndex = "97";
-            interview[i + 1].classList.add("interview-active-mobile"); // add
-            interview[i + 1].classList.remove("interview-inactive-mobile"); //remove
-            console.log(`next ${i + 1}`);
-
-
-            // setTimeout(removeInactiveDown1, 2000);
-
-            break;
-        }
-    }
-    // let timeout = random(4000, 7000);
-    // setTimeout(slideElements1, timeout);
-}
+// let touchstartX = 0;
+// let touchstartY = 0;
+// let touchendX = 0;
+// let touchendY = 0;
+//
+// const gestureZone = document.querySelector('.first-screen-bg-mobile');
+//
+// gestureZone.addEventListener('touchstart', function(event) {
+//     touchstartX = event.changedTouches[0].screenX;
+//     touchstartY = event.changedTouches[0].screenY;
+// }, false);
+//
+// gestureZone.addEventListener('touchend', function(event) {
+//     touchendX = event.changedTouches[0].screenX;
+//     touchendY = event.changedTouches[0].screenY;
+//     handleGesture();
+// }, false);
+//
+// function handleGesture() {
+//     if (touchendX < touchstartX) {
+//         // console.log('Swiped left');
+//     }
+//
+//     if (touchendX > touchstartX) {
+//         // console.log('Swiped right');
+//     }
+//
+//     if (touchendY < touchstartY) {
+//         console.log('Swiped up');
+//
+//         slideInterviewMobile();
+//     }
+//
+//     if (touchendY > touchstartY) {
+//         console.log('Swiped down');
+//
+//         slideInterviewMobile();
+//     }
+//
+//     if (touchendY === touchstartY) {
+//         // console.log('Tap');
+//     }
+// }
+// // A simple swipe detection on vanilla js
+//
+// function slideInterview() {
+//     let sliderInterview = document.querySelector("#interviews");
+//     // console.log(sliderInterview);
+//     let interview = sliderInterview.querySelectorAll(".interview");
+//     // console.log(interview.length);
+//
+//     for (let i = 0; i < interview.length; i++) {
+//
+//         if (interview[i].classList.contains("interview-active")) {
+//             // console.log(`current ${i}`);
+//             interview[i].classList.remove("interview-active"); // remove
+//             interview[i].classList.add("interview-inactive"); // add
+//             interview[i].style.zIndex = "91";
+//             // interview[i].classList.add("slide-inactive-down"); // add
+//
+//             if (i >= interview.length - 1) {
+//                 interview[0].style.zIndex = "97";
+//                 interview[0].classList.add("interview-active"); // add
+//                 interview[0].classList.remove("interview-inactive"); //remove
+//                 // console.log(`next 0`);
+//
+//                 // setTimeout(removeInactiveDown1, 2000);
+//
+//                 break;
+//             }
+//
+//             interview[i + 1].style.zIndex = "97";
+//             interview[i + 1].classList.add("interview-active"); // add
+//             interview[i + 1].classList.remove("interview-inactive"); //remove
+//             // console.log(`next ${i + 1}`);
+//
+//
+//             // setTimeout(removeInactiveDown1, 2000);
+//
+//             break;
+//         }
+//     }
+//     // let timeout = random(4000, 7000);
+//     // setTimeout(slideElements1, timeout);
+// }
+//
+// function slideInterviewMobile() {
+//     let sliderInterview = document.querySelector(".interviews-mobile");
+//     // console.log(sliderInterview);
+//     let interview = sliderInterview.querySelectorAll(".interview-mobile");
+//     // console.log(interview.length);
+//
+//     for (let i = 0; i < interview.length; i++) {
+//
+//         if (interview[i].classList.contains("interview-active-mobile")) {
+//             console.log(`current ${i}`);
+//             interview[i].classList.remove("interview-active-mobile"); // remove
+//             interview[i].classList.add("interview-inactive-mobile"); // add
+//             interview[i].style.zIndex = "91";
+//             // interview[i].classList.add("slide-inactive-down"); // add
+//
+//             if (i >= interview.length - 1) {
+//                 interview[0].style.zIndex = "97";
+//                 interview[0].classList.add("interview-active-mobile"); // add
+//                 interview[0].classList.remove("interview-inactive-mobile"); //remove
+//                 console.log(`next 0`);
+//
+//                 // setTimeout(removeInactiveDown1, 2000);
+//
+//                 break;
+//             }
+//
+//             interview[i + 1].style.zIndex = "97";
+//             interview[i + 1].classList.add("interview-active-mobile"); // add
+//             interview[i + 1].classList.remove("interview-inactive-mobile"); //remove
+//             console.log(`next ${i + 1}`);
+//
+//
+//             // setTimeout(removeInactiveDown1, 2000);
+//
+//             break;
+//         }
+//     }
+//     // let timeout = random(4000, 7000);
+//     // setTimeout(slideElements1, timeout);
+// }
 
 
 
