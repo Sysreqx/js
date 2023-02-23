@@ -1,11 +1,21 @@
 let playBackstage = document.querySelector("#play-backstage");
 let interviewBtn = document.querySelector("#interview-el");
+let playBackstageMobile = document.querySelector(".backstage-mobile");
+let interviewBtnMobile = document.querySelector(".read-interview-mobile");
 playBackstage.addEventListener("click", (event) => {
     showSecondScreen();
 });
 
+playBackstageMobile.addEventListener("click", (event) => {
+    showBackstageMobile();
+});
+
 interviewBtn.addEventListener("click", (event) => {
     showInterviewScreen();
+});
+
+interviewBtnMobile.addEventListener("click", (event) => {
+    showInterviewMobile();
 });
 
 function changeVisibilityOnMobile(x) {
@@ -20,7 +30,7 @@ function changeVisibilityOnMobile(x) {
         woman.style.display = "none";
         mintOval.style.display = "none";
 
-        tickTackBox.style.width = "4.5em";
+        tickTackBox.style.width = "11.5em";
         tickTackBox.style.top = "unset";
         tickTackBox.style.bottom = "6em";
         tickTackBox.style.right = "5.1em";
@@ -37,26 +47,66 @@ let x = window.matchMedia("(max-width: 767px)")
 // changeVisibilityOnMobile(x) // Call listener function at run time
 // x.addListener(changeVisibilityOnMobile) // Attach listener function on state changes
 
+function showBackstageMobile() {
+    let sliderMobile = document.querySelector(".slider-mobile");
+    sliderMobile.classList.remove("display-none");
+
+    let interviewsMobile = document.querySelector(".interviews-mobile");
+    interviewsMobile.classList.add("display-none");
+
+    let joinMobile = document.querySelector(".join-mobile");
+    joinMobile.style.width = "17em";
+    joinMobile.style.bottom = "3.5em";
+    joinMobile.style.right = "unset";
+    joinMobile.style.top = "unset";
+
+    let youtubeLogo = document.querySelector("#youtube-notmain");
+    youtubeLogo.classList.remove("display-none");
+    let youtubeLogoImg = document.querySelector("img");
+    youtubeLogoImg.style.width = "85%";
+
+    let logoMobile = document.querySelector(".logo-mobile");
+    logoMobile.style.left = "50%";
+    logoMobile.style.bottom = "9.5em";
+
+    let videoHeader = document.querySelector(".video-header2-mobile");
+    videoHeader.classList.add("display-none");
+
+    let videoMobile = document.querySelector("#video-class-mobile");
+    videoMobile.classList.add("display-none");
+
+    let mintOval = document.querySelector(".mint-oval-mobile");
+    mintOval.classList.add("display-none");
+
+    let womanMobile = document.querySelector(".woman-mobile");
+    womanMobile.classList.add("display-none");
+}
+
 function showSecondScreen() {
     let video = document.querySelector("#video-class");
-    let videoText1 = document.querySelector("#video-header1");
+    // let videoText1 = document.querySelector("#video-header1");
     let videoText2 = document.querySelector("#video-header2");
 
     let slider = document.querySelector("#snd-bg--slider");
     let sliderHeader = document.querySelector("#snd-bg--video-header");
+    let joinYenlik = document.querySelector(".join-yenliktictac");
 
     let interviews = document.querySelector("#interviews");
 
     video.style.transform = "translateX(-100vw)";
-    videoText1.style.transform = "translateX(-100vw)";
-    videoText2.style.transform = "translateX(-100vw)";
+    // videoText1.style.transform = "translateX(-100vw)";
+    // videoText2.style.transform = "translateX(-100vw)";
+    videoText2.style.display = "none";
+    joinYenlik.style.left = "37em";
+    joinYenlik.style.top = "34em";
 
     interviews.style.transform = "translateX(-300vw)";
 
     slider.style.transform = "translateX(0)";
-    sliderHeader.style.transform = "translateX(0)";
+    // sliderHeader.style.transform = "translateX(0)";
+    sliderHeader.style.display = "none";
 
-    changeVisibilityOnMobile(x);
+    // changeVisibilityOnMobile(x);
 }
 
 function changeVisibilityOnMobileInterview(x) {
@@ -72,7 +122,7 @@ function changeVisibilityOnMobileInterview(x) {
         woman.style.display = "none";
         mintOval.style.display = "none";
 
-        tickTackBox.style.width = "4.5em";
+        tickTackBox.style.width = "11.5em";
         tickTackBox.style.top = "unset";
         tickTackBox.style.bottom = "6em";
         tickTackBox.style.right = "5.1em";
@@ -85,10 +135,10 @@ function changeVisibilityOnMobileInterview(x) {
         mintOval.style.display = "unset";
     }
 }
-
+// showInterviewScreen();
 function showInterviewScreen() {
     let video = document.querySelector("#video-class");
-    let videoText1 = document.querySelector("#video-header1");
+    // let videoText1 = document.querySelector("#video-header1");
     let videoText2 = document.querySelector("#video-header2");
 
     let slider = document.querySelector("#snd-bg--slider");
@@ -96,17 +146,57 @@ function showInterviewScreen() {
 
     let interviews = document.querySelector("#interviews");
 
+    let joinYenlik = document.querySelector(".join-yenliktictac");
+
     video.style.transform = "translateX(-100vw)";
-    videoText1.style.transform = "translateX(-100vw)";
-    videoText2.style.transform = "translateX(-100vw)";
+    // videoText1.style.transform = "translateX(-100vw)";
+    // videoText2.style.transform = "translateX(-100vw)";
+    videoText2.style.display = "none";
 
     slider.style.transform = "translateX(-200vw)";
-    sliderHeader.style.transform = "translateX(-200vw)";
+    // sliderHeader.style.transform = "translateX(-200vw)";
+    sliderHeader.style.display = "none";
+
+    joinYenlik.style.top = "37em";
 
     // interviews.style.transform = "translateX(-50%)"; // mobile
     interviews.style.transform = "translateX(0)"; // desk
 
-    changeVisibilityOnMobileInterview(x);
+    // changeVisibilityOnMobileInterview(x);
+}
+
+function showInterviewMobile() {
+    let sliderMobile = document.querySelector(".slider-mobile");
+    sliderMobile.classList.add("display-none");
+
+    let interviewsMobile = document.querySelector(".interviews-mobile");
+    interviewsMobile.classList.remove("display-none");
+
+    let joinMobile = document.querySelector(".join-mobile");
+    joinMobile.style.width = "17em";
+    joinMobile.style.bottom = "3.5em";
+    joinMobile.style.right = "unset";
+    joinMobile.style.top = "unset";
+
+    let logoMobile = document.querySelector(".logo-mobile");
+    logoMobile.style.left = "50%";
+
+    let youtubeLogo = document.querySelector(".youtube-notmain");
+    youtubeLogo.classList.remove("display-none");
+    let youtubeLogoImg = document.querySelector("img");
+    youtubeLogoImg.style.width = "75%";
+
+    let videoHeader = document.querySelector(".video-header2-mobile");
+    videoHeader.classList.add("display-none");
+
+    let videoMobile = document.querySelector("#video-class-mobile");
+    videoMobile.classList.add("display-none");
+
+    let mintOval = document.querySelector(".mint-oval-mobile");
+    mintOval.classList.add("display-none");
+
+    let womanMobile = document.querySelector(".woman-mobile");
+    womanMobile.classList.add("display-none");
 }
 
 slideElements1();
@@ -275,23 +365,37 @@ function slideElements3() {
 // Rythm sound button
 showMediaButtons();
 function showMediaButtons() {
-    let button1 = document.querySelector("#button1-mobile");
-    let buttons = document.querySelector("#buttons-mobile-inner");
-    button1.addEventListener("click", e => {
-        buttons.classList.toggle("display-none");
-        button1.classList.toggle("right-zero");
-        console.log("button1");
+    // let button1 = document.querySelector("#button1-mobile");
+    // let buttons = document.querySelector("#buttons-mobile-inner");
+    // button1.addEventListener("click", e => {
+    //     buttons.classList.toggle("display-none");
+    //     button1.classList.toggle("right-zero");
+    //     console.log("button1");
+    // });
+
+    let buttonMobileClick = document.querySelector(".buttons--mobile");
+    let Overlay = document.querySelector(".buttons-mobile-overlay");
+    let buttonCloseOverlay = document.querySelector(".button-close-overlay");
+
+    buttonMobileClick.addEventListener("click", e => {
+        Overlay.classList.remove("display-none");
+    });
+
+    buttonCloseOverlay.addEventListener("click", e => {
+        Overlay.classList.add("display-none");
     });
 
     let button1Desktop = document.querySelector("#button1");
     let button2 = document.querySelector("#button2");
     let button3 = document.querySelector("#button3");
     let button4 = document.querySelector("#button4");
+    let button5 = document.querySelector("#button5");
 
     button1Desktop.addEventListener("click", e => {
         button2.classList.toggle("display-none");
         button3.classList.toggle("display-none");
         button4.classList.toggle("display-none");
+        button5.classList.toggle("display-none");
     });
 }
 
@@ -400,7 +504,7 @@ let touchstartY = 0;
 let touchendX = 0;
 let touchendY = 0;
 
-const gestureZone = document.getElementById('first-screen-bg');
+const gestureZone = document.querySelector('.first-screen-bg-mobile');
 
 gestureZone.addEventListener('touchstart', function(event) {
     touchstartX = event.changedTouches[0].screenX;
@@ -423,15 +527,15 @@ function handleGesture() {
     }
 
     if (touchendY < touchstartY) {
-        // console.log('Swiped up');
+        console.log('Swiped up');
 
-        slideInterview();
+        slideInterviewMobile();
     }
 
     if (touchendY > touchstartY) {
-        // console.log('Swiped down');
+        console.log('Swiped down');
 
-        slideInterview();
+        slideInterviewMobile();
     }
 
     if (touchendY === touchstartY) {
@@ -449,7 +553,7 @@ function slideInterview() {
     for (let i = 0; i < interview.length; i++) {
 
         if (interview[i].classList.contains("interview-active")) {
-            console.log(`current ${i}`);
+            // console.log(`current ${i}`);
             interview[i].classList.remove("interview-active"); // remove
             interview[i].classList.add("interview-inactive"); // add
             interview[i].style.zIndex = "91";
@@ -459,7 +563,7 @@ function slideInterview() {
                 interview[0].style.zIndex = "97";
                 interview[0].classList.add("interview-active"); // add
                 interview[0].classList.remove("interview-inactive"); //remove
-                console.log(`next 0`);
+                // console.log(`next 0`);
 
                 // setTimeout(removeInactiveDown1, 2000);
 
@@ -469,6 +573,47 @@ function slideInterview() {
             interview[i + 1].style.zIndex = "97";
             interview[i + 1].classList.add("interview-active"); // add
             interview[i + 1].classList.remove("interview-inactive"); //remove
+            // console.log(`next ${i + 1}`);
+
+
+            // setTimeout(removeInactiveDown1, 2000);
+
+            break;
+        }
+    }
+    // let timeout = random(4000, 7000);
+    // setTimeout(slideElements1, timeout);
+}
+
+function slideInterviewMobile() {
+    let sliderInterview = document.querySelector(".interviews-mobile");
+    // console.log(sliderInterview);
+    let interview = sliderInterview.querySelectorAll(".interview-mobile");
+    // console.log(interview.length);
+
+    for (let i = 0; i < interview.length; i++) {
+
+        if (interview[i].classList.contains("interview-active-mobile")) {
+            console.log(`current ${i}`);
+            interview[i].classList.remove("interview-active-mobile"); // remove
+            interview[i].classList.add("interview-inactive-mobile"); // add
+            interview[i].style.zIndex = "91";
+            // interview[i].classList.add("slide-inactive-down"); // add
+
+            if (i >= interview.length - 1) {
+                interview[0].style.zIndex = "97";
+                interview[0].classList.add("interview-active-mobile"); // add
+                interview[0].classList.remove("interview-inactive-mobile"); //remove
+                console.log(`next 0`);
+
+                // setTimeout(removeInactiveDown1, 2000);
+
+                break;
+            }
+
+            interview[i + 1].style.zIndex = "97";
+            interview[i + 1].classList.add("interview-active-mobile"); // add
+            interview[i + 1].classList.remove("interview-inactive-mobile"); //remove
             console.log(`next ${i + 1}`);
 
 

@@ -2,6 +2,11 @@ html, body {
     /*overflow: hidden;*/
 }
 
+marquee
+{
+    height: 100vh;
+}
+
 ::-webkit-scrollbar {
     display: none;
 }
@@ -13,7 +18,7 @@ html {
 }
 
 body {
-    background: #519960;
+    background: #00995E;
 }
 
 .display-none {
@@ -55,11 +60,23 @@ body {
     scroll-snap-align: start;
 }
 
+.interview-slide-mobile {
+    scroll-snap-align: start;
+}
+
 /* Hide the scrollbar */
 .interviews::-webkit-scrollbar {
     display: none; /* Safari, Google Chrome, Opera,  */
 }
 .interviews {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+}
+
+.interviews-mobile::-webkit-scrollbar {
+    display: none; /* Safari, Google Chrome, Opera,  */
+}
+.interviews-mobile {
     -ms-overflow-style: none; /* IE and Edge */
     scrollbar-width: none; /* Firefox */
 }
@@ -78,10 +95,25 @@ body {
 }
 
 
+/*interview-mobile interview1-mobile interview-slide-mobile */
+.interview-inactive-mobile {
+    /*transform: translateX(200%);*/
+    top: 200vh;
+    transition: all 0.3s ease;
+
+}
+
+.interview-active-mobile {
+    /*transform: translateX(0);*/
+    top: 0;
+    transition: all 0.3s ease;
+}
+
+
 /*slider mobile*/
 .slider-mobile--inner {
     overflow-x: auto;
-    overflow-y: hidden;
+    /*overflow-y: hidden;*/
     scroll-snap-type: x mandatory;
 }
 
@@ -735,7 +767,8 @@ body {
     }
 
     #video-header1 {
-        width: 9em;
+        /*width: 9em;*/
+        width: 11em;
         top: 18em;
     }
 
@@ -746,7 +779,8 @@ body {
     }
 
     #video-header2 {
-        width: 12em;
+        /*width: 12em;*/
+        width: 15em;
         top: 23.3em;
         right: 0.5em;
     }
@@ -800,9 +834,9 @@ body {
     }
 
     #tictac-box {
-        width: 5.5em;
-        top: 9.7em;
-        right: 2.1em;
+        width: 9.5em;
+        top: 11.1em;
+        right: 0.5em;
     }
 
     #video-class {
@@ -834,6 +868,31 @@ body {
         /* transform: translateX(-50%); */
         left: 50%;
         top: 16em;
+    }
+}
+
+@media screen and (max-width: 394px) {
+    #video-header1 {
+        width: 9em;
+        top: 18em;
+    }
+
+    #video-header2 {
+        width: 14em;
+        top: 23.3em;
+        right: 0.5em;
+    }
+}
+
+@media screen and (max-width: 359px) {
+    #video-header1 {
+        width: 8em;
+        right: 0.5em;
+    }
+
+    #video-header2 {
+        width: 12em;
+        right: 0.5em;
     }
 }
 
@@ -924,7 +983,7 @@ body {
     }
 
     #tictac-box {
-        width: 5.5em;
+        width: 11.5em;
         top: 9.7em;
         right: 2.1em;
     }
@@ -942,6 +1001,20 @@ body {
         aspect-ratio: 17 / 9;
     }
 }
+
+@media screen and (max-width: 359px) {
+    #video-header1 {
+        width: 8em;
+        right: 0.5em;
+    }
+
+    #video-header2 {
+        width: 12em;
+        right: 0.5em;
+    }
+}
+
+
 
 @media (min-aspect-ratio: 195/422) and (max-aspect-ratio: 9/16)  and (max-width: 767px) {
 
