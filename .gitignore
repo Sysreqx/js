@@ -43,3 +43,7 @@
 /node_modules/react-is/README.md
 /node_modules/object-assign/readme.md
 /node_modules/loose-envify/replace.js
+/node_modules/
+/.eslintrc.js
+/js_by_vladilen_react_crash_course/03_course_project/src/components/groupList.jsx
+/js_by_vladilen_react_crash_course/03_course_project/src/api/fake.api/professions.api.js
