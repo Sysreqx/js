@@ -148,7 +148,7 @@ const countAnswers = () => {
         fillAll.classList.add("display-none");
 
         if (page1 >= page2 && page1 >= page3) {
-            window.location.href = "https://elle.com.kz/herbalife-result1/";
+            window.location.href = "https://elle.com.kz/herbalife-result1/ ";
         } else if (page2 >= page3 && page2 >= page1) {
             window.location.href = "https://elle.com.kz/herbalife-result2/";
         } else {
