@@ -7,7 +7,7 @@ let quizes = document.querySelectorAll(".q");
 for (let i = 0; i < quizes.length; i++) {
     quizes[i].addEventListener("click", (event) => {
         let {target} = event;
-        console.log(target);
+        // console.log(target);
 
 
         // e-con-inner (near a circle)
@@ -101,19 +101,38 @@ for (let i = 0; i < quizes.length; i++) {
         }
 
 
-        // know result button text
-        if (target.parentElement.parentElement.id === "to-know-result") {
-            // console.log("button text clicked");
-            countAnswers();
-        }
-
-        // know result button
-        if (target.id === "to-know-result") {
-            // console.log("button clicked");
-            countAnswers();
-        }
+        // // know result button text
+        // if (target.parentElement.parentElement.id === "to-know-result") {
+        //     console.log("button text clicked");
+        //     countAnswers();
+        // }
+        //
+        // // know result button
+        // if (target.id === "to-know-result") {
+        //     console.log("button clicked");
+        //     countAnswers();
+        // }
     });
 }
+
+let toKnowResultBtn = document.querySelector("#to-know-result");
+toKnowResultBtn.addEventListener("click", (event) => {
+    let {target} = event;
+    // console.log(target);
+
+    // know result button text
+    if (target.parentElement.parentElement.id === "to-know-result") {
+        // console.log("button text clicked");
+        countAnswers();
+    }
+
+    // know result button
+    if (target.id === "to-know-result") {
+        // console.log("button clicked");
+        countAnswers();
+    }
+});
+
 
 const clearSelectionsFromQuestions = () => {
     for (let i = 0; i < quizes.length; i++) {
