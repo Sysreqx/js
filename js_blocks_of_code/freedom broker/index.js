@@ -13,4 +13,4 @@ for (let i = 0; i < buttons.length; i++) {
     });
 }
 
-//slider
+//sliderr
