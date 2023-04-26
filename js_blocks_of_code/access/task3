@@ -1,0 +1,3 @@
+SELECT Groups.teacher_fk, Groups.subject_fk, Groups.group_name, Groups.num_of_students  FROM Groups
+where
+Groups.teacher_fk=2;

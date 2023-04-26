@@ -1,0 +1,19 @@
+CREATE TABLE Librarian (
+    [LibrarianID] INTEGER NOT NULL PRIMARY KEY,
+    [LastName] TEXT(255) NOT NULL
+);
+
+CREATE INDEX idx_LibrarianLastName
+ON Librarian (LastName);
+
+CREATE TABLE Reader (
+    [ReaderID] INTEGER NOT NULL PRIMARY KEY ,
+    [LastName] TEXT(255) NOT NULL,
+    [DateOfBirth] DATETIME NOT NULL,
+    [Address] TEXT(30),
+    [DateOfComing] DATETIME NOT NULL,
+    [LibrarianID] INTEGER REFERENCES Librarian(LibrarianID)
+);
+
+CREATE INDEX idx_ReaderByLibrarianID
+ON Librarian (LibrarianID);
