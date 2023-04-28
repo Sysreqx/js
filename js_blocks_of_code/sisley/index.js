@@ -164,3 +164,21 @@ for (let i = 0; i < sliderLadies.length; i++) {
         }
     })
 }
+
+// next, prev buttons
+// let nextBtn = document.querySelector(".button-next");
+// let prevBtn = document.querySelector(".button-prev");
+//
+// nextBtn.addEventListener("click", (event) => {
+//     let {target} = event;
+//     // console.log(target);
+//
+//     if (target.classList.contains("button-next") ||
+//         target.parentElement.parentElement.parentElement.classList.contains("button-next")) {
+//         sliderBullets.forEach(s => {
+//             if (s.classList.contains("button-active") && s.classList.contains("button-1")) {
+//
+//             }
+//         })
+//     }
+// })
