@@ -1,5 +1,6 @@
 let ladies = document.querySelectorAll(".lady");
-let sliderBullets = document.querySelectorAll(".swiper-pagination-bullet");
+let sliderBullets = document.querySelectorAll(".button");
+let sliderImages = document.querySelectorAll(".image");
 
 // slider buttons click
 for (let i = 0; i < sliderBullets.length; i++) {
@@ -7,53 +8,107 @@ for (let i = 0; i < sliderBullets.length; i++) {
         let {target} = event;
 
         // console.log(target.ariaLabel);
-        if (target.ariaLabel === "Go to slide 1") {
-            if (target.classList.contains("swiper-pagination-bullet-active")) {
+        if (target.classList.contains("button-1")) {
+            if (target.classList.contains("button-active")) {
 
             } else {
                 ladies.forEach(l => {
                     l.classList.add("display-none");
                     ladies[0].classList.remove("display-none");
+
+                    sliderBullets.forEach(b => {
+                        b.classList.remove("button-active");
+                    })
+                    target.classList.add("button-active");
+
+                    sliderImages.forEach(el => {
+                        el.classList.add("display-none");
+                    })
+                    sliderImages[0].classList.remove("display-none");
                 })
             }
         }
-        if (target.ariaLabel === "Go to slide 2") {
-            if (target.classList.contains("swiper-pagination-bullet-active")) {
+        if (target.classList.contains("button-2")) {
+            if (target.classList.contains("button-active")) {
 
             } else {
                 ladies.forEach(l => {
                     l.classList.add("display-none");
                     ladies[1].classList.remove("display-none");
+
+                    sliderBullets.forEach(b => {
+                        b.classList.remove("button-active");
+                    })
+                    target.classList.add("button-active");
+
+
+                    sliderImages.forEach(el => {
+                        el.classList.add("display-none");
+                    })
+                    sliderImages[1].classList.remove("display-none");
                 })
             }
         }
-        if (target.ariaLabel === "Go to slide 3") {
-            if (target.classList.contains("swiper-pagination-bullet-active")) {
+        if (target.classList.contains("button-3")) {
+            if (target.classList.contains("button-active")) {
 
             } else {
                 ladies.forEach(l => {
                     l.classList.add("display-none");
                     ladies[2].classList.remove("display-none");
+
+                    sliderBullets.forEach(b => {
+                        b.classList.remove("button-active");
+                    })
+                    target.classList.add("button-active");
+
+
+                    sliderImages.forEach(el => {
+                        el.classList.add("display-none");
+                    })
+                    sliderImages[2].classList.remove("display-none");
                 })
             }
         }
-        if (target.ariaLabel === "Go to slide 4") {
-            if (target.classList.contains("swiper-pagination-bullet-active")) {
+        if (target.classList.contains("button-4")) {
+            if (target.classList.contains("button-active")) {
 
             } else {
                 ladies.forEach(l => {
                     l.classList.add("display-none");
                     ladies[3].classList.remove("display-none");
+
+                    sliderBullets.forEach(b => {
+                        b.classList.remove("button-active");
+                    })
+                    target.classList.add("button-active");
+
+
+                    sliderImages.forEach(el => {
+                        el.classList.add("display-none");
+                    })
+                    sliderImages[3].classList.remove("display-none");
                 })
             }
         }
-        if (target.ariaLabel === "Go to slide 5") {
-            if (target.classList.contains("swiper-pagination-bullet-active")) {
+        if (target.classList.contains("button-5")) {
+            if (target.classList.contains("button-active")) {
 
             } else {
                 ladies.forEach(l => {
                     l.classList.add("display-none");
                     ladies[4].classList.remove("display-none");
+
+                    sliderBullets.forEach(b => {
+                        b.classList.remove("button-active");
+                    })
+                    target.classList.add("button-active");
+
+
+                    sliderImages.forEach(el => {
+                        el.classList.add("display-none");
+                    })
+                    sliderImages[4].classList.remove("display-none");
                 })
             }
         }
