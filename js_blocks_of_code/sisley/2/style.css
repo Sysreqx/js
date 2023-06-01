@@ -1,0 +1,29 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.div100vh {
+    height: 100vh;
+    position: sticky;
+    top: 0;
+}
+
+.red {
+    background: #cb6464;
+}
+
+.blue {
+    background: #4e6cc2;
+
+    z-index: 2;
+
+    height: 200vh;
+
+}
+
+.green {
+    background: #49b444;
+
+    z-index: 3;
+}
