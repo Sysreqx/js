@@ -1,4 +1,6 @@
-let o_1 = document.querySelector(".o_1");
+// let o_1 = document.querySelector(".o_1");
+
+let dots = document.querySelector(".dots");
 
 let o_1_1 = document.querySelector(".o_1_1");
 let o_1_2 = document.querySelector(".o_1_2");
@@ -65,81 +67,275 @@ let t_6_4 = document.querySelector(".t_6_4");
 
 let chat = document.querySelector(".chat");
 
+chat.addEventListener("click", (event) => handleClick(event));
+
+async function handleClick(event) {
+    let {target} = event;
+
+    console.log(target);
+    // 1 l
+    if (target.parentElement.classList.contains("o_1_1") || target.parentElement.parentElement.classList.contains("o_1_1")) {
+        // o_1.classList.add("dn");
+        o_1_2.classList.add("dn");
 
 
-    chat.addEventListener("click", (event) => {
-        let {target} = event;
+        await new Promise(resolve => setTimeout(resolve, 1000));
+        s_1_1.classList.remove("dn");
+        s_1_1.scrollIntoView();
 
-        // console.log(target);
-        // 1
-        if (target.parentElement.classList.contains("o_1_1") || target.parentElement.parentElement.classList.contains("o_1_1")) {
-            o_1.classList.add("dn");
-            s_1_1.classList.remove("dn");
-            t_2_1.classList.remove("dn");
-        }
 
-        if (target.parentElement.classList.contains("o_1_2") || target.parentElement.parentElement.classList.contains("o_1_2")) {
-            o_1.classList.add("dn");
-            s_1_2.classList.remove("dn");
-            t_2_2.classList.remove("dn");
-        }
+        // dots.classList.remove("dn");
+        // dots.scrollIntoView();
+        await new Promise(resolve => setTimeout(resolve, 1000));
+        // dots.classList.add("dn");
+        t_2_1.classList.remove("dn");
+        t_2_1.scrollIntoView();
+
 
         // 2
-        if (target.parentElement.classList.contains("o_2_1") || target.parentElement.parentElement.classList.contains("o_2_1")) {
-            console.log("o_2_1");
-        }
 
-        if (target.parentElement.classList.contains("o_2_2") || target.parentElement.parentElement.classList.contains("o_2_2")) {
-            console.log("o_2_2");
-        }
+        await new Promise(resolve => setTimeout(resolve, 1000));
+        o_2.classList.remove("dn");
+        o_2.scrollIntoView();
 
-        if (target.parentElement.classList.contains("o_2_3") || target.parentElement.parentElement.classList.contains("o_2_3")) {
-            console.log("o_2_3");
-        }
+    }
 
-        if (target.parentElement.classList.contains("o_2_4") || target.parentElement.parentElement.classList.contains("o_2_4")) {
-            console.log("o_2_4");
-        }
+    // 2
+    if (target.parentElement.classList.contains("o_2_1") || target.parentElement.parentElement.classList.contains("o_2_1")) {
+        o_2_2.classList.add("dn");
+
+        await new Promise(resolve => setTimeout(resolve, 1000));
+        s_2_1.classList.remove("dn");
+        s_2_1.scrollIntoView();
+
+        // dots.classList.remove("dn");
+        // dots.scrollIntoView();
+        await new Promise(resolve => setTimeout(resolve, 1000));
+        // dots.classList.remove("dn");
+        t_3_1.classList.remove("dn");
+        t_3_1.scrollIntoView();
 
         // 3
-        if (target.parentElement.classList.contains("o_3_1") || target.parentElement.parentElement.classList.contains("o_3_1")) {
-            console.log("o_3_1");
-        }
+        await new Promise(resolve => setTimeout(resolve, 1000));
+        o_3.classList.remove("dn");
+        o_3.scrollIntoView();
+    }
 
-        if (target.parentElement.classList.contains("o_3_2") || target.parentElement.parentElement.classList.contains("o_3_2")) {
-            console.log("o_3_2");
-        }
+    if (target.parentElement.classList.contains("o_2_2") || target.parentElement.parentElement.classList.contains("o_2_2")) {
+        o_2_1.classList.add("dn");
 
-        if (target.parentElement.classList.contains("o_3_3") || target.parentElement.parentElement.classList.contains("o_3_3")) {
-            console.log("o_3_3");
-        }
+        await new Promise(resolve => setTimeout(resolve, 1000));
+        s_2_2.classList.remove("dn");
+        s_2_2.scrollIntoView();
+
+        // dots.classList.remove("dn");
+        // dots.scrollIntoView();
+        await new Promise(resolve => setTimeout(resolve, 1000));
+        // dots.classList.add("dn");
+        t_3_1.classList.remove("dn");
+        t_3_1.scrollIntoView();
+
+        // 3
+        await new Promise(resolve => setTimeout(resolve, 1000));
+        o_3.classList.remove("dn");
+        o_3.scrollIntoView();
+    }
+
+
+    // 3
+    if (target.parentElement.classList.contains("o_3_1") || target.parentElement.parentElement.classList.contains("o_3_1")) {
+        o_3_2.classList.add("dn");
+
+        await new Promise(resolve => setTimeout(resolve, 1000));
+        s_3_1.classList.remove("dn");
+        s_3_1.scrollIntoView();
+
+        // dots.classList.remove("dn");
+        // dots.scrollIntoView();
+        await new Promise(resolve => setTimeout(resolve, 1000));
+        // dots.classList.add("dn");
+        t_4_1.classList.remove("dn");
+        t_4_1.scrollIntoView();
+
+        await new Promise(resolve => setTimeout(resolve, 1000));
+        o_4_1w.classList.remove("dn");
+        o_4_1w.scrollIntoView();
+
+    }
+
+    if (target.parentElement.classList.contains("o_3_2") || target.parentElement.parentElement.classList.contains("o_3_2")) {
+        o_3_1.classList.add("dn");
+
+        await new Promise(resolve => setTimeout(resolve, 1000));
+        s_3_2.classList.remove("dn");
+        s_3_2.scrollIntoView();
+
+        // dots.classList.remove("dn");
+        // dots.scrollIntoView();
+        await new Promise(resolve => setTimeout(resolve, 1000));
+        // dots.classList.add("dn");
+        t_4_2.classList.remove("dn");
+        t_4_2.scrollIntoView();
+
+        await new Promise(resolve => setTimeout(resolve, 1000));
+        o_4_2w.classList.remove("dn");
+        o_4_2w.scrollIntoView();
+    }
+
+
+    // 4
+
+    if (target.parentElement.classList.contains("o_4_1") || target.parentElement.parentElement.classList.contains("o_4_1")) {
+        o_4_2.classList.add("dn");
+
+        await new Promise(resolve => setTimeout(resolve, 1000));
+        s_4_1.classList.remove("dn");
+        s_4_1.scrollIntoView();
+
+        await new Promise(resolve => setTimeout(resolve, 1000));
+        t_5_1.classList.remove("dn");
+        t_5_1.scrollIntoView();
+    }
+
+    if (target.parentElement.classList.contains("o_4_2") || target.parentElement.parentElement.classList.contains("o_4_2")) {
+        o_4_1.classList.add("dn");
+
+        await new Promise(resolve => setTimeout(resolve, 1000));
+        s_4_2.classList.remove("dn");
+        s_4_2.scrollIntoView();
+
+        await new Promise(resolve => setTimeout(resolve, 1000));
+        t_5_1.classList.remove("dn");
+        t_5_1.scrollIntoView();
+    }
+
+
+    // // // //
+    // 1 r
+    if (target.parentElement.classList.contains("o_1_2") || target.parentElement.parentElement.classList.contains("o_1_2")) {
+        o_1_1.classList.add("dn");
+
+        await new Promise(resolve => setTimeout(resolve, 1000));
+        s_1_2.classList.remove("dn");
+        s_1_2.scrollIntoView();
+
+        await new Promise(resolve => setTimeout(resolve, 1000));
+        t_2_2.classList.remove("dn");
+        t_2_2.scrollIntoView();
+
+        // 2
+        await new Promise(resolve => setTimeout(resolve, 1000));
+        o_2_.classList.remove("dn");
+        o_2_.scrollIntoView();
+    }
+
+
+    if (target.parentElement.classList.contains("o_2_3") || target.parentElement.parentElement.classList.contains("o_2_3")) {
+        o_2_4.classList.add("dn");
+
+        await new Promise(resolve => setTimeout(resolve, 1000));
+        s_2_3.classList.remove("dn");
+        s_2_3.scrollIntoView();
+
+        await new Promise(resolve => setTimeout(resolve, 1000));
+        t_3_3.classList.remove("dn");
+        t_3_3.scrollIntoView();
+
+        // 3
+        await new Promise(resolve => setTimeout(resolve, 1000));
+        o_3_.classList.remove("dn");
+        o_3_.scrollIntoView();
+    }
+
+    if (target.parentElement.classList.contains("o_2_4") || target.parentElement.parentElement.classList.contains("o_2_4")) {
+        o_2_3.classList.add("dn");
+
+        await new Promise(resolve => setTimeout(resolve, 1000));
+        s_2_4.classList.remove("dn");
+        s_2_4.scrollIntoView();
+
+        await new Promise(resolve => setTimeout(resolve, 1000));
+        t_3_3.classList.remove("dn");
+        t_3_3.scrollIntoView();
+
+        // 3
+        await new Promise(resolve => setTimeout(resolve, 1000));
+        o_3_.classList.remove("dn");
+        o_3_.scrollIntoView();
+    }
+
+
+    if (target.parentElement.classList.contains("o_3_3") || target.parentElement.parentElement.classList.contains("o_3_3")) {
+
+        await new Promise(resolve => setTimeout(resolve, 1000));
+        s_3_3.classList.remove("dn");
+        s_3_3.scrollIntoView();
+
+        await new Promise(resolve => setTimeout(resolve, 1000));
+        t_4_3.classList.remove("dn");
+        t_4_3.scrollIntoView();
+
 
         // 4
-        if (target.parentElement.classList.contains("o_4_1") || target.parentElement.parentElement.classList.contains("o_4_1")) {
-            console.log("o_4_1");
-        }
-
-        if (target.parentElement.classList.contains("o_4_2") || target.parentElement.parentElement.classList.contains("o_4_2")) {
-            console.log("o_4_2");
-        }
-
-        if (target.parentElement.classList.contains("o_4_3") || target.parentElement.parentElement.classList.contains("o_4_3")) {
-            console.log("o_4_3");
-        }
-
-        if (target.parentElement.classList.contains("o_4_4") || target.parentElement.parentElement.classList.contains("o_4_4")) {
-            console.log("o_4_4");
-        }
+        await new Promise(resolve => setTimeout(resolve, 1000));
+        o_4_.classList.remove("dn");
+        o_4_.scrollIntoView();
+    }
 
 
-        // 5
-        if (target.parentElement.classList.contains("o_5_3") || target.parentElement.parentElement.classList.contains("o_5_3")) {
-            console.log("o_5_3");
-        }
+    if (target.parentElement.classList.contains("o_4_3") || target.parentElement.parentElement.classList.contains("o_4_3")) {
+        o_4_4.classList.add("dn");
 
-        if (target.parentElement.classList.contains("o_5_4") || target.parentElement.parentElement.classList.contains("o_5_4")) {
-            console.log("o_5_4");
-        }
+        await new Promise(resolve => setTimeout(resolve, 1000));
+        s_4_3.classList.remove("dn");
+        s_4_3.scrollIntoView();
+
+        await new Promise(resolve => setTimeout(resolve, 1000));
+        t_5_3.classList.remove("dn");
+        t_5_3.scrollIntoView();
+
+        await new Promise(resolve => setTimeout(resolve, 1000));
+        o_5_3w.classList.remove("dn");
+        o_5_3w.scrollIntoView();
+    }
 
 
-    });
+    if (target.parentElement.classList.contains("o_4_4") || target.parentElement.parentElement.classList.contains("o_4_4")) {
+        o_4_3.classList.add("dn");
+
+        await new Promise(resolve => setTimeout(resolve, 1000));
+        s_4_4.classList.remove("dn");
+        s_4_4.scrollIntoView();
+
+        await new Promise(resolve => setTimeout(resolve, 1000));
+        t_5_4.classList.remove("dn");
+        t_5_4.scrollIntoView();
+
+        await new Promise(resolve => setTimeout(resolve, 1000));
+        o_5_4w.classList.remove("dn");
+        o_5_4w.scrollIntoView();
+    }
+
+
+    // 5
+
+    if (target.parentElement.classList.contains("o_5_3") || target.parentElement.parentElement.classList.contains("o_5_3")) {
+        await new Promise(resolve => setTimeout(resolve, 1000));
+        s_5_3.classList.remove("dn");
+        s_5_3.scrollIntoView();
+
+        await new Promise(resolve => setTimeout(resolve, 1000));
+        t_6_3.classList.remove("dn");
+        t_6_3.scrollIntoView();
+    }
+
+    if (target.parentElement.classList.contains("o_5_4") || target.parentElement.parentElement.classList.contains("o_5_4")) {
+        await new Promise(resolve => setTimeout(resolve, 1000));
+        s_5_4.classList.remove("dn");
+        s_5_4.scrollIntoView();
+
+        await new Promise(resolve => setTimeout(resolve, 1000));
+        t_6_4.classList.remove("dn");
+        t_6_4.scrollIntoView();
+    }
+}
