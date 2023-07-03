@@ -5,14 +5,14 @@
     <title>Title</title>
 </head>
 <body>
-    <! --Sourced from: https://img-comparison-slider.sneas.io/-->
-    <img-comparison-slider>
-        <img slot="first" src="https://staging14.websquadron.co.uk/wp-content/uploads/Mid028.webp" width="600" height="600"/>
-        <img slot="second" src="https://staging14.websquadron.co.uk/wp-content/uploads/Mid027.webp" width="600" height="600"/>
-    </img-comparison-slider>
-    <script
-            defer
-            src="https://unpkg.com/img-comparison-slider@7/dist/index.js"
-    ></script>
+    <div class="container">
+        <img src="image-1.png">
+        <img id="my-img" src="image-2.png" >
+        <input type="range" min="0" max="100" value="50" id="slider" oninput="slide()">
+    </div>
+
+
+    <!--Script-->
+    <script src="script.js"></script>
 </body>
 </html>
