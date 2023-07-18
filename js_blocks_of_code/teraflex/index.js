@@ -1,5 +1,3 @@
-// let o_1 = document.querySelector(".o_1");
-
 let dots = document.querySelector(".dots");
 
 let o_1_1 = document.querySelector(".o_1_1");
@@ -67,12 +65,20 @@ let t_6_4 = document.querySelector(".t_6_4");
 
 let chat = document.querySelector(".chat");
 
+let ladder = document.getElementById("ladder");
+
 chat.addEventListener("click", (event) => handleClick(event));
 
 async function handleClick(event) {
     let {target} = event;
 
     console.log(target);
+
+    // ladder scroll
+    if (target.parentElement.classList.contains("ladder_scroll") || target.parentElement.parentElement.classList.contains("ladder_scroll")) {
+        console.log(ladder.style.bottom);
+    }
+
     // 1 l
     if (target.parentElement.classList.contains("o_1_1") || target.parentElement.parentElement.classList.contains("o_1_1")) {
         // o_1.classList.add("dn");
