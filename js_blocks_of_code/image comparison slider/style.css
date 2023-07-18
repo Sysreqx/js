@@ -3,17 +3,17 @@
     overflow: hidden;
 }
 
-/*.img {*/
-/*    width: 100%;*/
-/*    height: 100%;*/
-/*    position: absolute;*/
-/*}*/
+.img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
 
-#my-img-1, #my-img-2, #my-img-3, #my-img-4, #my-img-5, #my-img-6, #my-img-7, #my-img-8, #my-img-9, #my-img-10, #my-img-11{
+#my-img-1, #my-img-2, #my-img-3, #my-img-4, #my-img-5, #my-img-6, #my-img-7, #my-img-8, #my-img-9, #my-img-10, #my-img-11, #my-img-12, #my-img-13, #my-img-14, #my-img-15, #my-img-16, #my-img-17{
     clip-path: polygon(0 0 , 50% 0, 50% 100%, 0 100%);
 }
 
-#slider-1, #slider-2, #slider-3, #slider-4, #slider-5, #slider-6, #slider-7, #slider-8, #slider-9, #slider-10, #slider-11 {
+#slider-1, #slider-2, #slider-3, #slider-4, #slider-5, #slider-6, #slider-7, #slider-8, #slider-9, #slider-10, #slider-11, #slider-12, #slider-13, #slider-14, #slider-15, #slider-16, #slider-17 {
     position: absolute;
     -webkit-appearance: none;
     width: calc( 100% + 40px);
@@ -23,7 +23,7 @@
     outline: none;
 }
 
-#slider-1::-webkit-slider-thumb, #slider-2::-webkit-slider-thumb, #slider-3::-webkit-slider-thumb, #slider-4::-webkit-slider-thumb, #slider-5::-webkit-slider-thumb, #slider-6::-webkit-slider-thumb, #slider-7::-webkit-slider-thumb, #slider-8::-webkit-slider-thumb, #slider-9::-webkit-slider-thumb, #slider-10::-webkit-slider-thumb, #slider-11::-webkit-slider-thumb {
+#slider-1::-webkit-slider-thumb, #slider-2::-webkit-slider-thumb, #slider-3::-webkit-slider-thumb, #slider-4::-webkit-slider-thumb, #slider-5::-webkit-slider-thumb, #slider-6::-webkit-slider-thumb, #slider-7::-webkit-slider-thumb, #slider-8::-webkit-slider-thumb, #slider-9::-webkit-slider-thumb, #slider-10::-webkit-slider-thumb, #slider-11::-webkit-slider-thumb, #slider-12::-webkit-slider-thumb, #slider-13::-webkit-slider-thumb, #slider-14::-webkit-slider-thumb, #slider-15::-webkit-slider-thumb, #slider-16::-webkit-slider-thumb, #slider-17::-webkit-slider-thumb {
     -webkit-appearance: none;
     height: 40px;
     width: 40px;

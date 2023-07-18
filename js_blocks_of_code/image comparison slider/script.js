@@ -53,3 +53,33 @@ function slide11(){
     document.getElementById("my-img-11").style.clipPath = "polygon(0 0," + slideValue + "% 0," + slideValue + "% 100%, 0 100%)";
 }
 
+function slide12(){
+    let slideValue = document.getElementById("slider-12").value;
+    document.getElementById("my-img-12").style.clipPath = "polygon(0 0," + slideValue + "% 0," + slideValue + "% 100%, 0 100%)";
+}
+
+function slide13(){
+    let slideValue = document.getElementById("slider-13").value;
+    document.getElementById("my-img-13").style.clipPath = "polygon(0 0," + slideValue + "% 0," + slideValue + "% 100%, 0 100%)";
+}
+
+function slide14(){
+    let slideValue = document.getElementById("slider-14").value;
+    document.getElementById("my-img-14").style.clipPath = "polygon(0 0," + slideValue + "% 0," + slideValue + "% 100%, 0 100%)";
+}
+
+function slide15(){
+    let slideValue = document.getElementById("slider-15").value;
+    document.getElementById("my-img-15").style.clipPath = "polygon(0 0," + slideValue + "% 0," + slideValue + "% 100%, 0 100%)";
+}
+
+function slide16(){
+    let slideValue = document.getElementById("slider-16").value;
+    document.getElementById("my-img-16").style.clipPath = "polygon(0 0," + slideValue + "% 0," + slideValue + "% 100%, 0 100%)";
+}
+
+function slide17(){
+    let slideValue = document.getElementById("slider-17").value;
+    document.getElementById("my-img-17").style.clipPath = "polygon(0 0," + slideValue + "% 0," + slideValue + "% 100%, 0 100%)";
+}
+
