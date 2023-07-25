@@ -34,3 +34,28 @@
     background-size: contain;
     cursor: pointer;
 }
+
+/*ladder move*/
+.shpixel0 {
+    margin-bottom: 0;
+}
+
+.shpixel30 {
+    margin-bottom: -30px !important;
+}
+
+.shpixel60 {
+    margin-bottom: -60px !important;
+}
+
+.shpixel90 {
+    margin-bottom: -90px !important;
+}
+
+.shpixel120 {
+    margin-bottom: -120px !important;
+}
+
+.shpixel150 {
+    margin-bottom: -150px !important;
+}
