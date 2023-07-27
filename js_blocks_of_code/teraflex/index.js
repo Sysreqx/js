@@ -4,6 +4,15 @@ let ladder = document.querySelector(".ladder");
 //     ladder.style.bottom = "0";
 // });
 
+let t_0_1 = document.querySelector(".t_0_1");
+let s_0_1 = document.querySelector(".s_0_1");
+let t_0_2 = document.querySelector(".t_0_2");
+let s_0_2 = document.querySelector(".s_0_2");
+let t_1_1 = document.querySelector(".t_1_1");
+let o_1 = document.querySelector(".o_1");
+let o_01 = document.querySelector(".o_01");
+let o_02 = document.querySelector(".o_02");
+
 let dots = document.querySelector(".dots");
 
 let o_1_1 = document.querySelector(".o_1_1");
@@ -42,6 +51,9 @@ let t_4_1 = document.querySelector(".t_4_1");
 let t_4_2 = document.querySelector(".t_4_2");
 let t_4_3 = document.querySelector(".t_4_3");
 
+let t_4_1_dopel = document.querySelector(".t_4_1_dopel");
+let t_4_2_dopel = document.querySelector(".t_4_2_dopel");
+
 let o_4_1w = document.querySelector(".o_4_1w");
 let o_4_2w = document.querySelector(".o_4_2w");
 let o_4_ = document.querySelector(".o_4_");
@@ -58,6 +70,8 @@ let t_5_1 = document.querySelector(".t_5_1");
 let t_5_3 = document.querySelector(".t_5_3");
 let t_5_4 = document.querySelector(".t_5_4");
 
+let t_5_3_dopel = document.querySelector(".t_5_3_dopel");
+let t_5_4_dopel = document.querySelector(".t_5_4_dopel");
 
 let o_5_3w = document.querySelector(".o_5_3w");
 let o_5_4w = document.querySelector(".o_5_4w");
@@ -82,6 +96,7 @@ let ladderCounter5 = document.querySelector(".ladder_counter_5")
 let ladderCounter6 = document.querySelector(".ladder_counter_6")
 
 chat.addEventListener("click", (event) => handleClick(event));
+
 
 async function handleClick(event) {
     let {target} = event;
@@ -109,16 +124,60 @@ async function handleClick(event) {
     //     ladder.style.marginBottom  = "-150px";
     // }
 
+    // preset
+
+    // await new Promise(resolve => setTimeout(resolve, 1000));
+    // t_0_1.classList.remove("dn");
+
+    if (target.parentElement.classList.contains("o_01_inner") || target.parentElement.parentElement.classList.contains("o_01_inner")) {
+
+        o_01.classList.add("dn");
+
+        await new Promise(resolve => setTimeout(resolve, 500));
+        s_0_1.classList.remove("dn");
+        s_0_1.scrollIntoView();
+
+        await new Promise(resolve => setTimeout(resolve, 1000));
+        t_0_2.classList.remove("dn");
+        t_0_2.scrollIntoView();
+
+        await new Promise(resolve => setTimeout(resolve, 1000));
+        o_02.classList.remove("dn");
+        o_02.scrollIntoView();
+
+    }
+
+    if (target.parentElement.classList.contains("o_02_inner") || target.parentElement.parentElement.classList.contains("o_02_inner")) {
+        o_02.classList.add("dn");
+
+        await new Promise(resolve => setTimeout(resolve, 500));
+        s_0_2.classList.remove("dn");
+        s_0_2.scrollIntoView();
+
+        await new Promise(resolve => setTimeout(resolve, 1000));
+        t_1_1.classList.remove("dn");
+        t_1_1.scrollIntoView();
+
+        await new Promise(resolve => setTimeout(resolve, 1000));
+        o_1.classList.remove("dn");
+        o_1.scrollIntoView();
+    }
+
+
     // 1 l
     if (target.parentElement.classList.contains("o_1_1") || target.parentElement.parentElement.classList.contains("o_1_1")) {
         // o_1.classList.add("dn");
         o_1_2.classList.add("dn");
 
+        await new Promise(resolve => setTimeout(resolve, 200));
+        o_1.classList.add("dn");
+
+
         ladderCounter1.classList.add("dn");
         ladderCounter2.classList.remove("dn");
         ladderCounter3.classList.add("dn");
         ladderCounter4.classList.add("dn");
-        ladderCounter5.classList.add("dn");;
+        ladderCounter5.classList.add("dn");
         ladderCounter6.classList.add("dn");
 
 
@@ -146,11 +205,14 @@ async function handleClick(event) {
     if (target.parentElement.classList.contains("o_2_1") || target.parentElement.parentElement.classList.contains("o_2_1")) {
         o_2_2.classList.add("dn");
 
+        await new Promise(resolve => setTimeout(resolve, 200));
+        o_2.classList.add("dn");
+
         ladderCounter1.classList.add("dn");
         ladderCounter2.classList.add("dn");
         ladderCounter3.classList.remove("dn");
         ladderCounter4.classList.add("dn");
-        ladderCounter5.classList.add("dn");;
+        ladderCounter5.classList.add("dn");
         ladderCounter6.classList.add("dn");
 
         await new Promise(resolve => setTimeout(resolve, 1000));
@@ -173,11 +235,14 @@ async function handleClick(event) {
     if (target.parentElement.classList.contains("o_2_2") || target.parentElement.parentElement.classList.contains("o_2_2")) {
         o_2_1.classList.add("dn");
 
+        await new Promise(resolve => setTimeout(resolve, 200));
+        o_2.classList.add("dn");
+
         ladderCounter1.classList.add("dn");
         ladderCounter2.classList.add("dn");
         ladderCounter3.classList.remove("dn");
         ladderCounter4.classList.add("dn");
-        ladderCounter5.classList.add("dn");;
+        ladderCounter5.classList.add("dn");
         ladderCounter6.classList.add("dn");
 
         await new Promise(resolve => setTimeout(resolve, 1000));
@@ -202,11 +267,14 @@ async function handleClick(event) {
     if (target.parentElement.classList.contains("o_3_1") || target.parentElement.parentElement.classList.contains("o_3_1")) {
         o_3_2.classList.add("dn");
 
+        await new Promise(resolve => setTimeout(resolve, 200));
+        o_3.classList.add("dn");
+
         ladderCounter1.classList.add("dn");
         ladderCounter2.classList.add("dn");
         ladderCounter3.classList.add("dn");
         ladderCounter4.classList.remove("dn");
-        ladderCounter5.classList.add("dn");;
+        ladderCounter5.classList.add("dn");
         ladderCounter6.classList.add("dn");
 
         await new Promise(resolve => setTimeout(resolve, 1000));
@@ -221,6 +289,11 @@ async function handleClick(event) {
         t_4_1.scrollIntoView();
 
         await new Promise(resolve => setTimeout(resolve, 1000));
+        // dots.classList.add("dn");
+        t_4_1_dopel.classList.remove("dn");
+        t_4_1_dopel.scrollIntoView();
+
+        await new Promise(resolve => setTimeout(resolve, 1000));
         o_4_1w.classList.remove("dn");
         o_4_1w.scrollIntoView();
 
@@ -228,6 +301,9 @@ async function handleClick(event) {
 
     if (target.parentElement.classList.contains("o_3_2") || target.parentElement.parentElement.classList.contains("o_3_2")) {
         o_3_1.classList.add("dn");
+
+        await new Promise(resolve => setTimeout(resolve, 200));
+        o_3.classList.add("dn");
 
         ladderCounter1.classList.add("dn");
         ladderCounter2.classList.add("dn");
@@ -243,13 +319,19 @@ async function handleClick(event) {
         // dots.classList.remove("dn");
         // dots.scrollIntoView();
         await new Promise(resolve => setTimeout(resolve, 1000));
-        // dots.classList.add("dn");
         t_4_2.classList.remove("dn");
         t_4_2.scrollIntoView();
 
         await new Promise(resolve => setTimeout(resolve, 1000));
-        o_4_2w.classList.remove("dn");
-        o_4_2w.scrollIntoView();
+        t_4_2_dopel.classList.remove("dn");
+        t_4_2_dopel.scrollIntoView();
+
+        await new Promise(resolve => setTimeout(resolve, 1000));
+        o_4_1w.classList.remove("dn");
+        o_4_1w.scrollIntoView();
+        // await new Promise(resolve => setTimeout(resolve, 1000));
+        // o_4_2w.classList.remove("dn");
+        // o_4_2w.scrollIntoView();
     }
 
 
@@ -258,6 +340,8 @@ async function handleClick(event) {
     if (target.parentElement.classList.contains("o_4_1") || target.parentElement.parentElement.classList.contains("o_4_1")) {
         o_4_2.classList.add("dn");
 
+        await new Promise(resolve => setTimeout(resolve, 200));
+        o_4_1w.classList.add("dn");
 
         ladderCounter1.classList.add("dn");
         ladderCounter2.classList.add("dn");
@@ -273,10 +357,23 @@ async function handleClick(event) {
         await new Promise(resolve => setTimeout(resolve, 1000));
         t_5_1.classList.remove("dn");
         t_5_1.scrollIntoView();
+
+
+        await new Promise(resolve => setTimeout(resolve, 1000));
+        t_7.classList.remove("dn");
+        t_7.scrollIntoView();
+
+        await new Promise(resolve => setTimeout(resolve, 1000));
+        o_7.classList.remove("dn");
+        o_7.scrollIntoView();
     }
 
     if (target.parentElement.classList.contains("o_4_2") || target.parentElement.parentElement.classList.contains("o_4_2")) {
         o_4_1.classList.add("dn");
+
+        await new Promise(resolve => setTimeout(resolve, 200));
+        o_4_1w.classList.add("dn");
+        // o_4_2w.classList.add("dn");
 
         ladderCounter1.classList.add("dn");
         ladderCounter2.classList.add("dn");
@@ -310,6 +407,9 @@ async function handleClick(event) {
     if (target.parentElement.classList.contains("o_1_2") || target.parentElement.parentElement.classList.contains("o_1_2")) {
         o_1_1.classList.add("dn");
 
+        await new Promise(resolve => setTimeout(resolve, 200));
+        o_1.classList.add("dn");
+
         ladderCounter1.classList.add("dn");
         ladderCounter2.classList.remove("dn");
         ladderCounter3.classList.add("dn");
@@ -335,6 +435,9 @@ async function handleClick(event) {
     if (target.parentElement.classList.contains("o_2_3") || target.parentElement.parentElement.classList.contains("o_2_3")) {
         o_2_4.classList.add("dn");
 
+        await new Promise(resolve => setTimeout(resolve, 200));
+        o_2_.classList.add("dn");
+
         ladderCounter1.classList.add("dn");
         ladderCounter2.classList.add("dn");
         ladderCounter3.classList.remove("dn");
@@ -358,6 +461,9 @@ async function handleClick(event) {
 
     if (target.parentElement.classList.contains("o_2_4") || target.parentElement.parentElement.classList.contains("o_2_4")) {
         o_2_3.classList.add("dn");
+
+        await new Promise(resolve => setTimeout(resolve, 200));
+        o_2_.classList.add("dn");
 
         ladderCounter1.classList.add("dn");
         ladderCounter2.classList.add("dn");
@@ -383,6 +489,8 @@ async function handleClick(event) {
 
     if (target.parentElement.classList.contains("o_3_3") || target.parentElement.parentElement.classList.contains("o_3_3")) {
 
+        await new Promise(resolve => setTimeout(resolve, 200));
+        o_3_.classList.add("dn");
 
         ladderCounter1.classList.add("dn");
         ladderCounter2.classList.add("dn");
@@ -411,6 +519,9 @@ async function handleClick(event) {
     if (target.parentElement.classList.contains("o_4_3") || target.parentElement.parentElement.classList.contains("o_4_3")) {
         o_4_4.classList.add("dn");
 
+        await new Promise(resolve => setTimeout(resolve, 200));
+        o_4_.classList.add("dn");
+
         ladderCounter1.classList.add("dn");
         ladderCounter2.classList.add("dn");
         ladderCounter3.classList.add("dn");
@@ -427,6 +538,10 @@ async function handleClick(event) {
         t_5_3.scrollIntoView();
 
         await new Promise(resolve => setTimeout(resolve, 1000));
+        t_5_3_dopel.classList.remove("dn");
+        t_5_3_dopel.scrollIntoView();
+
+        await new Promise(resolve => setTimeout(resolve, 1000));
         o_5_3w.classList.remove("dn");
         o_5_3w.scrollIntoView();
     }
@@ -434,6 +549,9 @@ async function handleClick(event) {
 
     if (target.parentElement.classList.contains("o_4_4") || target.parentElement.parentElement.classList.contains("o_4_4")) {
         o_4_3.classList.add("dn");
+
+        await new Promise(resolve => setTimeout(resolve, 200));
+        o_4_.classList.add("dn");
 
         ladderCounter1.classList.add("dn");
         ladderCounter2.classList.add("dn");
@@ -451,8 +569,14 @@ async function handleClick(event) {
         t_5_4.scrollIntoView();
 
         await new Promise(resolve => setTimeout(resolve, 1000));
-        o_5_4w.classList.remove("dn");
-        o_5_4w.scrollIntoView();
+        t_5_4_dopel.classList.remove("dn");
+        t_5_4_dopel.scrollIntoView();
+
+        await new Promise(resolve => setTimeout(resolve, 1000));
+        o_5_3w.classList.remove("dn");
+        o_5_3w.scrollIntoView();
+        // o_5_4w.classList.remove("dn");
+        // o_5_4w.scrollIntoView();
     }
 
 
@@ -460,6 +584,8 @@ async function handleClick(event) {
 
     if (target.parentElement.classList.contains("o_5_3") || target.parentElement.parentElement.classList.contains("o_5_3")) {
 
+        await new Promise(resolve => setTimeout(resolve, 200));
+        o_5_3w.classList.add("dn");
 
         ladderCounter1.classList.add("dn");
         ladderCounter2.classList.add("dn");
@@ -476,6 +602,7 @@ async function handleClick(event) {
         t_6_3.classList.remove("dn");
         t_6_3.scrollIntoView();
 
+
         await new Promise(resolve => setTimeout(resolve, 1000));
         t_7.classList.remove("dn");
         t_7.scrollIntoView();
@@ -487,6 +614,9 @@ async function handleClick(event) {
 
     if (target.parentElement.classList.contains("o_5_4") || target.parentElement.parentElement.classList.contains("o_5_4")) {
 
+        await new Promise(resolve => setTimeout(resolve, 200));
+        o_5_3w.classList.add("dn");
+        // o_5_4w.classList.add("dn");
 
         ladderCounter1.classList.add("dn");
         ladderCounter2.classList.add("dn");
@@ -515,7 +645,7 @@ async function handleClick(event) {
 
     // final button
     if (target.parentElement.classList.contains("o_7") || target.parentElement.parentElement.classList.contains("o_7")) {
+        o_7.classList.add("dn");
         alert("change screen");
     }
-
 }
