@@ -95,6 +95,47 @@ let ladderCounter4 = document.querySelector(".ladder_counter_4")
 let ladderCounter5 = document.querySelector(".ladder_counter_5")
 let ladderCounter6 = document.querySelector(".ladder_counter_6")
 
+
+let phone = document.querySelector(".phone");
+let first_screen = document.querySelector(".first_screen");
+let show_test_btn = document.querySelector(".show_test_btn");
+
+let change_screen_1 = document
+    .querySelector(".change_screen_1");
+
+let last_screen = document.querySelector(".last_screen");
+
+// show test
+show_test_btn.addEventListener("click", (event) => handleBtnClick(event));
+
+function handleBtnClick(event) {
+    let {target} = event;
+
+    // console.log(target);
+
+    if (target.parentElement.parentElement.parentElement.parentElement.parentElement.classList.contains("show_test_btn") || target.parentElement.parentElement.parentElement.classList.contains("show_test_btn")) {
+        first_screen.classList.add("dn");
+        phone.classList.remove("dn");
+    }
+}
+
+
+// show last screen
+function changeLastScreenBG() {
+    change_screen_1
+        .querySelector(".elementor-motion-effects-container")
+        .querySelector(".elementor-motion-effects-layer")
+        .style.backgroundImage = "url('https://elle.com.kz/wp-content/uploads/2016/04/image-4-1.png')";
+
+    ladder.style.backgroundImage = "url('https://elle.com.kz/wp-content/uploads/2016/04/medeu-1-3.svg')";
+
+    phone.classList.add("dn");
+
+    last_screen.classList.remove("dn");
+}
+
+
+// test
 chat.addEventListener("click", (event) => handleClick(event));
 
 
@@ -646,6 +687,6 @@ async function handleClick(event) {
     // final button
     if (target.parentElement.classList.contains("o_7") || target.parentElement.parentElement.classList.contains("o_7")) {
         o_7.classList.add("dn");
-        alert("change screen");
+        changeLastScreenBG();
     }
 }
