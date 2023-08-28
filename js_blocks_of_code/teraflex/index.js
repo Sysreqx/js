@@ -129,6 +129,8 @@ function changeLastScreenBG() {
 
     ladder.style.backgroundImage = "url('https://elle.com.kz/wp-content/uploads/2016/04/medeu-1-3.svg')";
 
+    ladder.style.backgroundSize = "contain";
+
     phone.classList.add("dn");
 
     last_screen.classList.remove("dn");
