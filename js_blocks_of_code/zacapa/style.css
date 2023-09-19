@@ -1,0 +1,12 @@
+.elementor-main-swiper .swiper-slide-active {
+    margin-right:-5% !important;
+}
+
+.elementor-main-swiper .swiper-slide-next {
+    width: 50% !important;
+    margin-right:-5% !important;
+}
+
+.elementor-main-swiper .elementor-swiper-button {
+    margin-left: 4%;
+}
