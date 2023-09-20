@@ -10,3 +10,18 @@
 .elementor-main-swiper .elementor-swiper-button {
     margin-left: 4%;
 }
+
+@media only screen and (max-width: 767px) {
+    .elementor-main-swiper .swiper-slide-active {
+        margin-right: 0 !important;
+    }
+
+    .elementor-main-swiper .swiper-slide-next {
+        width: 100% !important;
+        margin-right: 0 !important;
+    }
+
+    .elementor-main-swiper .elementor-swiper-button {
+        margin-left: 0;
+    }
+}
