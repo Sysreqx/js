@@ -5,3 +5,4 @@ chat.addEventListener("scroll", myFunction);
 function myFunction() {
     console.log(chat.scrollTop + 'px');
 }
+

@@ -122,12 +122,18 @@ function handleBtnClick(event) {
 
 // show last screen
 function changeLastScreenBG() {
+    // change_screen_1
+    //     .querySelector(".elementor-motion-effects-container")
+    //     .querySelector(".elementor-motion-effects-layer")
+    //     .style.backgroundImage = "url('https://elle.com.kz/wp-content/uploads/2016/04/image-4-1.png')";
     change_screen_1
         .querySelector(".elementor-motion-effects-container")
         .querySelector(".elementor-motion-effects-layer")
-        .style.backgroundImage = "url('https://elle.com.kz/wp-content/uploads/2016/04/image-4-1.png')";
+        .style.background = "none";
 
-    ladder.style.backgroundImage = "url('https://elle.com.kz/wp-content/uploads/2016/04/medeu-1-3.svg')";
+    // ladder.style.backgroundImage = "url('https://elle.com.kz/wp-content/uploads/2016/04/medeu-1-3.svg')";
+    ladder.style.background = "none";
+
 
     ladder.style.backgroundSize = "contain";
 

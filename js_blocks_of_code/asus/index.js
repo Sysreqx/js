@@ -11,7 +11,7 @@ document.addEventListener("click", (event) => {
     ) {
 
     } else {
-        mousePopUp.classList.add("dn");
+        mousePopUp.classList.add("dnO");
     }
 });
 
@@ -21,17 +21,14 @@ mouse.addEventListener("mouseover", (event) => {
     // console.log(target);
 
     if (target.parentElement.parentElement.classList.contains("mouse")) {
-        mousePopUp.classList.remove("dn");
+        mousePopUp.classList.remove("dnO");
     }
 });
 
 mouse.addEventListener("click", (event) => {
     let {target} = event;
 
-    // console.log(target);
-
     if (target.parentElement.parentElement.classList.contains("mouse")) {
-        // console.log("mouseout");
-        mousePopUp.classList.toggle("dn");
+        mousePopUp.classList.toggle("dnO");
     }
 });
