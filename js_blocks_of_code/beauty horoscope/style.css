@@ -7,6 +7,10 @@ body {
     z-index: 1000;
 }
 
+.dn {
+    display: none;
+}
+
 /* Определение анимации с именем rotate */
 @keyframes rotate {
     from {
@@ -51,3 +55,59 @@ body {
 }
 
 
+@keyframes runStripe {
+    0% {
+        background-position: 0 0;
+    }
+    50% {
+        background-position: 100% 0;
+    }
+    100% {
+        background-position: 0 0;
+    }
+}
+
+/* Применение анимации к элементу с классом "running-stripe" */
+.running-stripe {
+
+    animation: runStripe 360s linear infinite; /* infinite делает анимацию бесконечной */
+}
+
+
+/*POPUP*/
+.popup-container {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.popup-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    height: 90%;
+    overflow: auto;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}

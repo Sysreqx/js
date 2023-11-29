@@ -36,9 +36,9 @@
             padding: 20px;
             border-radius: 5px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            width: 90%;
-            height: 90%;
-            overflow: auto;
+            width: 85%;
+            height: 85%;
+            overflow: hidden;
         }
 
         .close-btn {
@@ -52,33 +52,68 @@
             from { opacity: 0; }
             to { opacity: 1; }
         }
+
+        .popup-trigger {
+            cursor: pointer;
+            width: 100px;
+        }
+
+        .hide-with-fade {
+            animation: fadeOut 1s ease-in-out;
+        }
+
+        @keyframes fadeOut {
+            from { opacity: 1; }
+            to { opacity: 0; }
+        }
     </style>
 </head>
 <body>
 
 <!-- Кнопка для открытия попапа -->
-<button onclick="openPopup()">Открыть попап</button>
+<!--<button onclick="openPopup()">Открыть попап</button>-->
+
+<img src="image.jpg" alt="Open Popup" class="popup-trigger popup-trigger1">
 
 <!-- Контейнер попапа -->
-<div class="popup-container" id="popupContainer">
+<div class="popup-container" id="popupContainer1">
     <!-- Содержимое попапа -->
     <div class="popup-content">
-        <span class="close-btn" onclick="closePopup()">&times;</span>
+        <span class="close-btn close-btn1">&times;</span>
         <!-- Ваша внутренняя страница или контент -->
-        <iframe src="ваша_внутренняя_страница.html" width="100%" height="100%" frameborder="0"></iframe>
+        <iframe src="https://elle.com.kz/horoscope-aquarius/" width="100%" height="100%" frameborder="0"></iframe>
     </div>
 </div>
 
 <script>
-    // Функция для открытия попапа
-    function openPopup() {
-        document.getElementById("popupContainer").style.display = "block";
-    }
+    document.addEventListener("DOMContentLoaded", function() {
+        let popupTrigger = document.querySelector(".popup-trigger1");
+        let popupContainer1 = document.getElementById("popupContainer1");
 
-    // Функция для закрытия попапа
-    function closePopup() {
-        document.getElementById("popupContainer").style.display = "none";
-    }
+        popupTrigger.addEventListener("click", function() {
+            popupContainer1.style.display = "block";
+        });
+
+        let closeBtn1 = document.querySelector(".close-btn1");
+
+        closeBtn1.addEventListener("click", function() {
+            closePopup1();
+        });
+
+        function closePopup1() {
+            // Add the "hide-with-fade" class for smooth fade-out
+            popupContainer1.classList.add("hide-with-fade");
+
+            // Set a timeout to hide the popup after the animation completes
+            setTimeout(function() {
+                popupContainer1.style.display = "none";
+                // Remove the "hide-with-fade" class for future openings
+                popupContainer1.classList.remove("hide-with-fade");
+            }, 500); // 500 milliseconds, should match the animation duration
+        }
+    });
+
+
 </script>
 
 </body>
