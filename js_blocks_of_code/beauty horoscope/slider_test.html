@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+        }
+
+        .slider-container {
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .slider {
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .slider-block {
+            width: 150px;
+            height: 33vh; /* Регулируйте высоту блока по своему усмотрению */
+            background-color: #ccc; /* Цвет блока, замените на свой */
+        }
+
+        .slider-block:nth-child(1) {
+            background-color: #ff8080; /* Цвет первого блока */
+        }
+
+        .slider-block:nth-child(2) {
+            background-color: #80ff80; /* Цвет второго блока */
+        }
+
+        .slider-block:nth-child(3) {
+            background-color: #8080ff; /* Цвет третьего блока */
+        }
+
+        .slider-block:nth-child(4) {
+            background-color: #dc6c0e; /* Цвет третьего блока */
+        }
+
+        .slider-block:nth-child(5) {
+            background-color: #d7b40a; /* Цвет третьего блока */
+        }
+
+        .arrow {
+            position: absolute;
+            /*top: 50%;*/
+            transform: translateY(-50%);
+            cursor: pointer;
+            font-size: 24px;
+            color: #333;
+            background-color: transparent;
+            border: none;
+            outline: none;
+        }
+
+        .arrow-up {
+            top: 5%;
+            left: 50%;
+            /*transform: translate(-50%, -50%) rotate(-90deg);*/
+        }
+
+        .arrow-down {
+            bottom: 0;
+            left: 50%;
+            /*transform: translate(-50%, -50%) rotate(90deg);*/
+        }
+    </style>
+    <title>Vertical Slider with Arrows</title>
+</head>
+<body>
+<div class="slider-container">
+    <button class="arrow arrow-up" onclick="prevSlide()">▲</button>
+    <div class="slider">
+        <div class="slider-block"></div>
+        <div class="slider-block"></div>
+        <div class="slider-block"></div>
+        <div class="slider-block"></div>
+        <div class="slider-block"></div>
+        <div class="slider-block"></div>
+        <!-- Добавьте дополнительные блоки по мере необходимости -->
+    </div>
+    <button class="arrow arrow-down" onclick="nextSlide()">▼</button>
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const slider = document.querySelector(".slider");
+        let currentIndex = 0;
+
+        function showSlide(index) {
+            const translateY = -index * 33 + "vh";
+            slider.style.transform = "translateY(" + translateY + ")";
+        }
+
+        function nextSlide() {
+            currentIndex = (currentIndex + 1) % (slider.children.length - 2); // Отображаем только 3 блока из 6
+            showSlide(currentIndex);
+        }
+
+        function prevSlide() {
+            currentIndex = (currentIndex - 1 + (slider.children.length - 2)) % (slider.children.length - 2);
+            showSlide(currentIndex);
+        }
+
+        document.querySelector(".arrow-up").addEventListener("click", prevSlide);
+        document.querySelector(".arrow-down").addEventListener("click", nextSlide);
+    });
+</script>
+</body>
+</html>
