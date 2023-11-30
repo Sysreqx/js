@@ -1,0 +1,24 @@
+
+/* Определение анимации с именем scaleOnHover */
+@keyframes scaleOnHover {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.1);
+    }
+}
+
+/* Применение анимации при наведении */
+.image-on-hover:hover {
+    animation: scaleOnHover 0.5s ease-in-out;
+    transform: scale(1.1); /* Начальный размер при наведении */
+    cursor: pointer;
+    z-index: 15;
+}
+
+/* Стили для изображения */
+.image-on-hover {
+
+    transition: transform 0.5s ease-in-out; /* Плавное переходное состояние */
+}
