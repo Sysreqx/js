@@ -62,24 +62,29 @@
             z-index: 100;
         }
 
-        .arrow-up {
+        .arrow_up {
             top: 5%;
             left: 50%;
             /*transform: translate(-50%, -50%) rotate(-90deg);*/
         }
 
-        .arrow-down {
+        .arrow_down {
             bottom: 0;
             left: 50%;
             /*transform: translate(-50%, -50%) rotate(90deg);*/
+        }
+
+        .dn {
+            display: none;
         }
     </style>
     <title>Vertical Slider with Arrows</title>
 </head>
 <body>
 <div class="slider-container">
-    <button class="arrow arrow-up" >▲</button>
+    <button class="arrow arrow_up" >▲</button>
     <div class="slider">
+        <div class="slider-block card"></div>
         <div class="slider-block card"></div>
         <div class="slider-block card"></div>
         <div class="slider-block card"></div>
@@ -88,38 +93,71 @@
         <div class="slider-block card"></div>
         <!-- Добавьте дополнительные блоки по мере необходимости -->
     </div>
-    <button class="arrow arrow-down" >▼</button>
+    <button class="arrow arrow_down" >▼</button>
 </div>
 
 <script>
     document.addEventListener("DOMContentLoaded", function () {
         const slider = document.querySelector(".slider");
-        let cardHeight = slider.querySelector(".card").offsetHeight;
-        let cards = document.querySelectorAll(".card");
-        let currentIndex = 0;
+        let sliderWidth = slider.offsetWidth;
 
-        function showSlide(index) {
-            // alert(cardHeight);
-            const translateY = -index * cardHeight + "px";
-            slider.style.transform = "translateY(" + translateY + ")";
-        }
+        let cardWidth = sliderWidth / 3 * 0.96;
+
+        let cards = document.querySelectorAll(".card");
+
+        cards.forEach(c => {
+            c.style.minWidth = `${cardWidth}px`;
+        })
+
+        let currentIndex = 0;
+        // function showSlide(index) {
+
+        //     // alert(cardHeight);
+                // let cardHeight = slider.querySelector(".card").offsetHeight;
+        //     // const translateY = -index * cardHeight + "px";
+        //     // slider.style.transform = "translateY(" + translateY + ")";
+        //     cards.forEach(c => {
+        //         c.classList.add("dn");
+        //     });
+        //
+        //     cards[index].classList.remove("dn");
+        //     cards[(index + 1) % cards.length].classList.remove("dn");
+        //     cards[(index + 2) % cards.length].classList.remove("dn");
+        //
+        //     // console.log(index);
+        // }
 
         function nextSlide() {
             currentIndex = (currentIndex + 1) % (cards.length);
-            // console.log(currentIndex);
-            showSlide(currentIndex);
-        }
+            let index = currentIndex;
 
+            cards.forEach(c => {
+                c.classList.add("dn");
+            });
+
+            cards[index].classList.remove("dn");
+            cards[(index + 1) % cards.length].classList.remove("dn");
+            cards[(index + 2) % cards.length].classList.remove("dn");
+        }
 
         function prevSlide() {
             currentIndex = (currentIndex - 1 + cards.length) % cards.length;
-            // console.log(currentIndex);
-            showSlide(currentIndex);
+            let index = currentIndex;
+
+            cards.forEach(c => {
+                c.classList.add("dn");
+            });
+
+            cards[index].classList.remove("dn");
+            cards[(index + 1) % cards.length].classList.remove("dn");
+            cards[(index + 2) % cards.length].classList.remove("dn");
         }
 
 
-        document.querySelector(".arrow-up").addEventListener("click", prevSlide);
-        document.querySelector(".arrow-down").addEventListener("click", nextSlide);
+        document.querySelector(".arrow_up").addEventListener("click", prevSlide);
+        document.querySelector(".arrow_up_mob").addEventListener("click", prevSlide);
+        document.querySelector(".arrow_down").addEventListener("click", nextSlide);
+        document.querySelector(".arrow_down_mob").addEventListener("click", nextSlide);
     });
 </script>
 </body>
