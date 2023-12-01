@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+
+        body {
+            overflow-x: hidden;
+        }
+
+        #blockNav {
+            z-index: 1000;
+        }
+
+        /* Определение анимации с именем rotate */
+        @keyframes rotate {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        /* Применение анимации к элементу с классом "rotating-image" */
+        .rotating-image {
+
+            border-radius: 50%;
+            /* Применение анимации с именем "rotate" */
+            animation: rotate 360s linear infinite; /* infinite делает анимацию бесконечной */
+        }
+
+        /*
+        absolute image esli chto to poidet po pizde
+
+
+        selector {
+            width: 70vw;
+            position: absolute;
+            top: -20%;
+            right: -35%;
+        }
+
+        @media only screen and (max-width: 1024px) {
+            selector {
+                width: 100vw;
+                right: 0;
+            }
+        }
+
+        @media only screen and (max-width: 767px) {
+            selector {
+                min-width: 200%;
+                top: 5%;
+                right: -200%;
+
+                transform: translate(-75%, -50%);
+            }
+        }
+
+        */
+
+
+
+        .slider {
+            overflow: hidden;
+            aspect-ratio: 150 / 543;
+        }
+
+
+        .card {
+            aspect-ratio: 150 / 177;
+            margin-bottom: 2%;
+
+            border-radius: 0px 28% 28% 0px;
+            background: #37373D;
+        }
+
+        .arrow_up {
+            margin-bottom: 2%;
+        }
+
+
+        @media only screen and (max-width: 1024px) {
+            .slider {
+                aspect-ratio: 261 / 71;
+            }
+
+            .card {
+                aspect-ratio: 83 / 71;
+                min-width: 83px;
+                max-width: 83px;
+                max-height: 71px;
+
+                border-radius: 0px 0px 25px 25px;
+
+                margin-bottom: 0;
+                margin-right: 2%;
+            }
+
+            .arrow_up {
+                margin-bottom: initial;
+                transform: rotate(-90deg);
+            }
+
+            .arrow_down {
+                transform: rotate(-90deg);
+            }
+
+
+            .main_image {
+                aspect-ratio: 890 / 633;
+                border-radius: 0 40px 40px 0;
+                border: 4px solid #674B2F;
+                border-left: none;
+                background: #FFF;
+                box-shadow: 15px 4px 7.4px 0px rgba(0, 0, 0, 0.37);
+
+                overflow: hidden;
+            }
+
+            @media only screen and (max-width: 1024px) {
+                .main_image {
+                    border-radius: 0 0 48px 48px;
+                    border: 3px solid #674B2F;
+                    border-top: none;
+
+                    background: #FFF;
+
+                    box-shadow: 0px 6px 9.2px 0px rgba(0, 0, 0, 0.40);
+                }
+            }
+
+
+
+            .slider_wrapper {
+                max-width: 150px;
+            }
+
+            @media only screen and (max-width: 1801px) {
+                .slider_wrapper {
+                    max-width: 120px;
+                }
+            }
+
+            @media only screen and (max-width: 1536px) {
+                .slider_wrapper {
+                    max-width: 100px;
+                }
+            }
+
+            @media only screen and (max-width: 1200px) {
+                .slider_wrapper {
+                    max-width: 85px;
+                }
+            }
+
+            @media only screen and (max-width: 1024px) {
+                .slider_wrapper {
+                    max-width: initial;
+                }
+            }
+
+
+
+
+        }
+    </style>
+    <title>Vertical Slider with Arrows</title>
+</head>
+<body>
+<div class="slider-container">
+    <button class="arrow arrow-up" >▲</button>
+    <div class="slider">
+        <div class="slider-block"></div>
+        <div class="slider-block"></div>
+        <div class="slider-block"></div>
+        <div class="slider-block"></div>
+        <div class="slider-block"></div>
+        <div class="slider-block"></div>
+        <!-- Добавьте дополнительные блоки по мере необходимости -->
+    </div>
+    <button class="arrow arrow-down" >▼</button>
+</div>
+
+<script>
+
+</script>
+</body>
+</html>

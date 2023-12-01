@@ -25,7 +25,7 @@
 
         .slider-block {
             width: 150px;
-            height: 33vh; /* Регулируйте высоту блока по своему усмотрению */
+            height: calc(100vh / 3); /* Регулируйте высоту блока по своему усмотрению */
             background-color: #ccc; /* Цвет блока, замените на свой */
         }
 
@@ -59,6 +59,7 @@
             background-color: transparent;
             border: none;
             outline: none;
+            z-index: 100;
         }
 
         .arrow-up {
@@ -77,38 +78,45 @@
 </head>
 <body>
 <div class="slider-container">
-    <button class="arrow arrow-up" onclick="prevSlide()">▲</button>
+    <button class="arrow arrow-up" >▲</button>
     <div class="slider">
-        <div class="slider-block"></div>
-        <div class="slider-block"></div>
-        <div class="slider-block"></div>
-        <div class="slider-block"></div>
-        <div class="slider-block"></div>
-        <div class="slider-block"></div>
+        <div class="slider-block card"></div>
+        <div class="slider-block card"></div>
+        <div class="slider-block card"></div>
+        <div class="slider-block card"></div>
+        <div class="slider-block card"></div>
+        <div class="slider-block card"></div>
         <!-- Добавьте дополнительные блоки по мере необходимости -->
     </div>
-    <button class="arrow arrow-down" onclick="nextSlide()">▼</button>
+    <button class="arrow arrow-down" >▼</button>
 </div>
 
 <script>
     document.addEventListener("DOMContentLoaded", function () {
         const slider = document.querySelector(".slider");
+        let cardHeight = slider.querySelector(".card").offsetHeight;
+        let cards = document.querySelectorAll(".card");
         let currentIndex = 0;
 
         function showSlide(index) {
-            const translateY = -index * 33 + "vh";
+            // alert(cardHeight);
+            const translateY = -index * cardHeight + "px";
             slider.style.transform = "translateY(" + translateY + ")";
         }
 
         function nextSlide() {
-            currentIndex = (currentIndex + 1) % (slider.children.length - 2); // Отображаем только 3 блока из 6
+            currentIndex = (currentIndex + 1) % (cards.length);
+            // console.log(currentIndex);
             showSlide(currentIndex);
         }
 
+
         function prevSlide() {
-            currentIndex = (currentIndex - 1 + (slider.children.length - 2)) % (slider.children.length - 2);
+            currentIndex = (currentIndex - 1 + cards.length) % cards.length;
+            // console.log(currentIndex);
             showSlide(currentIndex);
         }
+
 
         document.querySelector(".arrow-up").addEventListener("click", prevSlide);
         document.querySelector(".arrow-down").addEventListener("click", nextSlide);
