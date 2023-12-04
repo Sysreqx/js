@@ -1,0 +1,41 @@
+<!--// 4 December-->
+<div class="popup-container" id="popupContainer4">
+    <!-- Содержимое попапа -->
+    <div class="popup-content">
+        <span class="close-btn close-btn4">&times;</span>
+        <!-- Ваша внутренняя страница или контент -->
+        <iframe src="https://elle.com.kz/ac4/" width="100%" height="100%" frameborder="0"></iframe>
+    </div>
+</div>
+
+
+
+<script>
+
+
+
+    // 4 December
+    let popupTrigger4 = document.querySelector(".popup-trigger4");
+    let popupContainer4 = document.getElementById("popupContainer4");
+
+    popupTrigger4.addEventListener("click", function() {
+        popupContainer4.style.display = "block";
+    });
+
+    let closeBtn4 = document.querySelector(".close-btn4");
+
+    closeBtn4.addEventListener("click", function() {
+        closePopup4();
+    });
+
+    function closePopup4() {
+        popupContainer4.classList.add("hide-with-fade");
+
+        setTimeout(function() {
+            popupContainer4.style.display = "none";
+            popupContainer4.classList.remove("hide-with-fade");
+        }, 500);
+    }
+
+
+</script>
