@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .question-container {
+            margin-bottom: 20px;
+        }
+
+        .options-container {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .question-container div {
+            margin-bottom: 10px;
+        }
+
+        .option {
+            /*cursor: pointer;*/
+        }
+
+        .option-highlight:hover {
+            cursor: pointer;
+            background-color: #ddd; /* Серый цвет при наведении */
+        }
+
+    </style>
+</head>
+<body>
+
+<div id="quiz-container">
+    <div class="question-container" id="question1">
+        <p >What is the capital of France?</p>
+        <div class="options-container" id="options1">
+            <div class="option option-highlight">a) Paris</div>
+            <div class="option option-highlight">b) Berlin</div>
+            <div class="option option-highlight">c) Madrid</div>
+            <div class="option option-highlight">d) Almaty</div>
+        </div>
+    </div>
+
+    <div class="question-container" id="question2">
+        <p >Which planet is known as the Red Planet?</p>
+        <div class="options-container" id="options2">
+            <div class="option option-highlight">a) Mars</div>
+            <div class="option option-highlight">b) Venus</div>
+            <div class="option option-highlight">c) Jupiter</div>
+            <div class="option option-highlight">d) correctAnswer</div>
+        </div>
+    </div>
+</div>
+
+<script>
+
+    function checkAnswer(questionNumber, selectedOption, correctAnswer) {
+        // Check if the question has already been answered
+        if (selectedOption.parentNode.classList.contains('question-answered')) {
+            return;
+        }
+
+        // Mark the question as answered
+        selectedOption.parentNode.classList.add('question-answered');
+
+        // Check if the selected answer is correct
+        if (selectedOption.innerText.slice(3) === correctAnswer) {
+            // Highlight the selected option in green
+            selectedOption.style.backgroundColor = 'green';
+        } else {
+            // Highlight the selected option in red
+            selectedOption.style.backgroundColor = 'red';
+
+            // Find and highlight the correct answer in green
+            let options = selectedOption.parentNode.getElementsByClassName('option');
+            for (let i = 0; i < options.length; i++) {
+                if (options[i].innerText.slice(3) === correctAnswer) {
+                    options[i].style.backgroundColor = 'green';
+                }
+            }
+        }
+
+        // Disable further clicks on options
+        let options = selectedOption.parentNode.getElementsByClassName('option');
+        for (let i = 0; i < options.length; i++) {
+            options[i].classList.remove('option-highlight');
+        }
+    }
+
+    function showResults() {
+        // Implement logic to display results (total correct, total questions, etc.)
+        // You can use a modal or an alert for simplicity
+        alert('Quiz completed! Display results here.');
+    }
+
+    // Добавляем обработчики событий в JavaScript
+    document.querySelectorAll('.option').forEach(function(option) {
+        option.addEventListener('click', function() {
+            let questionNumber = parseInt(this.closest('.question-container').id.match(/\d+/)[0]); // Получаем номер вопроса
+            let correctAnswer = getCorrectAnswer(questionNumber); // Получаем правильный ответ
+            checkAnswer(questionNumber, this, correctAnswer);
+        });
+    });
+
+    function getCorrectAnswer(questionNumber) {
+        switch (questionNumber) {
+            case 1:
+                return "Almaty";
+            case 2:
+                return "Mars";
+            // Add more cases for additional questions
+            default:
+                return "";
+        }
+    }
+
+</script>
+
+</body>
+</html>
