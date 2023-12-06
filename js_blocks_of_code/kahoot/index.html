@@ -9,6 +9,11 @@
             font-family: Arial, sans-serif;
         }
 
+        #quiz-container {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
         .question-container {
             margin-bottom: 20px;
         }
@@ -18,17 +23,18 @@
             flex-direction: column;
         }
 
-        .question-container div {
-            margin-bottom: 10px;
-        }
-
         .option {
-            /*cursor: pointer;*/
+            margin-bottom: 10px;
         }
 
         .option-highlight:hover {
             cursor: pointer;
             background-color: #ddd; /* Серый цвет при наведении */
+        }
+
+        img {
+            width: 300px;
+            /*margin-bottom: 20px;*/
         }
 
     </style>
@@ -37,22 +43,35 @@
 
 <div id="quiz-container">
     <div class="question-container" id="question1">
-        <p >What is the capital of France?</p>
+        <p ><b>What is the capital of France?</b></p>
+        <img src="cat.jpg" alt="cat">
         <div class="options-container" id="options1">
-            <div class="option option-highlight">a) Paris</div>
-            <div class="option option-highlight">b) Berlin</div>
-            <div class="option option-highlight">c) Madrid</div>
-            <div class="option option-highlight">d) Almaty</div>
+            <div class="option option-highlight">Johnnie Walker</div>
+            <div class="option option-highlight">Berlin</div>
+            <div class="option option-highlight">Madrid</div>
+            <div class="option option-highlight">Almaty</div>
         </div>
     </div>
 
     <div class="question-container" id="question2">
-        <p >Which planet is known as the Red Planet?</p>
+        <p ><b>Which planet is known as the Red Planet?</b></p>
+        <img src="cat.jpg" alt="cat">
         <div class="options-container" id="options2">
-            <div class="option option-highlight">a) Mars</div>
-            <div class="option option-highlight">b) Venus</div>
-            <div class="option option-highlight">c) Jupiter</div>
-            <div class="option option-highlight">d) correctAnswer</div>
+            <div class="option option-highlight">Mars</div>
+            <div class="option option-highlight">Venus</div>
+            <div class="option option-highlight">4 года</div>
+            <div class="option option-highlight">correctAnswer</div>
+        </div>
+    </div>
+
+    <div class="question-container" id="question3">
+        <p ><b>What is the capital of France?</b></p>
+        <img src="cat.jpg" alt="cat">
+        <div class="options-container" id="options3">
+            <div class="option option-highlight">Paris</div>
+            <div class="option option-highlight">Berlin</div>
+            <div class="option option-highlight">Нисколько, употребляйте алкоголь ответственно</div>
+            <div class="option option-highlight">Almaty</div>
         </div>
     </div>
 </div>
@@ -69,18 +88,20 @@
         selectedOption.parentNode.classList.add('question-answered');
 
         // Check if the selected answer is correct
-        if (selectedOption.innerText.slice(3) === correctAnswer) {
+        // if (selectedOption.innerText.slice(3) === correctAnswer) {
+        if (selectedOption.innerText === correctAnswer) {
             // Highlight the selected option in green
-            selectedOption.style.backgroundColor = 'green';
+            selectedOption.style.backgroundColor = '#49b444';
         } else {
             // Highlight the selected option in red
-            selectedOption.style.backgroundColor = 'red';
+            selectedOption.style.backgroundColor = '#d35151';
 
             // Find and highlight the correct answer in green
             let options = selectedOption.parentNode.getElementsByClassName('option');
             for (let i = 0; i < options.length; i++) {
-                if (options[i].innerText.slice(3) === correctAnswer) {
-                    options[i].style.backgroundColor = 'green';
+                // if (options[i].innerText.slice(3) === correctAnswer) {
+                if (options[i].innerText === correctAnswer) {
+                    options[i].style.backgroundColor = '#49b444';
                 }
             }
         }
@@ -90,12 +111,6 @@
         for (let i = 0; i < options.length; i++) {
             options[i].classList.remove('option-highlight');
         }
-    }
-
-    function showResults() {
-        // Implement logic to display results (total correct, total questions, etc.)
-        // You can use a modal or an alert for simplicity
-        alert('Quiz completed! Display results here.');
     }
 
     // Добавляем обработчики событий в JavaScript
@@ -110,10 +125,45 @@
     function getCorrectAnswer(questionNumber) {
         switch (questionNumber) {
             case 1:
-                return "Almaty";
+                return "Johnnie Walker";
             case 2:
-                return "Mars";
-            // Add more cases for additional questions
+                return "4 года";
+            case 3:
+                return "Нисколько, употребляйте алкоголь ответственно";
+            case 4:
+                return "С 2005";
+            case 5:
+                return "В дубовой";
+            case 6:
+                return "Майкл Джордан";
+            case 7:
+                return "Johnnie Walker";
+            case 8:
+                return "8 млрд";
+            case 9:
+                return "Шотландия";
+            case 10:
+                return "Мужская мода и стиль жизни";
+            case 11:
+                return "Keep Walking";
+            case 12:
+                return "27";
+            case 13:
+                return "3 года";
+            case 14:
+                return "True";
+            case 15:
+                return "225 000 евро";
+            case 16:
+                return "Со льдом";
+            case 17:
+                return "Матурация";
+            case 18:
+                return "4";
+            case 19:
+                return "Игра престолов";
+            case 20:
+                return "Эсквайр";
             default:
                 return "";
         }
