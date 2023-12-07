@@ -89,20 +89,37 @@
 
         // Check if the selected answer is correct
         // if (selectedOption.innerText.slice(3) === correctAnswer) {
-        if (selectedOption.innerText === correctAnswer) {
+        if (selectedOption.innerText.trim() === correctAnswer.trim()) {
             // Highlight the selected option in green
             selectedOption.style.backgroundColor = '#49b444';
+            // console.log("from green");
+            // console.log(`correctAnswer = ${correctAnswer}`);
+            // console.log(`selectedOption.innerText = ${selectedOption.innerText}`);
+
+            // selectedOption.style.backgroundColor = 'green';
         } else {
             // Highlight the selected option in red
             selectedOption.style.backgroundColor = '#d35151';
+
+            // console.log();
+            // console.log("from red");
+            // console.log(`correctAnswer = ${correctAnswer}`);
+            // console.log(`selectedOption.innerText = ${selectedOption.innerText}`);
+            // selectedOption.style.backgroundColor = 'red';
 
             // Find and highlight the correct answer in green
             let options = selectedOption.parentNode.getElementsByClassName('option');
             for (let i = 0; i < options.length; i++) {
                 // if (options[i].innerText.slice(3) === correctAnswer) {
-                if (options[i].innerText === correctAnswer) {
+                if (options[i].innerText.trim() === correctAnswer.trim()) {
+                    // options[i].style.backgroundColor = 'green';
                     options[i].style.backgroundColor = '#49b444';
+
                 }
+                // console.log();
+                // console.log(`from red inner ${i}`);
+                // console.log(`correctAnswer = ${correctAnswer}`);
+                // console.log(`options[i].innerText = ${options[i].innerText}`);
             }
         }
 
@@ -162,8 +179,6 @@
                 return "4";
             case 19:
                 return "Игра престолов";
-            case 20:
-                return "Эсквайр";
             default:
                 return "";
         }
