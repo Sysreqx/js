@@ -328,12 +328,15 @@ closeBtn1.addEventListener("click", function() {
 
 
 
-    // Выводим сообщение, если браузер - Safari
-    const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+// Выводим сообщение, если браузер - Safari
+const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
 
 // Выводим сообщение, если браузер - Safari
-    if (isSafari) {
-    alert('Для корректной работы сайта перейдите в браузер Google Chrome');
+if (isSafari) {
+    let safariDivs = document.querySelectorAll(".safariShow");
+    safariDivs.forEach(e => {
+        e.classList.remove("dn");
+    })
 }
 
 
