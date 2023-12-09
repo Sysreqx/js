@@ -1,0 +1,39 @@
+<!--// 9 December-->
+<div class="popup-container" id="popupContainer9">
+    <div class="popup-content">
+        <span class="close-btn close-btn9">&times;</span>
+        <iframe src="https://elle.com.kz/ac9/" width="100%" height="100%" frameborder="0"></iframe>
+    </div>
+</div>
+
+
+
+<script>
+
+
+
+    // 9 December
+    let popupTrigger9 = document.querySelector(".popup-trigger9");
+    let popupContainer9 = document.getElementById("popupContainer9");
+
+    popupTrigger9.addEventListener("click", function() {
+        popupContainer9.style.display = "block";
+    });
+
+    let closeBtn9 = document.querySelector(".close-btn9");
+
+    closeBtn9.addEventListener("click", function() {
+        closePopup9();
+    });
+
+    function closePopup9() {
+        popupContainer9.classList.add("hide-with-fade");
+
+        setTimeout(function() {
+            popupContainer9.style.display = "none";
+            popupContainer9.classList.remove("hide-with-fade");
+        }, 500);
+    }
+
+
+</script>
