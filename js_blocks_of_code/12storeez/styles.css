@@ -1,0 +1,25 @@
+.swiper {
+    width: 300px;
+    aspect-ratio: 770 / 1026;
+}
+
+.swiper img {
+    width: 100%;
+}
+
+.swiper .swiper-pagination-bullet {
+    /*width: 10px;*/
+}
+
+.swiper .swiper-pagination-bullet-active {
+    background: #FFFFFF;
+    width: 16px;
+    border-radius: 8px;
+}
+
+.swiper .swiper-pagination {
+    text-align: right;
+    top: 10px;
+    right: 10px;
+    width: auto;
+}
