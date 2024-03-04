@@ -1,0 +1,39 @@
+<!--// 26 December-->
+<div class="popup-container" id="popupContainer26">
+    <div class="popup-content burgundy">
+        <span class="close-btn close-btn26">&times;</span>
+        <iframe src="https://elle.com.kz/ac26/" width="100%" height="100%" frameborder="0"></iframe>
+    </div>
+</div>
+
+
+
+<script>
+
+
+
+    // 26 December
+    let popupTrigger26 = document.querySelector(".popup-trigger26");
+    let popupContainer26 = document.getElementById("popupContainer26");
+
+    popupTrigger26.addEventListener("click", function() {
+        popupContainer26.style.display = "block";
+    });
+
+    let closeBtn26 = document.querySelector(".close-btn26");
+
+    closeBtn26.addEventListener("click", function() {
+        closePopup26();
+    });
+
+    function closePopup26() {
+        popupContainer26.classList.add("hide-with-fade");
+
+        setTimeout(function() {
+            popupContainer26.style.display = "none";
+            popupContainer26.classList.remove("hide-with-fade");
+        }, 500);
+    }
+
+
+</script>

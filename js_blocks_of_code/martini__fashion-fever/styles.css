@@ -1,0 +1,10 @@
+.font-mergury {
+    font-family: "Mergury", Sans-serif;
+    font-size: 1.4em;
+
+}
+
+li {
+    display: flex;
+    align-items: baseline;
+}
