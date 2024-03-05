@@ -5,10 +5,10 @@ const swiper = new Swiper('.swiper', {
     speed: 500,
     effect: "fade",
     // If we need pagination
-    // pagination: {
-    //     el: '.swiper-pagination',
-    //     clickable: true,
-    // },
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+    },
     autoplay: {
         delay: 2000,
     },
