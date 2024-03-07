@@ -1,0 +1,47 @@
+.dysonColor {
+    color: #BD64AA;
+}
+
+.popupList {
+    cursor: pointer;
+}
+
+.rotableImage {
+    transform: rotate(135deg);
+}
+
+.zeroHeight {
+    max-height: 0;
+    overflow: hidden;
+}
+
+/*rortate*/
+.container {
+    position: relative;
+}
+
+.image-container {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+img {
+    transition: transform 0.5s ease;
+}
+
+.hidden {
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    visibility: hidden;
+    transition: opacity 0.5s ease, visibility 0s linear 0.5s;
+}
+
+.visible {
+    opacity: 1;
+    max-height: initial;
+    overflow: hidden;
+    visibility: visible;
+    transition: opacity 0.5s ease, visibility 0s linear ;
+}
