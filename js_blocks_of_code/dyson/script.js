@@ -1,37 +1,50 @@
 document.addEventListener("DOMContentLoaded", function () {
-    var image = document.getElementById("image");
-    var content = document.getElementById("content");
+    let img1 = document.getElementById("rotableImage");
+    let img2 = document.getElementById("rotableImage2");
+
+    let imgs = [];
+    imgs.push(img1, img2);
+
+    let content = document.getElementById("creditsContent");
 
     // Initial image rotation
-    var isRotated = false;
+    let isRotated = false;
 
     // Rotate image on hover only if content is hidden
-    image.addEventListener("mouseenter", function () {
-        if (!content.classList.contains("hidden")) return;
-        this.style.transform = "rotate(135deg)";
+    imgs.forEach(i => {
+        i.addEventListener("mouseenter", function () {
+            if (!content.classList.contains("hiddenElem")) return;
+            img1.style.transform = "rotate(135deg)";
+        });
     });
 
-    image.addEventListener("mouseleave", function () {
-        if (!content.classList.contains("hidden")) return;
-        if (!isRotated) {
-            this.style.transform = "rotate(0deg)";
-        }
+
+    imgs.forEach(i => {
+        i.addEventListener("mouseleave", function () {
+            if (!content.classList.contains("hiddenElem")) return;
+            if (!isRotated) {
+                img1.style.transform = "rotate(0deg)";
+            }
+        });
     });
+
 
     // Rotate image and show content on click
-    image.addEventListener("click", function () {
-        if (content.classList.contains("hidden")) {
-            this.style.transform = "rotate(135deg)";
-            content.classList.remove("hidden");
-            content.classList.add("visible"); // Add visible class for smooth transition
-            isRotated = true;
-        } else {
-            this.style.transform = "rotate(0deg)";
-            content.classList.remove("visible"); // Remove visible class for smooth transition
-            setTimeout(function () {
-                content.classList.add("hidden");
-            }, 300); // Delay hiding content for smooth transition
-            isRotated = false;
-        }
+    imgs.forEach(i => {
+       i.addEventListener("click", function () {
+           if (content.classList.contains("hiddenElem")) {
+               img1.style.transform = "rotate(135deg)";
+               content.classList.remove("hiddenElem");
+               content.classList.add("visible"); // Add visible class for smooth transition
+               isRotated = true;
+           } else {
+               img1.style.transform = "rotate(0deg)";
+               content.classList.remove("visible"); // Remove visible class for smooth transition
+               setTimeout(function () {
+                   content.classList.add("hiddenElem");
+               }, 300); // Delay hiding content for smooth transition
+               isRotated = false;
+           }
+       });
     });
 });

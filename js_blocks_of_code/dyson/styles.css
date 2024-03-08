@@ -6,16 +6,7 @@
     cursor: pointer;
 }
 
-.rotableImage {
-    transform: rotate(135deg);
-}
-
-.zeroHeight {
-    max-height: 0;
-    overflow: hidden;
-}
-
-/*rortate*/
+/*rotate*/
 .container {
     position: relative;
 }
@@ -26,11 +17,11 @@
     overflow: hidden;
 }
 
-img {
+.rotableImage {
     transition: transform 0.5s ease;
 }
 
-.hidden {
+.hiddenElem {
     opacity: 0;
     max-height: 0;
     overflow: hidden;
