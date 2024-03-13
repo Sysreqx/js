@@ -2,8 +2,8 @@ const swiper = new Swiper('.swiper', {
     // Optional parameters
     direction: 'horizontal',
     loop: true,
-    speed: 500,
-    effect: "fade",
+    // speed: 500,
+    // effect: "fade",
     // If we need pagination
     pagination: {
         el: '.swiper-pagination',

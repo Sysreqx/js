@@ -1,4 +1,56 @@
+body {
+    background: #F8ECE9;
+}
+
 .PFItalic {
     font-family: "Playfair Display", Sans-serif;
     font-style: italic;
+    color: #FF47A0;
+}
+
+.PFItalic:hover {
+    color: #ff478e;
+}
+
+.swiper {
+    width: 300px;
+    /*width: 900px;*/
+    /*aspect-ratio: 770 / 1026;*/
+}
+
+
+
+/*swiper*/
+.swiper .swiper-text {
+    color: #2E2127;
+    font-family: "Tilda Sans", Sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    text-align: justify;
+    padding-top: 25px
+}
+
+.swiper .swiper-text-gray {
+    color: #BABABA;
+}
+
+.swiper img {
+    width: 100%;
+}
+
+.swiper .swiper-pagination-bullet {
+    /*width: 10px;*/
+}
+
+.swiper .swiper-pagination-bullet-active {
+    background: #BABABA;
+    width: 16px;
+    border-radius: 8px;
+}
+
+.swiper .swiper-pagination {
+    text-align: right;
+    top: 10px;
+    right: 10px;
+    width: auto;
 }

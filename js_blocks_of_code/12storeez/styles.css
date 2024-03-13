@@ -5,9 +5,10 @@
 }
 
 .swiper .swiper-text {
-    font-family: "Gerbera", Sans-serif;
-    font-size: 11px;
-    font-weight: 400;
+    color: #2E2127;
+    font-family: "Tilda Sans", Sans-serif;
+    font-size: 18px;
+    font-weight: 500;
     text-align: center;
     padding: 10px
 }
