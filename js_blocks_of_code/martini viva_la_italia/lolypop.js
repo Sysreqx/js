@@ -50,11 +50,10 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
 
-
 //popups
 // 1
-    let popupTrigger1 = document.querySelectorAll(".popup-trigger1");
-    let popupContainer1 = document.getElementById("popupContainer1");
+    let popupTrigger1 = document.querySelectorAll(".popup-trigger01");
+    let popupContainer1 = document.getElementById("popupContainer01");
 
     popupTrigger1.forEach(p => {
         p.addEventListener("click", function () {

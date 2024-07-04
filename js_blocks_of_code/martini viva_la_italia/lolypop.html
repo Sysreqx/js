@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .container {
+            position: relative;
+            width: 300px;
+            margin: 20px;
+            /*overflow: hidden;*/
+        }
+
+        .text {
+            padding: 10px;
+            background: #f0f0f0;
+            text-align: center;
+        }
+
+        .image {
+            width: 100%;
+            height: auto;
+
+            max-width: 20px;
+
+            display: flex;
+            margin: 0 auto;
+        }
+
+        .overlay {
+            /*height: 100%;*/
+            /*background: rgba(157, 54, 54, 0.7);*/
+            /*color: #fff;*/
+            /*padding: 15px;*/
+            /*display: flex;*/
+            /*flex-direction: column;*/
+            /*justify-content: center;*/
+            /*align-items: center;*/
+
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            opacity: 0;
+            transition: opacity 0.5s ease, visibility 0.5s ease;
+            visibility: hidden;
+        }
+
+        .overlay.show {
+            opacity: 1;
+            z-index: 5;
+            visibility: visible;
+        }
+
+
+        .overlay p {
+            margin: 10px 0;
+        }
+
+        .overlay a {
+            color: #fff;
+            text-decoration: underline;
+            margin-bottom: 10px;
+        }
+
+        .overlay button {
+            padding: 10px 20px;
+            border: none;
+            background: #007bff;
+            color: #fff;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .overlay button:hover {
+            background: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="text">Первый текст</div>
+    <div class="image-container">
+        <img src="lolypop.png" alt="Image 1" class="image">
+        <div class="overlay">
+            <p>Текст при наведении</p>
+            <a href="#">Ссылка</a>
+            <button>Кнопка</button>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="text">Второй текст</div>
+    <div class="image-container">
+        <img src="lolypop.png" alt="Image 2" class="image">
+        <div class="overlay">
+            <p>Текст при наведении</p>
+            <a href="#">Ссылка</a>
+            <button>Кнопка</button>
+        </div>
+    </div>
+</div>
+
+
+<script>
+    document.querySelectorAll('.image-container').forEach(container => {
+        const image = container.querySelector('.image');
+        const overlay = container.querySelector('.overlay');
+
+        image.addEventListener('mouseover', function() {
+            overlay.classList.add('show');
+        });
+
+        container.addEventListener('mouseleave', function() {
+            overlay.classList.remove('show');
+        });
+    });
+</script>
+
+</body>
+</html>
