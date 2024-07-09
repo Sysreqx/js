@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8"/>
+    <title>Swiper demo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"/>
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+
+    <!-- Demo styles -->
+    <style>
+        html,
+        body {
+            position: relative;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            width: 100vw;
+        }
+
+        body {
+            background: #099866;
+            font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+            font-size: 14px;
+            color: #000;
+        }
+
+        .swiper-wrapper {
+            align-items: center;
+        }
+
+        .mySwiper {
+            position: relative;
+            /*width: 100%;*/
+            /*height: 100%;*/
+            width: 90vw;
+            height: 100%;
+        }
+
+        .swiper {
+            width: 100%;
+            height: 100%;
+        }
+
+        .swiper-slide {
+            height: 400px;
+            /*aspect-ratio: 465 / 566;*/
+            position: relative;
+            display: flex;
+            background: #eee;
+            align-items: center;
+            justify-content: center;
+            transition: all 200ms linear;
+            transform: scale(0.8) !important;
+            border-radius: 20px;
+            overflow: hidden;
+            /*width: 10% !important;*/
+        }
+
+        .swiper-slide > .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.4);
+
+        }
+
+        .swiper-slide.swiper-slide-active {
+            transform: scale(1) !important;
+
+            height: 500px;
+            /*aspect-ratio: 875 / 647 !important;*/
+            /*width: 40% !important;*/
+            /*background: #fc0;*/
+        }
+
+
+        .swiper-slide.swiper-slide-active > .overlay{
+            background: rgba(0, 0, 0, 0);
+        }
+
+        .swiper-slide-1 {
+            background: url("https://harpersbazaar.kz/wp-content/uploads/2024/07/slide%20%284%29.png") no-repeat fixed center top;
+        }
+        .swiper-slide-2 {
+            background: url("https://harpersbazaar.kz/wp-content/uploads/2024/07/slide%20%284%29.png") no-repeat fixed center top;
+        }
+        .swiper-slide-3 {
+            background: url("https://harpersbazaar.kz/wp-content/uploads/2024/07/slide%20%284%29.png") no-repeat fixed center top;
+        }
+        .swiper-slide-4 {
+            background: url("https://harpersbazaar.kz/wp-content/uploads/2024/07/slide%20%284%29.png") no-repeat fixed center top;
+        }
+
+        .swiper-slide img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+
+        .swiper-button-prev, .swiper-rtl .swiper-button-next {
+            left: 37%;
+            right: auto;
+            transform: translateX(-50%);
+            background: #FFFFFF;
+            padding: 10px 13px;
+            border-radius: 50%;
+            font-weight: 900;
+            --swiper-navigation-size: 15px;
+        }
+
+        .swiper-button-next, .swiper-rtl .swiper-button-prev {
+            right: 37%;
+            left: auto;
+            transform: translateX(50%);
+            background: #FFFFFF;
+            padding: 10px 13px;
+            border-radius: 50%;
+            font-weight: 900;
+            --swiper-navigation-size: 15px;
+        }
+
+        @media only screen and (max-width: 1024px) {
+            .swiper-button-next, .swiper-rtl .swiper-button-prev {
+                left: auto;
+                right: 30px;
+            }
+            .swiper-button-prev, .swiper-rtl .swiper-button-next {
+                left: 30px;
+                right: auto;
+            }
+        }
+
+
+        .swiper-button-prev:after, .swiper-rtl .swiper-button-next:after {
+            content: "prev";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .swiper-button-next:after, .swiper-rtl .swiper-button-prev:after {
+            content: "next";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .swiper-button-next:hover,
+        .swiper-button-prev:hover {
+            --swiper-theme-color: #ffffff;
+            background: #000000;
+            transition: all 0.3s ease-in-out;
+        }
+
+        :root {
+            /*--swiper-navigation-size: 15px;*/
+        }
+
+        :root {
+            --swiper-theme-color: #000000;
+        }
+
+
+    </style>
+</head>
+
+<body>
+<!-- Swiper -->
+<div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide swiper-slide-1">
+            <div class="overlay"></div>
+        </div>
+        <div class="swiper-slide swiper-slide-2">
+            <div class="overlay"></div>
+        </div>
+        <div class="swiper-slide swiper-slide-3">
+            <div class="overlay"></div>
+        </div>
+        <div class="swiper-slide swiper-slide-4">
+            <div class="overlay"></div>
+        </div>
+    </div>
+    <!-- If we need navigation buttons -->
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+</div>
+
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<!-- Initialize Swiper -->
+<script>
+    let swiper = new Swiper(".mySwiper", {
+        spaceBetween: 10,
+        slidesPerView: 1,
+        centeredSlides: true,
+        roundLengths: true,
+        loop: true,
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev"
+        },
+        breakpoints: {
+            // when window width is <= 1024px
+            1024: {
+                slidesPerView: 3
+            }
+        }
+    });
+</script>
+</body>
+
+</html>
