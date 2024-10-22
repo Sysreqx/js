@@ -1,0 +1,93 @@
+body {
+    background: #F8ECE9;
+}
+
+.PFItalic {
+    font-family: "Playfair Display", Sans-serif;
+    font-style: italic;
+    color: #FF47A0;
+}
+
+.PFItalic:hover {
+    color: #ff478e;
+}
+
+.swiper {
+    width: 300px;
+    /*width: 900px;*/
+    /*aspect-ratio: 770 / 1026;*/
+}
+
+
+
+/*swiper*/
+.swiper .swiper-text {
+    color: #2E2127;
+    font-family: "Futura PT", Sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    text-align: justify;
+    padding-top: 25px
+}
+
+.swiper .swiper-text-gray {
+    color: #BABABA;
+}
+
+.swiper img {
+    width: 100%;
+}
+
+.swiper .swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+    background: #FFFFFF;
+    opacity: 1;
+}
+
+.swiper .swiper-pagination-bullet-active {
+    background: #000000;
+    /*width: 20px;*/
+    /*border-radius: 50%;*/
+    opacity: 1;
+}
+
+.swiper .swiper-pagination {
+    text-align: center;
+    top: 10px;
+    right: 10px;
+    width: auto;
+}
+
+.counter {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    z-index: 50;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+    color: #fff;
+    /*background: rgba(0, 0, 0, 0.5);*/
+    padding: 10px;
+    border-radius: 5px;
+    z-index: 50;
+}
+
+.swiper-button-next {
+    background-image: url('https://harpersbazaar.kz/wp-content/uploads/2016/10/button-next__swiper-1.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.swiper-button-prev {
+    background-image: url('https://harpersbazaar.kz/wp-content/uploads/2016/10/button-prev__swiper-1.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
