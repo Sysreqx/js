@@ -21,8 +21,12 @@ const hoverDivs = document.querySelectorAll('.hover-div');
 hoverDivs.forEach(div => {
     // Добавляем событие mouseenter для изменения фона основного дива
     div.addEventListener('mouseenter', function() {
-        const bg = this.getAttribute('data-bg');
-        mainDiv.style.backgroundImage = bg;
+        mainDiv.style.backgroundImage = this.getAttribute('data-bg');
+
+        hoverDivs.forEach(d => {
+            d.style.border = "0px solid #fff";
+        })
+        div.style.border = "2px solid #fff";
     });
 });
 
@@ -35,6 +39,11 @@ hoverDivs02.forEach(div => {
     // Добавляем событие mouseenter для изменения фона основного дива
     div.addEventListener('mouseenter', function() {
         mainDiv02.style.backgroundImage = this.getAttribute('data-bg');
+
+        hoverDivs02.forEach(d => {
+            d.style.border = "0px solid #fff";
+        })
+        div.style.border = "2px solid #fff";
     });
 });
 //bg changer
@@ -181,22 +190,99 @@ function closePopup05() {
 // popups
 
 
-// swiper
-const swiper = new Swiper('.swiper-suchara-01', {
-    // Optional parameters
-    direction: 'horizontal',
-    loop: true,
-    // speed: 500,
-    // effect: "fade",
-    // If we need pagination
-    pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-    },
-    autoplay: {
-        delay: 2000,
-    },
-    updateOnWindowResize: true,
-    touchEventsTarget: 'container'
+// designers hover
+let designer01 = document.querySelectorAll(".designer-bg-01");
+let designer02 = document.querySelectorAll(".designer-bg-02");
+let designer03 = document.querySelectorAll(".designer-bg-03");
+let designer04 = document.querySelectorAll(".designer-bg-04");
+let designer05 = document.querySelectorAll(".designer-bg-05");
+
+// left: -2.5%;        left: -0.5%;
+// top: -1%;           top: -0.1%;
+popupTrigger1.forEach(trigger => {
+    trigger.addEventListener("mouseover", () => {
+        designer01.forEach(designer => {
+            designer.style.left = "-2.5%"; //
+            designer.style.top = "-1%"; //
+        });
+    });
+
+    trigger.addEventListener("mouseout", () => {
+        designer01.forEach(designer => {
+            designer.style.left = "-0.5%"; //
+            designer.style.top = "-0.1%"; //
+        });
+    });
 });
-// swiper
+
+
+popupTrigger02.forEach(trigger => {
+    trigger.addEventListener("mouseover", () => {
+        designer02.forEach(designer => {
+            designer.style.left = "-2.5%"; //
+            designer.style.top = "-1%"; //
+        });
+    });
+
+    trigger.addEventListener("mouseout", () => {
+        designer02.forEach(designer => {
+            designer.style.left = "-0.5%"; //
+            designer.style.top = "-0.1%"; //
+        });
+    });
+});
+
+
+popupTrigger03.forEach(trigger => {
+    trigger.addEventListener("mouseover", () => {
+        designer03.forEach(designer => {
+            designer.style.left = "-2.5%"; //
+            designer.style.top = "-1%"; //
+        });
+    });
+
+    trigger.addEventListener("mouseout", () => {
+        designer03.forEach(designer => {
+            designer.style.left = "-0.5%"; //
+            designer.style.top = "-0.1%"; //
+        });
+    });
+});
+
+
+popupTrigger04.forEach(trigger => {
+    trigger.addEventListener("mouseover", () => {
+        designer04.forEach(designer => {
+            designer.style.left = "-2.5%"; //
+            designer.style.top = "-1%"; //
+        });
+    });
+
+    trigger.addEventListener("mouseout", () => {
+        designer04.forEach(designer => {
+            designer.style.left = "-0.5%"; //
+            designer.style.top = "-0.1%"; //
+        });
+    });
+});
+
+
+popupTrigger05.forEach(trigger => {
+    trigger.addEventListener("mouseover", () => {
+        designer05.forEach(designer => {
+            designer.style.left = "-2.5%"; //
+            designer.style.top = "-1%"; //
+        });
+    });
+
+    trigger.addEventListener("mouseout", () => {
+        designer05.forEach(designer => {
+            designer.style.left = "-0.5%"; //
+            designer.style.top = "-0.1%"; //
+        });
+    });
+});
+
+
+
+// designers hover

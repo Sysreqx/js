@@ -20,6 +20,11 @@ body {
 
 
 
+/*swiper for test*/
+.swiper img {
+    width: 100%;
+}
+
 /*swiper*/
 .swiper .swiper-text {
     color: #2E2127;
@@ -32,10 +37,6 @@ body {
 
 .swiper .swiper-text-gray {
     color: #BABABA;
-}
-
-.swiper img {
-    width: 100%;
 }
 
 .swiper .swiper-pagination-bullet {
@@ -77,6 +78,7 @@ body {
     padding: 10px;
     border-radius: 5px;
     z-index: 50;
+    width: 44px;
 }
 
 .swiper-button-next {
@@ -91,3 +93,4 @@ body {
     background-repeat: no-repeat;
     background-position: center;
 }
+/*swiper*/
