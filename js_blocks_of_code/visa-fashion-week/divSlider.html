@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Switch Divs</title>
+    <style>
+        body {
+            background: #1b5264;
+        }
+
+        .div-content-01 {
+            opacity: 0; /* По умолчанию скрываем */
+            transition: opacity 0.5s ease; /* Добавляем плавный переход */
+            position: absolute;
+            /*display: none; !* Скрываем все дивы по умолчанию *!*/
+        }
+
+        .div-content-03 {
+            opacity: 0; /* По умолчанию скрываем */
+            transition: opacity 0.5s ease; /* Добавляем плавный переход */
+            position: absolute;
+        }
+
+        .div-content-04 {
+            opacity: 0; /* По умолчанию скрываем */
+            transition: opacity 0.5s ease; /* Добавляем плавный переход */
+            position: absolute;
+        }
+
+        .active {
+            display: flex;
+            opacity: 1; /* Когда активен, плавно показываем */
+            position: relative;
+        }
+
+        @media only screen and (max-width: 767px) {
+            .div-content-01,
+            .div-content-03,
+            .div-content-04 {
+                position: relative;
+                opacity: 1;
+            }
+        }
+
+        .nav-button {
+            width: 50px; /* Ширина кнопки */
+            height: 50px; /* Высота кнопки */
+            display: inline-block;
+            background-size: cover; /* Задаем размеры фона */
+            cursor: pointer;
+            z-index: 999999;
+        }
+
+        /* Стиль для кнопки "Предыдущий" */
+        .prev-button {
+            background-image: url('https://harpersbazaar.kz/wp-content/uploads/2016/10/button-prev__swiper-1.svg');
+        }
+
+        /* Стиль для кнопки "Следующий" */
+        .next-button {
+            background-image: url('https://harpersbazaar.kz/wp-content/uploads/2016/10/button-next__swiper-1.svg');
+        }
+
+        /* Отключение кнопки */
+        .disabled {
+            opacity: 0.5;
+            pointer-events: none; /* Отключаем возможность нажатия */
+        }
+    </style>
+</head>
+<body>
+
+<div class="div-content-01 active">Див 1</div>
+<div class="div-content-01">Див 2</div>
+<div class="div-content-01">Див 3</div>
+
+<div class="nav-button prev-button prev-button-01 disabled"></div>
+<div class="nav-button next-button next-button-01"></div>
+
+
+<div class="div-content-03 active">Див 1</div>
+<div class="div-content-03">Див 2</div>
+<div class="div-content-03">Див 3</div>
+
+<div class="nav-button prev-button prev-button-03 disabled"></div>
+<div class="nav-button next-button next-button-03"></div>
+
+
+<div class="div-content-04 active">Див 1</div>
+<div class="div-content-04">Див 2</div>
+<div class="div-content-04">Див 3</div>
+
+<div class="nav-button prev-button prev-button-04 disabled"></div>
+<div class="nav-button next-button next-button-04"></div>
+
+<script>
+    const divs01 = document.querySelectorAll('.div-content-01');
+    let currentDiv01 = 0;
+
+    const prevButton01 = document.querySelector('.prev-button-01');
+    const nextButton01 = document.querySelector('.next-button-01');
+
+    function updateDivs() {
+        divs01.forEach((div, index) => {
+            div.classList.toggle('active', index === currentDiv01);
+        });
+
+        // Отключаем кнопку, если нет предыдущего/следующего дива
+        prevButton01.classList.toggle('disabled', currentDiv01 === 0);
+        nextButton01.classList.toggle('disabled', currentDiv01 === divs01.length - 1);
+    }
+
+    nextButton01.addEventListener('click', () => {
+        if (currentDiv01 < divs01.length - 1) {
+            currentDiv01++;
+            updateDivs();
+        }
+    });
+
+    prevButton01.addEventListener('click', () => {
+        if (currentDiv01 > 0) {
+            currentDiv01--;
+            updateDivs();
+        }
+    });
+
+    updateDivs(); // Первоначальное обновление
+
+
+    const divs03 = document.querySelectorAll('.div-content-03');
+    let currentDiv03 = 0;
+
+    const prevButton03 = document.querySelector('.prev-button-03');
+    const nextButton03 = document.querySelector('.next-button-03');
+
+    function updateDivs03() {
+        divs03.forEach((div, index) => {
+            div.classList.toggle('active', index === currentDiv03);
+        });
+
+        // Отключаем кнопку, если нет предыдущего/следующего дива
+        prevButton03.classList.toggle('disabled', currentDiv03 === 0);
+        nextButton03.classList.toggle('disabled', currentDiv03 === divs03.length - 1);
+    }
+
+    nextButton03.addEventListener('click', () => {
+        if (currentDiv03 < divs03.length - 1) {
+            currentDiv03++;
+            updateDivs03();
+        }
+    });
+
+    prevButton03.addEventListener('click', () => {
+        if (currentDiv03 > 0) {
+            currentDiv03--;
+            updateDivs03();
+        }
+    });
+
+    updateDivs03(); // Первоначальное обновление
+
+
+    const divs04 = document.querySelectorAll('.div-content-04');
+    let currentDiv04 = 0;
+
+    const prevButton04 = document.querySelector('.prev-button-04');
+    const nextButton04 = document.querySelector('.next-button-04');
+
+    function updateDivs04() {
+        divs04.forEach((div, index) => {
+            div.classList.toggle('active', index === currentDiv04);
+        });
+
+        // Отключаем кнопку, если нет предыдущего/следующего дива
+        prevButton04.classList.toggle('disabled', currentDiv04 === 0);
+        nextButton04.classList.toggle('disabled', currentDiv04 === divs04.length - 1);
+    }
+
+    nextButton04.addEventListener('click', () => {
+        if (currentDiv04 < divs04.length - 1) {
+            currentDiv04++;
+            updateDivs04();
+        }
+    });
+
+    prevButton04.addEventListener('click', () => {
+        if (currentDiv04 > 0) {
+            currentDiv04--;
+            updateDivs04();
+        }
+    });
+
+    updateDivs04(); // Первоначальное обновление
+</script>
+
+</body>
+</html>
